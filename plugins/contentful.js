@@ -1,5 +1,5 @@
-require('dotenv').config();
-const contentful = require('contentful');
+require("dotenv").config();
+const contentful = require("contentful");
 
 module.exports = contentful.createClient({
   space: process.env.CTF_SPACE_ID,

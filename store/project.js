@@ -1,13 +1,13 @@
 import client from "../plugins/contentful";
 
 export const state = () => ({
-  currentPost: {},
+  currentProject: {},
   isLoading: true
 });
 
 export const mutations = {
-  setCurrentPost(state, payload) {
-    state.currentPost = payload;
+  setCurrentProject(state, payload) {
+    state.currentProject = payload;
   },
   setLoading(state, payload) {
     state.isLoading = payload;
@@ -15,13 +15,13 @@ export const mutations = {
 };
 
 export const actions = {
-  async getPostBySlug({ commit }, slug) {
+  async getProjectBySlug({ commit }, slug) {
     commit("setLoading", true);
     const response = await client.getEntries({
-      content_type: "blogPost",
+      content_type: "project",
       "fields.slug": slug
     });
-    commit("setCurrentPost", response.items[0]);
+    commit("setCurrentProject", response.items[0]);
     commit("setLoading", false);
   }
 };

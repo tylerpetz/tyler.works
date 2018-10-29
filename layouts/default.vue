@@ -1,32 +1,62 @@
 <template>
   <div>
-    <h1 class="site-title">
-      <nuxt-link
-        :to="{ path: '/' }"
-        class="site-title__link">
-        Nuxt Demo
-      </nuxt-link>
-    </h1>
-
-    <section class="main-content columns">
-
-      <div class="container column ">
-        <nuxt />
+    <Header />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-12-desktop">
+          <transition
+            name="page"
+            mode="out-in">
+            <nuxt />
+          </transition>
+        </div>
       </div>
-
-    </section>
+    </div>
+    <Controls />
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
+import Controls from "@/components/Controls.vue";
+
 export default {
-  data() {
-    return {
-      items: [
-        { title: 'Home', icon: 'home', to: { name: 'index' } },
-        { title: 'Inspire', icon: 'lightbulb', to: { name: 'inspire' } }
-      ]
-    };
+  components: {
+    Header,
+    Controls
+  },
+  mounted() {
+    this.$root.$on("submit", form => {
+      this.handleSubmit(form);
+    });
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit(form) {
+      console.log(form);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": "contact-form",
+          name: form.name,
+          email: form.email,
+          message: form.message
+        })
+      })
+        .then(() => {
+          console.log("thanks");
+        })
+        .catch(() => {
+          console.log("aight");
+        });
+    }
   }
 };
 </script>

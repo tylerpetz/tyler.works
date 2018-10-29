@@ -1,22 +1,22 @@
 import client from "../plugins/contentful";
 
 export const state = () => ({
-  posts: []
+  projects: []
 });
 
 export const mutations = {
-  setPosts(state, payload) {
+  setProjects(state, payload) {
     state.posts = payload;
   }
 };
 
 export const actions = {
-  async getPosts({ commit }) {
+  async getProjects({ commit }) {
     const response = await client.getEntries({
-      content_type: "blogPost"
+      content_type: "project"
     });
     if (response.items.length > 0) {
-      commit("setPosts", response.items);
+      commit("setProjects", response.items);
     }
   }
 };

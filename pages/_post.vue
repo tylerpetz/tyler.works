@@ -30,7 +30,7 @@ export default {
     }
   },
   async fetch({ store, params }) {
-    await store.dispatch('post/getPostBySlug', params.slug);
+    await store.dispatch("post/getPostBySlug", params.slug);
   }
 };
 </script>
