@@ -1,3 +1,4 @@
+global.File = typeof window === "undefined" ? Object : window.File;
 const pkg = require("./package");
 
 module.exports = {
@@ -24,18 +25,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: {
-    loaderOptions: {
-      sass: {
-        data: `@import "@/assets/_variables.scss";`
-      }
-    }
-  },
+  css: ["~/assets/scss/main.scss"],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ["~/plugins/buefy.js"],
 
   /*
   ** Nuxt.js modules
@@ -44,9 +39,11 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     "@nuxtjs/axios",
     "@nuxtjs/dotenv",
-    "@nuxtjs/markdownit"
-    // Doc: https://buefy.github.io/#/documentation
+    "@nuxtjs/markdownit",
+    "nuxt-sass-resources-loader"
   ],
+
+  sassResources: ["~/assets/scss/**/*.scss"],
 
   /*
   ** Axios module configuration

@@ -6,58 +6,32 @@
       href="http://strivemedia.net" 
       target="_blank" 
       class="list-item__link">Strive Media</a>. Call my boss, he'll tell you.</p>
-    <p class="list-item">I have also worked as a <em>web developer</em> for other companies, you can <router-link 
+    <p class="list-item">I have also worked as a <em>web developer</em> for other companies, you can <nuxt-link 
       to="/resume" 
-      class="list-item__link">check my resume</router-link> if you don't believe me.</p>
+      class="list-item__link">check my resume</nuxt-link> if you don't believe me.</p>
     <p class="list-item">I share my <em>web development code</em> that I have written on <a 
       href="https://github.com/tylerpetz" 
       target="_blank" 
       class="list-item__link">my github</a>. This is like a dead giveaway that I'm a web developer.</p>
     <!-- Todo: Create a reason to include this line -->
     <!-- <p class="list-item">I am currently <a class="list-item__link">accepting new clients</a> as a <em>web developer</em>. Seriously, why else would I be doing that?</p> -->
-    <Projects
-      :intro="projectIntro"
-      :outro="projectOutro"
-      :project-count="2"
-    />
-    <!-- Todo: Create a blog -->
-    <BlogPosts
-      :intro="blogIntro"
-      :outro="blogOutro"
-      :blog-count="2"
-    />
+    <ProjectList :post-count="2" />
+    <BlogList :post-count="2" />
     <ContactForm
       :intro="contactIntro"
     />
   </div>
-  <!-- <div class="container">
-    <h2>Latest posts</h2>
-    <ul v-if="posts">
-      <li
-        v-for="(post, index) in posts"
-        :key="index">
-        <nuxt-link :to="post.fields.slug">
-          {{ post.fields.title }}
-        </nuxt-link>
-      </li>
-    </ul>
-    <ul v-if="projects">
-      <li
-        v-for="(project, index) in projects"
-        :key="index">
-        <nuxt-link :to="project.fields.slug">
-          {{ project.fields.title }}
-        </nuxt-link>
-      </li>
-    </ul>
-  </div> -->
 </template>
 
 <script>
+import BlogList from "../components/BlogList";
+import ProjectList from "../components/ProjectList";
+import ContactForm from "../components/ContactForm.vue";
+
 export default {
   components: {
-    Projects,
-    BlogPosts,
+    BlogList,
+    ProjectList,
     ContactForm
   },
   data() {
@@ -72,8 +46,7 @@ export default {
       contactIntro:
         "Still not convinced?<br/>Fill out this form. The form gets sent to my email because I made it do that."
     };
-  }
-  /*   name: 'HomePage',
+  },
   computed: {
     posts() {
       return this.$store.state.posts.posts;
@@ -84,9 +57,9 @@ export default {
   },
   async fetch({ store, params }) {
     await Promise.all([
-      store.dispatch('posts/getPosts', params.slug),
-      store.dispatch('projects/getProjects', params.slug)
+      store.dispatch("posts/getPosts", params.slug),
+      store.dispatch("projects/getProjects", params.slug)
     ]);
-  } */
+  }
 };
 </script>

@@ -1,4 +1,4 @@
-import client from "../plugins/contentful";
+import client from "@/plugins/contentful";
 
 export const state = () => ({
   currentPost: {},

@@ -110,15 +110,11 @@
             <h2 class="card-description__title">Tyler Petz</h2>
             <p class="card-description__details">A web developer.</p>
             <a class="card-description__button">
-              <b-icon
-                pack="fab"
-                icon="github" />
+              
               GitHub
             </a>
             <a class="card-description__button">
-              <b-icon
-                pack="fab"
-                icon="linkedin" />
+              
               Linkedin
             </a>
           </div>
@@ -130,7 +126,6 @@
 
 <script>
 export default {
-  name: "ContactForm",
   props: {
     intro: {
       type: String,
@@ -196,179 +191,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-.contact {
-  margin-bottom: $gap;
-
-  .field {
-    &--last {
-      margin-top: $gap / 2;
-    }
-
-    .select {
-      width: 100%;
-
-      select {
-        width: 100%;
-      }
-    }
-  }
-
-  select,
-  input,
-  textarea {
-    &:hover {
-      border-color: $green;
-    }
-  }
-
-  figcaption {
-    position: absolute;
-  }
-
-  .label {
-    color: $green;
-
-    @include until($tablet) {
-      font-size: $size-5;
-    }
-  }
-
-  .button {
-    width: 100%;
-    background: linear-gradient(135deg, $green 0%, $lightblue 100%);
-    color: $white;
-
-    &[disabled] {
-      & + .helper {
-        color: $red;
-        display: block;
-        opacity: 0;
-        transition: opacity 150ms ease;
-      }
-
-      &:hover {
-        & + .helper {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .helper {
-    display: none;
-  }
-
-  @include until($tablet) {
-    .control,
-    .icon,
-    input,
-    select,
-    label {
-      .is-large {
-        font-size: $size-5 !important;
-      }
-    }
-
-    input {
-      padding-left: calc(0.625em - 1px) !important;
-    }
-
-    .icon {
-      display: none;
-    }
-  }
-}
-
-.card-container {
-  padding-top: 48%;
-  position: relative;
-}
-
-.card {
-  background-color: $green;
-  border: 0;
-  display: flex;
-  height: 390px;
-  justify-content: center;
-  margin-bottom: 0;
-  outline: 0;
-  padding-top: $gap;
-  transform-style: preserve-3d;
-  background: linear-gradient(160deg, $blue 0%, $purple 100%);
-  box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3),
-    0 50px 100px 0 rgba(51, 51, 51, 0.15);
-
-  &__image {
-    box-shadow: 0 0 25px rgba(51, 51, 51, 0.4);
-    pointer-events: none;
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.card-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: $gap / 2;
-  text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
-
-  @include until($tablet) {
-    padding: $gap / 2.5;
-  }
-
-  &__title {
-    font-size: $size-3;
-    color: $white;
-    transform: translate3d(-80px, 0, 0);
-    opacity: 0;
-    transition: opacity 100ms ease-out, transform 450ms ease;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-
-    @include until($tablet) {
-      font-size: $size-4;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-
-  &__button {
-    color: $pink;
-    display: flex;
-    margin-top: 10px;
-    transition: color 300ms ease;
-
-    .icon {
-      padding-right: 10px;
-    }
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  &__details {
-    font-size: $size-5;
-    transform: translate3d(-50px, 0, 0);
-    color: $white;
-    opacity: 0;
-    transition: opacity 150ms ease-out, transform 300ms ease;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-
-    @include until($tablet) {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-}
-
-.js-tilt-glare {
-  z-index: 1;
-}
-</style>

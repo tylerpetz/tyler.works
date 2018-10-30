@@ -1,8 +1,8 @@
-import client from "../plugins/contentful";
+import client from "@/plugins/contentful";
 
 export const state = () => ({
   currentProject: {},
-  isLoading: true
+  projectLoading: true
 });
 
 export const mutations = {
@@ -10,7 +10,7 @@ export const mutations = {
     state.currentProject = payload;
   },
   setLoading(state, payload) {
-    state.isLoading = payload;
+    state.projectLoading = payload;
   }
 };
 

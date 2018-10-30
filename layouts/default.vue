@@ -1,6 +1,33 @@
 <template>
   <div>
-    <Header />
+    <div id="header">
+      <nav
+        class="navigation container"
+        role="navigation"
+        aria-label="main navigation">
+        <nuxt-link
+          class="navigation__link"
+          to="/"
+          exact>Home</nuxt-link>
+        <nuxt-link
+          class="navigation__link"
+          to="/work">Work</nuxt-link>
+        <nuxt-link
+          class="navigation__link"
+          to="/blog">Blog</nuxt-link>
+        <!-- <nuxt-link class="navbar-item nav-item" to="/about">About</nuxt-link> -->
+        <nuxt-link
+          class="navigation__link"
+          to="/contact">Contact</nuxt-link>
+      </nav>
+      <header class="header">
+        <div class="header__container container">
+          <a
+            class="header__link"
+            @click="quickScroll">Tyler Petz - A web developer.</a>
+        </div>
+      </header>
+    </div>
     <div class="container">
       <div class="columns">
         <div class="column is-12-desktop">
@@ -17,17 +44,24 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Controls from "@/components/Controls.vue";
+import Controls from "../components/Controls.vue";
+import Headroom from "headroom.js";
 
 export default {
   components: {
-    Header,
     Controls
   },
   mounted() {
     this.$root.$on("submit", form => {
       this.handleSubmit(form);
+    });
+
+    let header = new Headroom(document.getElementById("header"));
+    header.init({
+      tolerance: {
+        up: 5,
+        down: 0
+      }
     });
   },
   methods: {
@@ -60,3 +94,7 @@ export default {
   }
 };
 </script>
+
+<style>
+@import url("https://use.typekit.net/mdz6hax.css");
+</style>

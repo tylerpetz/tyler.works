@@ -1,4 +1,4 @@
-import client from "../plugins/contentful";
+import client from "@/plugins/contentful";
 
 export const state = () => ({
   projects: []
@@ -6,7 +6,7 @@ export const state = () => ({
 
 export const mutations = {
   setProjects(state, payload) {
-    state.posts = payload;
+    state.projects = payload;
   }
 };
 
