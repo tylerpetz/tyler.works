@@ -1,33 +1,8 @@
 <template>
   <div>
-    <div id="header">
-      <nav
-        class="navigation container"
-        role="navigation"
-        aria-label="main navigation">
-        <nuxt-link
-          class="navigation__link"
-          to="/"
-          exact>Home</nuxt-link>
-        <nuxt-link
-          class="navigation__link"
-          to="/work">Work</nuxt-link>
-        <nuxt-link
-          class="navigation__link"
-          to="/blog">Blog</nuxt-link>
-        <!-- <nuxt-link class="navbar-item nav-item" to="/about">About</nuxt-link> -->
-        <nuxt-link
-          class="navigation__link"
-          to="/contact">Contact</nuxt-link>
-      </nav>
-      <header class="header">
-        <div class="header__container container">
-          <a
-            class="header__link"
-            @click="quickScroll">Tyler Petz - A web developer.</a>
-        </div>
-      </header>
-    </div>
+    <no-ssr>
+      <Header />
+    </no-ssr>
     <div class="container">
       <div class="columns">
         <div class="column is-12-desktop">
@@ -44,24 +19,17 @@
 </template>
 
 <script>
+import Header from "../components/Header.vue";
 import Controls from "../components/Controls.vue";
-import Headroom from "headroom.js";
 
 export default {
   components: {
+    Header: () => import("@/components/Header.vue"),
     Controls
   },
   mounted() {
     this.$root.$on("submit", form => {
       this.handleSubmit(form);
-    });
-
-    let header = new Headroom(document.getElementById("header"));
-    header.init({
-      tolerance: {
-        up: 5,
-        down: 0
-      }
     });
   },
   methods: {
@@ -95,6 +63,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://use.typekit.net/mdz6hax.css");
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
 </style>

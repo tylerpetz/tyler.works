@@ -1,21 +1,37 @@
 <template>
-  <div class="single-project">
-    <div
-      v-if="!isLoading"
-      class="single-project__article">
-      <h1 class="single-project__title">
-        {{ currentProject.fields.title }}
-      </h1>
+  <div
+    v-if="!isLoading"
+    class="project">
+    <header 
+      :class="currentProject.fields.slug"
+      class="project__header">
+      <div class="container">
+        <h1 class="project__title">
+          {{ currentProject.fields.title }}
+        </h1>
+        <p class="project__description">{{ currentProject.fields.description }}</p>
+
+      </div>
+    </header>
+    <div class="project__article">
+      <h2 class="list-item section-heading">About the project:</h2>
       <div
-        class="single-project__content"
+        class="project__content"
         v-html="$md.render(currentProject.fields.body)"
       />
+      <h2 class="list-item section-heading">Technology Used:</h2>
+      <div 
+        v-if="currentProject.fields.tags"
+        class="project__tags">
+        <div
+          v-for="(tag, index) in currentProject.fields.tags"
+          :key="index">
+          <i 
+            :class="'fa-' + tag.toLowerCase()"
+            class="fab fa-3x" />
+        </div>
+      </div>
     </div>
-    <p
-      v-else
-      class="single-project__loading">
-      Loading
-    </p>
   </div>
 </template>
 
@@ -29,8 +45,65 @@ export default {
       return this.$store.state.project.isLoading;
     }
   },
+  mounted() {
+    document.body.classList.add("project-page");
+  },
+  beforeDestroy() {
+    document.body.classList.remove("project-page");
+  },
   async fetch({ store, params }) {
     await store.dispatch("project/getProjectBySlug", params.slug);
   }
 };
 </script>
+
+<style lang="scss">
+.project {
+  &__header {
+    align-items: stretch;
+    color: $white;
+    display: flex;
+    height: 300px;
+    left: 0;
+    padding-top: 100px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: $size-2;
+    opacity: 1;
+    text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
+
+    @include until($tablet) {
+      font-size: $size-4;
+    }
+  }
+
+  &__description {
+    text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
+    font-size: $size-5;
+    color: $white;
+  }
+
+  &__article {
+  }
+
+  &__content {
+    font-size: $size-5;
+  }
+
+  &__tags {
+    display: flex;
+  }
+}
+</style>

@@ -13,7 +13,8 @@ export const mutations = {
 export const actions = {
   async getProjects({ commit }) {
     const response = await client.getEntries({
-      content_type: "project"
+      content_type: "project",
+      order: "sys.createdAt"
     });
     if (response.items.length > 0) {
       commit("setProjects", response.items);

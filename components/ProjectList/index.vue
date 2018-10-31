@@ -1,35 +1,32 @@
 <template>
   <section class="projects">
     <h1
-      v-if="intro"
       class="list-item section-heading"
-      v-html="intro"/>
-    <h1
-      v-else
-      class="list-item section-heading">Here are those projects I was talking about.</h1>
+      v-html="intro" />
     <div
       v-if="projects"
       class="columns is-multiline">
       <div
         v-for="(project, index) in projects.slice(0, projectCount)"
-        :key="index">
+        :key="index"
+        class="column is-half">
         <div class="card-container">
           <nuxt-link 
             :to="'/work/' + project.fields.slug"
+            :class="project.fields.slug"
             class="full-tilt card">
             <img
-              :src="project.fields.heroImage"
-              :alt="project.fields.title"
-              class="card__image">
+              :src="project.fields.heroImage.fields.file.url"
+              :alt="project.fields.heroImage.fields.title"
+              class="card__image card__image--wide">
           </nuxt-link>
           <div class="card-description">
-            <h2 class="card-description__title">{{ project.fields.name }}</h2>
+            <h2 class="card-description__title">{{ project.fields.title }}</h2>
             <p class="card-description__details">{{ project.fields.description }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div v-else>No Projects</div>
     <p
       v-if="outro"
       class="list-item"
@@ -48,69 +45,14 @@ export default {
     },
     outro: {
       type: String,
-      default: `This isn't all of them, that'd be nuts. The rest can be found <nuxt-link class="list-item__link" to="/work">here</nuxt-link> though.`
+      default: ""
     },
     projectCount: {
       type: Number,
       default: 10
     }
   },
-  data: () => {
-    return {
-      projectsOld: [
-        {
-          name: "Tee Up Fore Autism",
-          description:
-            "A website for an annual golf tournament that helps support a local non-profit school.",
-          icon: "golfball.svg",
-          slug: "teeup"
-        },
-        {
-          name: "Wishlisted",
-          description:
-            "A web platform for sharing awesome lists of products for your specific purchasing needs.",
-          icon: "w.svg",
-          slug: "wishlisted"
-        },
-        {
-          name: "Strive Media",
-          description:
-            "A website for my IRL web developer job. I learned a lot of web development skills here.",
-          icon: "golfball.svg",
-          slug: "strive"
-        },
-        {
-          name: "The Stadium Gallery",
-          description:
-            "A website for a local business that sells some big ol' pictures of sports stadiums. I made it.",
-          icon: "golfball.svg",
-          slug: "stadium"
-        },
-        {
-          name: "Tyler's Record Collection",
-          description:
-            "A web project to display my record collection in an interesting way, using the Discogs web API.",
-          icon: "vinyl.svg",
-          slug: "records"
-        },
-        {
-          name: "Overwatch Player Comparison",
-          description:
-            "A web project that allows you to look at and compare stats for players of the popular video game, Overwatch.",
-          icon: "overwatch.svg",
-          slug: "overwatch"
-        }
-      ]
-    };
-  },
   computed: {
-    projectsToDisplay: function() {
-      if (this.projectCount) {
-        return this.projects.slice(0, this.projectCount);
-      } else {
-        return this.projectsOld;
-      }
-    },
     projects() {
       return this.$store.state.projects.projects;
     }
@@ -129,3 +71,97 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.projects {
+  margin-bottom: $gap;
+
+  .column {
+    @include until($tablet) {
+      padding-bottom: $gap / 2.5;
+      padding-top: $gap / 2.5;
+    }
+  }
+
+  .card-container {
+    position: relative;
+  }
+
+  .card {
+    background-color: $green;
+    border: 0;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 rgba(10, 10, 10, 0.1);
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    margin-bottom: 0;
+    outline: 0;
+    padding-top: $gap;
+    transform-style: preserve-3d;
+
+    &::after {
+      box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3),
+        0 50px 100px 0 rgba(51, 51, 51, 0.15);
+      content: "";
+      height: 85%;
+      left: 7.5%;
+      position: absolute;
+      top: 7.5%;
+      transform: translateZ(-50px);
+      transition: 0.3s;
+      width: 85%;
+      z-index: -1;
+    }
+
+    &__image {
+      filter: drop-shadow(0 0 25px rgba(51, 51, 51, 0.4));
+      pointer-events: none;
+      position: relative;
+      transform: translateZ(50px);
+      transition: transform 550ms ease-in-out;
+      z-index: 2;
+
+      &--square {
+        max-height: 90px;
+        max-width: 90px;
+      }
+
+      &--wide {
+        width: 75%;
+        object-fit: scale-down;
+        max-height: 100px;
+      }
+    }
+  }
+
+  .card-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $gap / 2;
+    pointer-events: none;
+    text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
+
+    @include until($tablet) {
+      padding: $gap / 2.5;
+    }
+
+    &__title {
+      font-size: $size-3;
+      color: $white;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+
+      @include until($tablet) {
+        font-size: $size-4;
+      }
+    }
+
+    &__details {
+      font-size: $size-5;
+      color: $white;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+</style>

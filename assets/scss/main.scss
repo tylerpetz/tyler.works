@@ -26,6 +26,18 @@ $body-background-color: $white;
 $column-gap: 2rem;
 $card-transition: all 150ms ease;
 
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert)
+);
+
 @import "~bulma/sass/base/_all";
 @import "~bulma/sass/elements/box.sass";
 @import "~bulma/sass/elements/button.sass";
@@ -54,17 +66,6 @@ $card-transition: all 150ms ease;
 @import "~bulma/sass/layout/_all";
 @import "~buefy/src/scss/buefy";
 
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.175s, transform 0.35s;
-}
-
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform: translateX(-30%);
-}
-
 html,
 body {
   font-family: $family-secondary;
@@ -75,22 +76,13 @@ body {
   padding-top: 100px;
 
   @include until($tablet) {
-    padding-top: 75px;
+    padding-top: 60px;
   }
 }
 
 ::selection {
   background: $green;
   color: $blue;
-}
-
-.background {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 40vh;
-  background: linear-gradient(to right, #649173, #dbd5a4);
 }
 
 .container {
@@ -100,6 +92,15 @@ body {
   @include until($desktop) {
     padding: 0 ($gap / 1.5);
   }
+}
+
+.background {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  background: linear-gradient(to right, #649173, #dbd5a4);
 }
 
 .heading {
@@ -249,290 +250,6 @@ body {
   }
 }
 
-.tooltip {
-  margin-right: $gap / 4;
-}
-
-.projects {
-  margin-bottom: $gap;
-
-  .column {
-    @include until($tablet) {
-      padding-bottom: $gap / 2.5;
-      padding-top: $gap / 2.5;
-    }
-  }
-}
-
-.card-container {
-  position: relative;
-}
-
-.card {
-  background-color: $green;
-  border: 0;
-  display: flex;
-  height: 350px;
-  justify-content: center;
-  margin-bottom: 0;
-  outline: 0;
-  padding-top: $gap;
-  transform-style: preserve-3d;
-
-  &::after {
-    box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3),
-      0 50px 100px 0 rgba(51, 51, 51, 0.15);
-    content: "";
-    height: 90%;
-    left: 5%;
-    position: absolute;
-    top: 5%;
-    transform: translateZ(-50px);
-    transition: 0.3s;
-    width: 90%;
-    z-index: -1;
-  }
-
-  &--teeup {
-    background: linear-gradient(to right, #649173, #dbd5a4);
-  }
-
-  &--wishlisted {
-    background: linear-gradient(135deg, $purple 0%, $red 100%);
-  }
-
-  &--strive {
-    background: linear-gradient(135deg, #bad405 0%, #8faa0e 40%);
-  }
-
-  &--stadium {
-    background: linear-gradient(135deg, $grey 0%, $lightblue 100%);
-  }
-
-  &--overwatch {
-    background: linear-gradient(135deg, $blue 0%, $lightblue 100%);
-  }
-
-  &--records {
-    background: linear-gradient(135deg, $orange 0%, $yellow 100%);
-  }
-
-  &__image {
-    filter: drop-shadow(0 0 25px rgba(51, 51, 51, 0.4));
-    max-height: 90px;
-    max-width: 90px;
-    pointer-events: none;
-    position: relative;
-    transform: translateZ(50px);
-    transition: transform 550ms ease-in-out;
-    z-index: 2;
-  }
-}
-
-.card-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: $gap / 2;
-  pointer-events: none;
-  text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
-
-  @include until($tablet) {
-    padding: $gap / 2.5;
-  }
-
-  &__title {
-    font-size: $size-3;
-    color: $white;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-
-    @include until($tablet) {
-      font-size: $size-4;
-    }
-  }
-
-  &__details {
-    font-size: $size-5;
-    color: $white;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.js-tilt-glare {
-  z-index: 1;
-}
-
-.contact {
-  margin-bottom: $gap;
-
-  .field {
-    &--last {
-      margin-top: $gap / 2;
-    }
-
-    .select {
-      width: 100%;
-
-      select {
-        width: 100%;
-      }
-    }
-  }
-
-  select,
-  input,
-  textarea {
-    &:hover {
-      border-color: $green;
-    }
-  }
-
-  figcaption {
-    position: absolute;
-  }
-
-  .label {
-    color: $green;
-
-    @include until($tablet) {
-      font-size: $size-5;
-    }
-  }
-
-  .button {
-    width: 100%;
-    background: linear-gradient(135deg, $green 0%, $lightblue 100%);
-    color: $white;
-
-    &[disabled] {
-      & + .helper {
-        color: $red;
-        display: block;
-        opacity: 0;
-        transition: opacity 150ms ease;
-      }
-
-      &:hover {
-        & + .helper {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .helper {
-    display: none;
-  }
-
-  @include until($tablet) {
-    .control,
-    .icon,
-    input,
-    select,
-    label {
-      .is-large {
-        font-size: $size-5 !important;
-      }
-    }
-
-    input {
-      padding-left: calc(0.625em - 1px) !important;
-    }
-
-    .icon {
-      display: none;
-    }
-  }
-}
-
-.card-container {
-  padding-top: 48%;
-  position: relative;
-}
-
-.card {
-  background-color: $green;
-  border: 0;
-  display: flex;
-  height: 390px;
-  justify-content: center;
-  margin-bottom: 0;
-  outline: 0;
-  padding-top: $gap;
-  transform-style: preserve-3d;
-  background: linear-gradient(160deg, $blue 0%, $purple 100%);
-  box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3),
-    0 50px 100px 0 rgba(51, 51, 51, 0.15);
-
-  &__image {
-    box-shadow: 0 0 25px rgba(51, 51, 51, 0.4);
-    pointer-events: none;
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.card-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: $gap / 2;
-  text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
-
-  @include until($tablet) {
-    padding: $gap / 2.5;
-  }
-
-  &__title {
-    font-size: $size-3;
-    color: $white;
-    transform: translate3d(-80px, 0, 0);
-    opacity: 0;
-    transition: opacity 100ms ease-out, transform 450ms ease;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-
-    @include until($tablet) {
-      font-size: $size-4;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-
-  &__button {
-    color: $pink;
-    display: flex;
-    margin-top: 10px;
-    transition: color 300ms ease;
-
-    .icon {
-      padding-right: 10px;
-    }
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  &__details {
-    font-size: $size-5;
-    transform: translate3d(-50px, 0, 0);
-    color: $white;
-    opacity: 0;
-    transition: opacity 150ms ease-out, transform 300ms ease;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-
-    @include until($tablet) {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-}
-
 .js-tilt-glare {
   z-index: 1;
 }
@@ -608,84 +325,26 @@ body {
   width: 260px;
 }
 
-.navigation {
-  align-items: center;
-  display: none;
-  height: 100px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translate3d(0, -100px, 0);
-  z-index: 2;
-
-  &__link {
-    color: $blue;
-    font-size: $size-4;
-    padding-right: $gap / 1.5;
-    transition: color 150ms ease-in-out;
-
-    &:hover,
-    &:active {
-      color: $orange !important;
-    }
-
-    &.router-link-active {
-      color: $green !important;
-    }
-  }
+.tee-up-fore-autism {
+  background: linear-gradient(to right, #649173, #dbd5a4);
 }
 
-.header {
-  background: $blue;
-  display: none;
-  height: 50px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 99;
-
-  &__container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__link {
-    color: $white;
-    font-size: $size-4;
-    transform: color 150ms ease-in-out;
-
-    &:hover {
-      color: $lightblue;
-    }
-  }
+.wishlisted {
+  background: linear-gradient(135deg, $purple 0%, $red 100%);
 }
 
-.headroom {
-  display: flex;
-  transition: all 350ms ease;
+.strive-media {
+  background: linear-gradient(135deg, #464646 0%, $grey 100%);
+}
 
-  .header {
-    display: flex;
-    transform: translate3d(0, -50px, 0);
-    transition: transform 300ms ease;
-  }
+.the-stadium-gallery {
+  background: linear-gradient(135deg, $blue 0%, $lightblue 100%);
+}
 
-  .navigation {
-    display: flex;
-    transform: translate3d(0, 0, 0);
-    transition: transform 300ms ease;
-  }
+.overwatch {
+  background: linear-gradient(135deg, $blue 0%, $lightblue 100%);
+}
 
-  &--not-top {
-    .navigation {
-      transform: translate3d(0, -100px, 0);
-    }
-
-    .header {
-      transform: translate3d(0, 0, 0);
-    }
-  }
+.records {
+  background: linear-gradient(135deg, $orange 0%, $yellow 100%);
 }

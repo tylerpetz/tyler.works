@@ -1,9 +1,9 @@
 <template>
   <div>
-    <ProjectList />
-    <ContactForm
-      :intro="contactIntro"
-    />
+    <ProjectList
+      :intro="projectIntro"
+      :outro="projectOutro" />
+    <ContactForm :intro="contactIntro" />
   </div>
 </template>
 
@@ -20,10 +20,9 @@ export default {
   },
   data() {
     return {
-      projectOutro:
-        "Those are my favorite ones, the rest are on <a href='https://github.com/tylerpetz' target='_blank' class='list-item__link'>my github</a>, peep it.",
-      contactIntro:
-        "Cool projects huh? Get in touch with me if you wanna talk shop."
+      projectIntro: `Here are those projects I was talking about.`,
+      projectOutro: `Those are my favorite ones, the rest are on <a href='https://github.com/tylerpetz' target='_blank' class='list-item__link'>my github</a>, peep it.`,
+      contactIntro: `Cool projects huh? Get in touch with me if you wanna talk shop.`
     };
   },
   computed: {

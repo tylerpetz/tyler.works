@@ -10,11 +10,30 @@ module.exports = {
   head: {
     title: pkg.name,
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
+      {
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: pkg.description
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      }
+    ]
   },
 
   /*
@@ -25,12 +44,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ["~/assets/scss/main.scss"],
+  css: [{ src: "~/assets/scss/main.scss", lang: "scss" }],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/buefy.js"],
+  plugins: ["~/plugins/buefy.js", { src: "~/plugins/headroom.js", ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -66,6 +85,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    vendor: ["headroom"],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

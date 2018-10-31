@@ -15,8 +15,12 @@
       class="list-item__link">my github</a>. This is like a dead giveaway that I'm a web developer.</p>
     <!-- Todo: Create a reason to include this line -->
     <!-- <p class="list-item">I am currently <a class="list-item__link">accepting new clients</a> as a <em>web developer</em>. Seriously, why else would I be doing that?</p> -->
-    <ProjectList :post-count="2" />
-    <BlogList :post-count="2" />
+    <ProjectList 
+      :intro="projectIntro"
+      :project-count="4" />
+    <BlogList 
+      :intro="blogIntro"
+      :post-count="2" />
     <ContactForm
       :intro="contactIntro"
     />
@@ -37,9 +41,8 @@ export default {
   data() {
     return {
       baseUrl: process.env.BASE_URL,
-      projectIntro:
-        "I also <em>web developed</em> the projects that I have listed below:",
-      projectOutro: null,
+      projectIntro: `I also <em>web developed</em> the projects that I have listed below:`,
+      projectOutro: `This isn't all of them, that'd be nuts. The rest can be found <nuxt-link class="list-item__link" to="/work">here</nuxt-link> though.`,
       blogIntro:
         "I have also written these blog posts on <em>web development</em>:",
       blogOutro: null,
