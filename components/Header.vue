@@ -1,5 +1,6 @@
 <template>
-  <div id="header">
+  <div
+    id="header">
     <nav
       class="navigation container"
       role="navigation"
@@ -26,6 +27,8 @@
           @click="quickScroll">Tyler Petz - A web developer.</a>
       </div>
     </header>
+
+    {{ page }}
   </div>
 </template>
 
@@ -37,7 +40,6 @@ if (process.browser) {
 
 export default {
   mounted() {
-    console.log(this.$el);
     let header = new Headroom(this.$el);
     header.init({
       tolerance: {

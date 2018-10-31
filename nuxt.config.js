@@ -36,15 +36,19 @@ module.exports = {
     ]
   },
 
+  router: {
+    middleware: "pages"
+  },
+
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#fff" },
+  loading: { color: "#3B8070" },
 
   /*
   ** Global CSS
   */
-  css: [{ src: "~/assets/scss/main.scss", lang: "scss" }],
+  css: ["animate.css", { src: "~/assets/scss/main.scss", lang: "scss" }],
 
   /*
   ** Plugins to load before mounting the App

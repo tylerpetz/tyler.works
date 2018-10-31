@@ -6,9 +6,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-12-desktop">
-          <transition
-            name="page"
-            mode="out-in">
+          <transition name="router-anim">
             <nuxt />
           </transition>
         </div>
@@ -65,15 +63,33 @@ export default {
 
 <style lang="scss">
 @import url("https://use.typekit.net/mdz6hax.css");
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.3s ease-out;
+.router-anim-enter-active {
+  animation: coming 0.5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.router-anim-leave-active {
+  animation: going 0.5s;
 }
 
-.page-enter,
-.page-leave-active {
-  opacity: 0;
-  transform-origin: 50% 50%;
+@keyframes going {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes coming {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>
