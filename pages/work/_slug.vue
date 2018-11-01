@@ -1,34 +1,34 @@
 <template>
-  <div
-    v-if="!isLoading"
-    class="project">
-    <header 
-      :class="currentProject.fields.slug"
-      class="project__header">
-      <div class="container">
-        <h1 class="project__title">
-          {{ currentProject.fields.title }}
-        </h1>
-        <p class="project__description">{{ currentProject.fields.description }}</p>
-
-      </div>
-    </header>
-    <div class="project__article">
-      <h2 class="list-item section-heading">About the project:</h2>
-      <div
-        class="project__content"
-        v-html="$md.render(currentProject.fields.body)"
-      />
-      <h2 class="list-item section-heading">Technology Used:</h2>
-      <div 
-        v-if="currentProject.fields.tags"
-        class="project__tags">
+  <div>
+    <div
+      v-if="!isLoading"
+      class="project">
+      <header 
+        :class="currentProject.fields.slug"
+        class="project__header">
+        <div class="container">
+          <h1 class="project__title">
+            {{ currentProject.fields.title }}
+          </h1>
+        </div>
+      </header>
+      <div class="project__article">
+        <h2 class="list-item section-heading">About the project:</h2>
         <div
-          v-for="(tag, index) in currentProject.fields.tags"
-          :key="index">
-          <i 
-            :class="'fa-' + tag.toLowerCase()"
-            class="fab fa-3x" />
+          class="project__content"
+          v-html="$md.render(currentProject.fields.body)"
+        />
+        <h2 class="list-item section-heading">Technology Used:</h2>
+        <div 
+          v-if="currentProject.fields.tags"
+          class="project__tags">
+          <div
+            v-for="(tag, index) in currentProject.fields.tags"
+            :key="index">
+            <i 
+              :class="'fa-' + tag.toLowerCase()"
+              class="fab fa-2x" />
+          </div>
         </div>
       </div>
     </div>
@@ -45,12 +45,6 @@ export default {
       return this.$store.state.project.isLoading;
     }
   },
-  mounted() {
-    document.body.classList.add("project-page");
-  },
-  beforeDestroy() {
-    document.body.classList.remove("project-page");
-  },
   async fetch({ store, params }) {
     await store.dispatch("project/getProjectBySlug", params.slug);
   }
@@ -63,12 +57,8 @@ export default {
     align-items: stretch;
     color: $white;
     display: flex;
-    height: 300px;
-    left: 0;
-    padding-top: 100px;
-    position: fixed;
-    right: 0;
-    top: 0;
+    height: 200px;
+    padding: 0 50px;
     width: 100%;
 
     .container {
@@ -89,13 +79,8 @@ export default {
     }
   }
 
-  &__description {
-    text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
-    font-size: $size-5;
-    color: $white;
-  }
-
   &__article {
+    padding: 0 50px;
   }
 
   &__content {
