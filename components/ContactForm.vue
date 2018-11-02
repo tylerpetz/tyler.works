@@ -113,7 +113,7 @@
               GitHub
             </a>
             <a class="card-description__button">
-              
+
               Linkedin
             </a>
           </div>
@@ -191,7 +191,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .contact {
   margin-bottom: $gap;
 

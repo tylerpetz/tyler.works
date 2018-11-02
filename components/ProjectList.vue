@@ -11,7 +11,7 @@
         :key="index"
         class="column is-half">
         <div class="card-container">
-          <nuxt-link 
+          <nuxt-link
             :to="'/work/' + project.fields.slug"
             :class="project.fields.slug"
             class="full-tilt card">
@@ -72,7 +72,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .projects {
   margin-bottom: $gap;
 

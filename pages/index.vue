@@ -2,23 +2,23 @@
   <div>
     <h1 class="heading">Looking for a web developer?</h1>
     <h2 class="subheading"><em>I am one of those.</em> Want Proof?</h2>
-    <p class="list-item">I currently am a <em>web developer</em> at <a 
-      href="http://strivemedia.net" 
-      target="_blank" 
+    <p class="list-item">I currently am a <em>web developer</em> at <a
+      href="http://strivemedia.net"
+      target="_blank"
       class="list-item__link">Strive Media</a>. Call my boss, he'll tell you.</p>
-    <p class="list-item">I have also worked as a <em>web developer</em> for other companies, you can <nuxt-link 
-      to="/resume" 
+    <p class="list-item">I have also worked as a <em>web developer</em> for other companies, you can <nuxt-link
+      to="/resume"
       class="list-item__link">check my resume</nuxt-link> if you don't believe me.</p>
-    <p class="list-item">I share my <em>web development code</em> that I have written on <a 
-      href="https://github.com/tylerpetz" 
-      target="_blank" 
+    <p class="list-item">I share my <em>web development code</em> that I have written on <a
+      href="https://github.com/tylerpetz"
+      target="_blank"
       class="list-item__link">my github</a>. This is like a dead giveaway that I'm a web developer.</p>
     <!-- Todo: Create a reason to include this line -->
     <!-- <p class="list-item">I am currently <a class="list-item__link">accepting new clients</a> as a <em>web developer</em>. Seriously, why else would I be doing that?</p> -->
-    <ProjectList 
+    <ProjectList
       :intro="projectIntro"
       :project-count="4" />
-    <BlogList 
+    <BlogList
       :intro="blogIntro"
       :post-count="2" />
     <ContactForm
@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import BlogList from "../components/BlogList";
-import ProjectList from "../components/ProjectList";
+import BlogList from "../components/BlogList.vue";
+import ProjectList from "../components/ProjectList.vue";
 import ContactForm from "../components/ContactForm.vue";
 
 export default {

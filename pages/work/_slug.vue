@@ -3,7 +3,7 @@
     <div
       v-if="!isLoading"
       class="project">
-      <header 
+      <header
         :class="currentProject.fields.slug"
         class="project__header">
         <div class="container">
@@ -19,13 +19,13 @@
           v-html="$md.render(currentProject.fields.body)"
         />
         <h2 class="list-item section-heading">Technology Used:</h2>
-        <div 
+        <div
           v-if="currentProject.fields.tags"
           class="project__tags">
           <div
             v-for="(tag, index) in currentProject.fields.tags"
             :key="index">
-            <i 
+            <i
               :class="'fa-' + tag.toLowerCase()"
               class="fab fa-2x" />
           </div>
@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project {
   &__header {
     align-items: stretch;

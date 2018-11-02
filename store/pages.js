@@ -4,7 +4,6 @@ export const state = () => ({
 
 export const mutations = {
   updatePage(state, pageName) {
-    console.log(state, pageName);
     state.page = pageName;
   }
 };
