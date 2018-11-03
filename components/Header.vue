@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navigation {
   &__link {
     color: $blue;

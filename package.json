@@ -22,6 +22,7 @@
     "contentful": "^7.0.5",
     "cross-env": "^5.2.0",
     "font-awesome": "^4.7.0",
+    "module": "^1.2.5",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.1",
     "nuxt-sass-resources-loader": "^2.0.5",

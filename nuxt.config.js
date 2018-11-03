@@ -51,7 +51,7 @@ module.exports = {
   */
   loading: { color: "#7fb800" },
 
-
+  css: ["./assets/scss/main.scss"],
   /*
   ** Plugins to load before mounting the App
   */
@@ -67,7 +67,7 @@ module.exports = {
     "nuxt-sass-resources-loader"
   ],
 
-  sassResources: ["~/assets/scss/**/*.scss"],
+  sassResources: ["./assets/scss/main.scss"],
 
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
@@ -113,14 +113,19 @@ module.exports = {
         accessToken: process.env.CTF_CD_ACCESS_TOKEN
       });
 
-      return client.getEntries().then(response => {
-        console.log(response);
-        return response.items.map(entry => {
-          return {
-            route: entry.fields.slug,
-            payload: entry
-          };
-        });
+      return Promise.all([
+        client.getEntries({
+          content_type: "blogPost"
+        }),
+        client.getEntries({
+          content_type: "project"
+        })
+      ]).then(([blogs, projects]) => {
+        console.table(blogs, projects);
+        return [
+          ...blogs.items.map(entry => `/blog/${entry.fields.slug}`),
+          ...projects.items.map(entry => `/work/${entry.fields.slug}`)
+        ];
       });
     }
   }

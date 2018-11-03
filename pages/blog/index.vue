@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import BlogList from "~/components/BlogList.vue";
+import BlogList from "~/components/BlogList";
 import ContactForm from "~/components/ContactForm.vue";
 
 export default {

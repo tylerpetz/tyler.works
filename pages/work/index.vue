@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ProjectList from "~/components/ProjectList.vue";
+import ProjectList from "~/components/ProjectList";
 import ContactForm from "~/components/ContactForm.vue";
 import Tilt from "vanilla-tilt";
 
