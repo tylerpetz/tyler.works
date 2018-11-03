@@ -51,15 +51,11 @@ module.exports = {
   */
   loading: { color: "#7fb800" },
 
-  /*
-  ** Global CSS
-  */
-  css: [{ src: "~/assets/scss/main.scss", lang: "scss" }],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/buefy.js", { src: "~/plugins/headroom.js", ssr: false }],
+  plugins: ["~/plugins/buefy.js"],
 
   /*
   ** Nuxt.js modules
@@ -89,7 +85,6 @@ module.exports = {
     extractCSS: {
       allChunks: true
     },
-    vendor: ["headroom"],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -113,10 +108,7 @@ module.exports = {
         accessToken: process.env.CTF_CD_ACCESS_TOKEN
       });
 
-      return client
-        .getEntries({
-          content_type: "blogPost"
-        })
+      return client.getEntries()
         .then(response => {
           return response.items.map(entry => {
             return {

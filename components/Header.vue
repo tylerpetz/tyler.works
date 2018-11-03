@@ -1,6 +1,5 @@
 <template>
-  <div
-    id="header">
+  <headroom>
     <nav
       class="navigation container"
       role="navigation"
@@ -27,24 +26,15 @@
           @click="quickScroll">Tyler Petz - A web developer.</a>
       </div>
     </header>
-  </div>
+  </headroom>
 </template>
 
 <script>
-let Headroom;
-if (process.browser) {
-  Headroom = require("headroom.js");
-}
+import { headroom } from "vue-headroom";
 
 export default {
-  mounted() {
-    let header = new Headroom(this.$el);
-    header.init({
-      tolerance: {
-        up: 5,
-        down: 0
-      }
-    });
+  components: {
+    headroom
   },
   methods: {
     quickScroll() {

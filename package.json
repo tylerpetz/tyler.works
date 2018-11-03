@@ -21,12 +21,12 @@
     "contentful": "^7.0.5",
     "cross-env": "^5.2.0",
     "font-awesome": "^4.7.0",
-    "headroom.js": "^0.9.4",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.1",
     "nuxt-sass-resources-loader": "^2.0.5",
     "register-service-worker": "^1.0.0",
-    "vanilla-tilt": "^1.5.0"
+    "vanilla-tilt": "^1.5.0",
+    "vue-headroom": "^0.9.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
