@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import BlogList from "../components/BlogList";
-import ProjectList from "../components/ProjectList";
+import BlogList from "../components/BlogList.vue";
+import ProjectList from "../components/ProjectList.vue";
 import ContactForm from "../components/ContactForm.vue";
 
 export default {

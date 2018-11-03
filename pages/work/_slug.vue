@@ -19,6 +19,10 @@
           v-html="$md.render(currentProject.fields.body)"
         />
         <h2 class="list-item section-heading">Technology Used:</h2>
+        <b-taglist attached>
+          <b-tag type="is-dark">npm</b-tag>
+          <b-tag type="is-info">0.5.1</b-tag>
+        </b-taglist>
         <div
           v-if="currentProject.fields.tags"
           class="project__tags">

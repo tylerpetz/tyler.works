@@ -31,6 +31,7 @@
 
 <script>
 import { headroom } from "vue-headroom";
+headroom.computed.style = () => "";
 
 export default {
   components: {
@@ -48,93 +49,6 @@ export default {
 </script>
 
 <style lang="scss">
-.navigation {
-  &__link {
-    color: $blue;
-    font-size: $size-4;
-    padding-right: $gap / 1.5;
-    transition: color 150ms ease-in-out;
-
-    &:hover,
-    &:active {
-      color: $orange !important;
-    }
-
-    &.router-link-active {
-      color: $green !important;
-    }
-
-    @include until($tablet) {
-      font-size: $size-5;
-      padding-right: $gap / 2.5;
-    }
-  }
-}
-
-.header {
-  &__container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__link {
-    color: $white;
-    font-size: $size-4;
-    transform: color 150ms ease-in-out;
-
-    &:hover {
-      color: $lightblue;
-    }
-
-    @include until($tablet) {
-      font-size: $size-5;
-    }
-  }
-}
-
-.headroom {
-  display: flex;
-  transition: all 350ms ease;
-
-  .header {
-    background: $blue;
-    display: flex;
-    height: 50px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translate3d(0, -50px, 0);
-    transition: transform 300ms ease;
-    z-index: 99;
-  }
-
-  .navigation {
-    align-items: center;
-    display: flex;
-    height: 100px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translate3d(0, -100px, 0);
-    transform: translate3d(0, 0, 0);
-    transition: transform 300ms ease;
-    z-index: 2;
-  }
-
-  &--not-top {
-    .navigation {
-      transform: translate3d(0, -100px, 0);
-    }
-
-    .header {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-}
-
 body.project-page {
   padding-top: 300px;
 

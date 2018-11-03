@@ -60,6 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bulma/sass/utilities/_all";
 @import "~bulma/sass/base/_all";
 @import "~bulma/sass/elements/box.sass";
 @import "~bulma/sass/elements/button.sass";
@@ -67,26 +68,96 @@ export default {
 @import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/form.sass";
 @import "~bulma/sass/elements/icon.sass";
-@import "~bulma/sass/elements/image.sass";
-@import "~bulma/sass/elements/notification.sass";
 @import "~bulma/sass/elements/progress.sass";
-@import "~bulma/sass/elements/table.sass";
-@import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/elements/other.sass";
-@import "~bulma/sass/components/card.sass";
-@import "~bulma/sass/components/dropdown.sass";
-@import "~bulma/sass/components/level.sass";
-@import "~bulma/sass/components/media.sass";
-@import "~bulma/sass/components/menu.sass";
-@import "~bulma/sass/components/message.sass";
-@import "~bulma/sass/components/modal.sass";
-@import "~bulma/sass/components/navbar.sass";
-@import "~bulma/sass/components/pagination.sass";
-@import "~bulma/sass/components/panel.sass";
-@import "~bulma/sass/components/tabs.sass";
 @import "~bulma/sass/grid/_all";
-@import "~bulma/sass/layout/_all";
-@import "~buefy/src/scss/buefy";
+@import "~buefy/src/scss/utils/all";
+
+.navigation {
+  height: 100px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, 0, 0);
+  transition: transform 300ms ease;
+  display: none;
+
+  &__link {
+    color: $blue;
+    font-size: $size-4;
+    padding-right: $gap / 1.5;
+    transition: color 150ms ease-in-out;
+
+    &:hover,
+    &:active {
+      color: $orange !important;
+    }
+
+    &.router-link-active {
+      color: $green !important;
+    }
+
+    @include until($tablet) {
+      font-size: $size-5;
+      padding-right: $gap / 2.5;
+    }
+  }
+}
+
+.header {
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $white;
+    font-size: $size-4;
+    transform: color 150ms ease-in-out;
+
+    &:hover {
+      color: $lightblue;
+    }
+
+    @include until($tablet) {
+      font-size: $size-5;
+    }
+  }
+}
+
+.headroom {
+  .header {
+    background: $blue;
+    display: flex;
+    height: 50px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate3d(0, -50px, 0);
+    transition: transform 300ms ease;
+    z-index: 99;
+  }
+
+  .navigation {
+    align-items: center;
+    display: flex;
+    z-index: 50;
+  }
+
+  &--not-top {
+    .navigation {
+      transform: translate3d(0, -100px, 0);
+    }
+
+    .header {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
 
 html,
 body {
