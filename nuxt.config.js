@@ -1,5 +1,7 @@
 global.File = typeof window === "undefined" ? Object : window.File;
 const pkg = require("./package");
+const contentful = require("contentful");
+require("dotenv").config();
 
 module.exports = {
   mode: "universal",
@@ -103,6 +105,28 @@ module.exports = {
       config.node = {
         fs: "empty"
       };
+    }
+  },
+
+  generate: {
+    routes: () => {
+      const client = contentful.createClient({
+        space: process.env.CTF_SPACE_ID,
+        accessToken: process.env.CTF_CD_ACCESS_TOKEN
+      });
+
+      return client
+        .getEntries({
+          content_type: "blogPost"
+        })
+        .then(response => {
+          return response.items.map(entry => {
+            return {
+              route: entry.fields.slug,
+              payload: entry
+            };
+          });
+        });
     }
   }
 };
