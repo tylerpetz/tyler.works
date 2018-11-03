@@ -1,8 +1,6 @@
 <template>
   <div>
-    <no-ssr>
-      <Header />
-    </no-ssr>
+    <Header />
     <div class="container">
       <div class="columns">
         <div class="column is-12-desktop">
@@ -22,7 +20,7 @@ import Controls from "../components/Controls.vue";
 
 export default {
   components: {
-    Header: () => import("@/components/Header.vue"),
+    Header,
     Controls
   },
   mounted() {

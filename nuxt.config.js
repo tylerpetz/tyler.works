@@ -113,20 +113,15 @@ module.exports = {
         accessToken: process.env.CTF_CD_ACCESS_TOKEN
       });
 
-      return client.getEntries({
-          content_type: 'blogPost'
-        })
-        .then(response => {
-          return response.items.map(entry => {
-            return {
-              route: entry.fields.slug,
-              payload: entry
-            };
-          });
-        })
-        .catch(function (err) {
-          console.log(err);
+      return client.getEntries().then(response => {
+        console.log(response);
+        return response.items.map(entry => {
+          return {
+            route: entry.fields.slug,
+            payload: entry
+          };
         });
+      });
     }
   }
 };
