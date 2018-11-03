@@ -1,7 +1,7 @@
 global.File = typeof window === "undefined" ? Object : window.File;
+require("dotenv").config();
 const pkg = require("./package");
 const contentful = require("contentful");
-require("dotenv").config();
 
 module.exports = {
   mode: "universal",
@@ -34,6 +34,10 @@ module.exports = {
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://use.typekit.net/mdz6hax.css"
       }
     ]
   },
@@ -61,21 +65,12 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    "@nuxtjs/axios",
     "@nuxtjs/dotenv",
     "@nuxtjs/markdownit",
     "nuxt-sass-resources-loader"
   ],
 
   sassResources: ["~/assets/scss/**/*.scss"],
-
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
 
   /*
   ** Processes markdown
@@ -91,7 +86,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    analyze: true,
     extractCSS: {
       allChunks: true
     },
@@ -119,14 +113,21 @@ module.exports = {
         accessToken: process.env.CTF_CD_ACCESS_TOKEN
       });
 
-      return client.getEntries().then(response => {
-        return response.items.map(entry => {
-          return {
-            route: entry.fields.slug,
-            payload: entry
-          };
+      return client
+        .getEntries({
+          content_type: "blogPost"
+        })
+        .then(response => {
+          return response.items.map(entry => {
+            return {
+              route: entry.fields.slug,
+              payload: entry
+            };
+          });
+        })
+        .catch(function (err) {
+          console.log(err);
         });
-      });
     }
   }
 };

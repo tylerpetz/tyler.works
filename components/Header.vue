@@ -27,8 +27,6 @@
           @click="quickScroll">Tyler Petz - A web developer.</a>
       </div>
     </header>
-
-    {{ page }}
   </div>
 </template>
 
