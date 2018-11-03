@@ -1,7 +1,7 @@
 global.File = typeof window === "undefined" ? Object : window.File;
 require("dotenv").config();
-const pkg = require("./package");
 const contentful = require("contentful");
+const pkg = require("./package");
 
 module.exports = {
   mode: "universal",
@@ -55,7 +55,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/buefy.js", "~/plugins/headroom.js"],
+  plugins: [
+    "~/plugins/buefy.js",
+    "~/plugins/headroom.js",
+    "~/plugins/contentful"
+  ],
 
   /*
   ** Nuxt.js modules
@@ -128,5 +132,9 @@ module.exports = {
         ];
       });
     }
+  },
+  env: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CD_ACCESS_TOKEN: process.env.CTF_CD_ACCESS_TOKEN
   }
 };
