@@ -55,18 +55,23 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/buefy.js"],
+  plugins: ["~/plugins/buefy.js", "~/plugins/headroom.js"],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    "@nuxtjs/axios",
     "@nuxtjs/dotenv",
     "@nuxtjs/markdownit",
     "nuxt-sass-resources-loader"
   ],
 
   sassResources: ["~/assets/scss/**/*.scss"],
+
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+  },
 
   /*
   ** Processes markdown
@@ -108,7 +113,9 @@ module.exports = {
         accessToken: process.env.CTF_CD_ACCESS_TOKEN
       });
 
-      return client.getEntries()
+      return client.getEntries({
+          content_type: 'blogPost'
+        })
         .then(response => {
           return response.items.map(entry => {
             return {
