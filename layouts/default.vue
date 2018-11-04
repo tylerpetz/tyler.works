@@ -4,7 +4,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-12-desktop">
-          <transition name="router-anim">
+          <transition name="page">
             <nuxt />
           </transition>
         </div>
@@ -69,6 +69,7 @@ export default {
 @import "~bulma/sass/elements/form.sass";
 @import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/elements/progress.sass";
+@import "~bulma/sass/elements/table.sass";
 @import "~bulma/sass/elements/other.sass";
 @import "~bulma/sass/grid/_all";
 @import "~buefy/src/scss/utils/all";
@@ -185,6 +186,10 @@ body {
   @include until($desktop) {
     padding: 0 ($gap / 1.5);
   }
+
+  @include until($tablet) {
+    padding: 0 ($gap / 2.5);
+  }
 }
 
 .background {
@@ -264,44 +269,6 @@ body {
 .line-break {
   @include until($tablet) {
     display: none !important;
-  }
-}
-
-.blog {
-  margin-bottom: $gap;
-}
-
-.blog-post {
-  margin-bottom: $gap / 2;
-
-  &__title {
-    color: $pink;
-    font-size: $size-3;
-    font-style: italic;
-
-    a {
-      color: $pink;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    @include until($tablet) {
-      font-size: $size-4;
-    }
-  }
-
-  &__date {
-    color: darken($white, 30%);
-    font-size: $size-6;
-    font-style: italic;
-  }
-
-  &__content {
-    color: $blue;
-    font-size: $size-5;
-    margin: ($gap / 4) auto;
   }
 }
 
@@ -404,33 +371,14 @@ body {
   background: linear-gradient(135deg, $orange 0%, $yellow 100%);
 }
 
-.router-anim-enter-active {
-  animation: coming 0.5s;
-  animation-delay: 0.5s;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.35s ease;
+}
+.page-enter,
+.page-leave-active {
   opacity: 0;
-}
-.router-anim-leave-active {
-  animation: going 0.5s;
-}
-
-@keyframes going {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
-@keyframes coming {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 </style>

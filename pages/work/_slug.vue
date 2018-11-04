@@ -1,46 +1,63 @@
 <template>
   <div>
-    <div
+    <article
       v-if="!isLoading"
       class="project">
-      <header
-        :class="currentProject.fields.slug"
-        class="project__header">
-        <div class="container">
-          <h1 class="project__title">
-            {{ currentProject.fields.title }}
-          </h1>
-        </div>
+      <header class="project__header">
+        <h1 class="project__title">
+          {{ currentProject.fields.title }}
+        </h1>
+        
+        <div 
+          :class="currentProject.fields.slug"
+          class="project__border" />
       </header>
-      <div class="project__article">
-        <h2 class="list-item section-heading">About the project:</h2>
+      <section>
         <div
-          class="project__content"
+          class="project__content content"
           v-html="$md.render(currentProject.fields.body)"
         />
-        <h2 class="list-item section-heading">Technology Used:</h2>
-        <b-taglist attached>
-          <b-tag type="is-dark">npm</b-tag>
-          <b-tag type="is-info">0.5.1</b-tag>
-        </b-taglist>
-        <div
-          v-if="currentProject.fields.tags"
-          class="project__tags">
-          <div
-            v-for="(tag, index) in currentProject.fields.tags"
-            :key="index">
-            <i
-              :class="'fa-' + tag.toLowerCase()"
-              class="fab fa-2x" />
-          </div>
-        </div>
-      </div>
-    </div>
+        <button
+          :href="currentProject.fields.projectUrl"
+          class="button is-external is-large">
+          <span>View this Project on the Internet</span>
+          <span class="icon">
+            <i class="fas fa-external-link-alt" />
+          </span>
+        </button>
+        <button
+          :href="currentProject.fields.projectUrl"
+          class="button is-repo is-large">
+          <span>Check out this Repository on Github</span>
+          <span class="icon">
+            <i class="fab fa-github-alt" />
+          </span>
+        </button>
+      </section>
+    </article>
+    <ContactForm intro="Use this contact form to get in touch with me." />
   </div>
 </template>
 
 <script>
+import ContactForm from "~/components/ContactForm.vue";
+
 export default {
+  components: {
+    ContactForm
+  },
+  head() {
+    return {
+      title: `Tyler Petz - ${this.currentProject.fields.title}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.currentProject.fields.description
+        }
+      ]
+    };
+  },
   computed: {
     currentProject() {
       return this.$store.state.project.currentProject;
@@ -58,11 +75,10 @@ export default {
 <style lang="scss">
 .project {
   &__header {
-    align-items: stretch;
-    color: $white;
+    padding-top: $gap;
+    flex-direction: column;
     display: flex;
-    height: 200px;
-    padding: 0 50px;
+    margin-bottom: $gap / 2;
     width: 100%;
 
     .container {
@@ -73,22 +89,35 @@ export default {
   }
 
   &__title {
-    color: $white;
     font-size: $size-2;
     opacity: 1;
-    text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
+    font-weight: bold;
+    color: $blue;
 
     @include until($tablet) {
       font-size: $size-4;
     }
   }
 
-  &__article {
-    padding: 0 50px;
+  &__border {
+    width: 100%;
+    display: block;
+    height: 10px;
+    margin-top: $gap / 2;
   }
 
   &__content {
     font-size: $size-5;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $blue;
+      font-weight: normal;
+    }
   }
 
   &__tags {

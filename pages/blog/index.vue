@@ -18,8 +18,21 @@ export default {
   },
   data() {
     return {
+      title: "Here is my blog.",
       contactIntro:
         "Want to talk some more about that stuff that I blogged about?"
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.title
+        }
+      ]
     };
   },
   computed: {

@@ -88,7 +88,6 @@ export default {
   }
 
   .card {
-    background-color: $green;
     border: 0;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 rgba(10, 10, 10, 0.1);
     display: flex;
@@ -98,6 +97,11 @@ export default {
     outline: 0;
     padding-top: $gap;
     transform-style: preserve-3d;
+
+    @include until($tablet) {
+      height: 300px;
+      padding-top: $gap / 1.5;
+    }
 
     &::after {
       box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.3),
@@ -130,6 +134,10 @@ export default {
         width: 75%;
         object-fit: scale-down;
         max-height: 100px;
+
+        @include until($tablet) {
+          max-height: 70px;
+        }
       }
     }
   }
@@ -143,7 +151,7 @@ export default {
     text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
 
     @include until($tablet) {
-      padding: $gap / 2.5;
+      padding: $gap / 3;
     }
 
     &__title {
@@ -161,6 +169,10 @@ export default {
       font-size: $size-5;
       color: $white;
       transform: translate3d(0, 0, 0);
+
+      @include until($tablet) {
+        font-size: 1.125rem;
+      }
     }
   }
 }
