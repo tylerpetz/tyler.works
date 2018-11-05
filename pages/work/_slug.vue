@@ -15,6 +15,14 @@
           class="project__content content"
           v-html="$md.render(currentProject.fields.body)"
         />
+        <carousel :per-page="1">
+          <slide>
+            Slide 1 Content
+          </slide>
+          <slide>
+            Slide 2 Content
+          </slide>
+        </carousel>
         <button
           v-if="currentProject.fields.projectUrl"
           :href="currentProject.fields.projectUrl"
@@ -43,10 +51,13 @@
 
 <script>
 import ContactForm from "~/components/ContactForm.vue";
+import { Carousel, Slide } from "vue-carousel";
 
 export default {
   components: {
-    ContactForm
+    ContactForm,
+    Carousel,
+    Slide
   },
   head() {
     return {

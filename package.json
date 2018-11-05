@@ -29,6 +29,7 @@
     "nuxt-sass-resources-loader": "^2.0.5",
     "register-service-worker": "^1.0.0",
     "vanilla-tilt": "^1.5.0",
+    "vue-carousel": "^0.16.0-rc2",
     "vue-headroom": "^0.9.0"
   },
   "devDependencies": {
