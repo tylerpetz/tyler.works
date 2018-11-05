@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <article
-      v-if="!isLoading"
-      class="project">
+  <div v-if="!isLoading">
+    <article class="project">
       <header class="project__header">
         <h1 class="project__title">
           {{ currentProject.fields.title }}
         </h1>
-        
-        <div 
+
+        <div
           :class="currentProject.fields.slug"
           class="project__border" />
       </header>
@@ -18,17 +16,21 @@
           v-html="$md.render(currentProject.fields.body)"
         />
         <button
+          v-if="currentProject.fields.projectUrl"
           :href="currentProject.fields.projectUrl"
-          class="button is-external is-large">
-          <span>View this Project on the Internet</span>
+          class="button is-external is-large"
+          target="_blank">
+          <span>View this project on the internet.</span>
           <span class="icon">
             <i class="fas fa-external-link-alt" />
           </span>
         </button>
         <button
-          :href="currentProject.fields.projectUrl"
-          class="button is-repo is-large">
-          <span>Check out this Repository on Github</span>
+          v-if="currentProject.fields.repoUrl"
+          :href="currentProject.fields.repoUrl"
+          class="button is-repo is-large"
+          target="_blank">
+          <span>Check out this repository on Github.</span>
           <span class="icon">
             <i class="fab fa-github-alt" />
           </span>
@@ -72,7 +74,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .project {
   &__header {
     padding-top: $gap;
@@ -117,6 +119,20 @@ export default {
     h6 {
       color: $blue;
       font-weight: normal;
+    }
+
+    h1 {
+      color: $blue;
+    }
+
+    h2 {
+      color: $red;
+      font-style: italic;
+    }
+
+    h3 {
+      color: $green;
+      font-weight: bold;
     }
   }
 
