@@ -15,14 +15,30 @@
           class="project__content content"
           v-html="$md.render(currentProject.fields.body)"
         />
-        <carousel :per-page="1">
-          <slide>
-            Slide 1 Content
-          </slide>
-          <slide>
-            Slide 2 Content
-          </slide>
-        </carousel>
+
+        <div 
+          v-for="thumbnailSet in currentProject.fields.thumbnailSets"
+          :key="thumbnailSet.id">
+
+          <div class="columns">
+            <div class="column is-narrow">
+              <figure class="image">
+                <img :src="thumbnailSet.desktop">
+              </figure>
+            </div>
+            <div class="column is-narrow">
+              <figure class="image">
+                <img :src="thumbnailSet.tablet">
+              </figure>
+            </div>
+            <div class="column is-narrow">
+              <figure class="image">
+                <img :src="thumbnailSet.mobile">
+              </figure>
+            </div>
+          </div>
+        </div>
+
         <button
           v-if="currentProject.fields.projectUrl"
           :href="currentProject.fields.projectUrl"
@@ -51,13 +67,10 @@
 
 <script>
 import ContactForm from "~/components/ContactForm.vue";
-import { Carousel, Slide } from "vue-carousel";
 
 export default {
   components: {
-    ContactForm,
-    Carousel,
-    Slide
+    ContactForm
   },
   head() {
     return {
@@ -145,6 +158,11 @@ export default {
       color: $green;
       font-weight: bold;
     }
+  }
+
+  .columns {
+    padding: 1rem;
+    align-items: center;
   }
 
   &__tags {
