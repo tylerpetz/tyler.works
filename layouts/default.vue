@@ -202,7 +202,7 @@ body {
 }
 
 .heading {
-  color: $blue;
+  color: $purple;
   font-size: $size-1;
   margin-top: 40px;
 
@@ -225,6 +225,7 @@ body {
   font-size: $size-5;
   margin-bottom: $gap / 4;
   margin-top: $gap / 4;
+  color: $blue;
 
   &__link {
     color: $green;

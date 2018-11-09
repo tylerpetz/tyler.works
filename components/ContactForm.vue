@@ -91,7 +91,7 @@
               :disabled="!isFormFilled"
               type="submit"
               class="button is-large is-info">Send Email</button>
-            <p class="helper">You've still got some stuff to fill out homey.</p>
+            <p class="helper">Not so fast, partner. You haven't even finished filling out the form.</p>
           </div>
         </form>
       </div>
@@ -109,11 +109,16 @@
               src="/tyler.png">
             <h2 class="card-description__title">Tyler Petz</h2>
             <p class="card-description__details">A web developer.</p>
-            <a class="card-description__button">
+            <a 
+              class="card-description__button" 
+              href="https://github.com/tylerpetz" 
+              target="_blank">
               GitHub
             </a>
-            <a class="card-description__button">
-
+            <a 
+              class="card-description__button" 
+              href="https://www.linkedin.com/in/tyler-petz-11734818/" 
+              target="_blank">
               Linkedin
             </a>
           </div>
@@ -133,7 +138,7 @@ export default {
   },
   data() {
     return {
-      selected: "",
+      selected: false,
       selectedOptionFields: {
         label: "Got somethin' to say?",
         placeholder: "Hey dude."

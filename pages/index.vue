@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="heading">Looking for a web developer?</h1>
+    <h1 class="heading">Looking for a web developer?</h1> 
     <h2 class="subheading"><em>I am one of those.</em> Want Proof?</h2>
     <p class="list-item">I currently am a <em>web developer</em> at <a
       href="http://strivemedia.net"

@@ -19,24 +19,18 @@
         <div 
           v-for="thumbnailSet in currentProject.fields.thumbnailSets"
           :key="thumbnailSet.id">
-
-          <div class="columns">
-            <div class="column is-narrow">
-              <figure class="image">
-                <img :src="thumbnailSet.desktop">
-              </figure>
-            </div>
-            <div class="column is-narrow">
-              <figure class="image">
-                <img :src="thumbnailSet.tablet">
-              </figure>
-            </div>
-            <div class="column is-narrow">
-              <figure class="image">
-                <img :src="thumbnailSet.mobile">
-              </figure>
-            </div>
-          </div>
+          <section class="project__gallery">
+            <figure class="image project__gallery--desktop">
+              <img :src="thumbnailSet.thumbs.desktop">
+            </figure>
+            <figure class="image project__gallery--tablet">
+              <img :src="thumbnailSet.thumbs.tablet">
+            </figure>
+            <figure class="image project__gallery--mobile">
+              <img :src="thumbnailSet.thumbs.mobile">
+            </figure>
+          </section>
+          <h4 class="project__gallery--title">{{ thumbnailSet.title }}</h4>
         </div>
 
         <button
@@ -156,7 +150,6 @@ export default {
 
     h3 {
       color: $green;
-      font-weight: bold;
     }
   }
 
@@ -167,6 +160,37 @@ export default {
 
   &__tags {
     display: flex;
+  }
+
+  &__gallery {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+
+    &--desktop {
+      flex: calc(1024 / 768);
+      padding: ($gap / 3) 0;
+    }
+
+    &--tablet {
+      flex: calc(800 / 850);
+      padding: $gap / 3;
+    }
+
+    &--mobile {
+      flex: calc(411 / 731);
+      padding: ($gap / 3) 0;
+    }
+
+    .image {
+      padding-bottom: 0;
+    }
+
+    &--title {
+      font-size: $size-6;
+    }
   }
 }
 </style>
