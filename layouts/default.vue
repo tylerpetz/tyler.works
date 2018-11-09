@@ -68,9 +68,11 @@ export default {
 @import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/form.sass";
 @import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/progress.sass";
 @import "~bulma/sass/elements/table.sass";
 @import "~bulma/sass/elements/other.sass";
+@import "~bulma/sass/components/modal.sass";
 @import "~bulma/sass/grid/_all";
 @import "~buefy/src/scss/utils/all";
 
@@ -202,9 +204,13 @@ body {
 }
 
 .heading {
-  color: $purple;
+  color: $blue;
   font-size: $size-1;
   margin-top: 40px;
+
+  span {
+    color: $green;
+  }
 
   @include until($tablet) {
     font-size: $size-3;

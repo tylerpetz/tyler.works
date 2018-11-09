@@ -5,7 +5,6 @@
         <h1 class="project__title">
           {{ currentProject.fields.title }}
         </h1>
-
         <div
           :class="currentProject.fields.slug"
           class="project__border" />
@@ -13,46 +12,39 @@
       <section>
         <div
           class="project__content content"
-          v-html="$md.render(currentProject.fields.body)"
-        />
-
-        <div 
+          v-html="$md.render(currentProject.fields.body)" />
+        <div
           v-for="thumbnailSet in currentProject.fields.thumbnailSets"
           :key="thumbnailSet.id">
+          <h4 class="project__gallery--title">{{ thumbnailSet.title }}</h4>
           <section class="project__gallery">
-            <figure class="image project__gallery--desktop">
-              <img :src="thumbnailSet.thumbs.desktop">
-            </figure>
-            <figure class="image project__gallery--tablet">
-              <img :src="thumbnailSet.thumbs.tablet">
-            </figure>
-            <figure class="image project__gallery--mobile">
-              <img :src="thumbnailSet.thumbs.mobile">
+            <figure
+              v-for="thumbs in thumbnailSet.thumbs"
+              :key="thumbs.url"
+              :class="`project__gallery--${thumbs.size}`"
+              class="image project__gallery--desktop">
+              <img
+                :src="thumbs.url"
+                @click="imageModal(thumbs.url, thumbs.size)">
             </figure>
           </section>
-          <h4 class="project__gallery--title">{{ thumbnailSet.title }}</h4>
         </div>
-
-        <button
-          v-if="currentProject.fields.projectUrl"
-          :href="currentProject.fields.projectUrl"
-          class="button is-external is-large"
-          target="_blank">
-          <span>View this project on the internet.</span>
-          <span class="icon">
-            <i class="fas fa-external-link-alt" />
-          </span>
-        </button>
-        <button
-          v-if="currentProject.fields.repoUrl"
-          :href="currentProject.fields.repoUrl"
-          class="button is-repo is-large"
-          target="_blank">
-          <span>Check out this repository on Github.</span>
-          <span class="icon">
-            <i class="fab fa-github-alt" />
-          </span>
-        </button>
+        <div class="project__buttons">
+          <a
+            v-if="currentProject.fields.projectUrl"
+            :href="currentProject.fields.projectUrl"
+            class="project__button"
+            target="_blank">
+            View this project on the internet.
+          </a>
+          <a
+            v-if="currentProject.fields.repoUrl"
+            :href="currentProject.fields.repoUrl"
+            class="project__button"
+            target="_blank">
+            Check out this repository on Github.
+          </a>
+        </div>
       </section>
     </article>
     <ContactForm intro="Use this contact form to get in touch with me." />
@@ -84,6 +76,24 @@ export default {
     },
     isLoading() {
       return this.$store.state.project.isLoading;
+    }
+  },
+  methods: {
+    getImageRatio(size) {
+      if (size === "desktop") {
+        return "is-4by3";
+      } else if (size === "mobile") {
+        return "is-9by16";
+      }
+    },
+    imageModal(url, size) {
+      let sizeClass = this.getImageRatio(size);
+
+      this.$modal.open(
+        `<figure class="image ${sizeClass}">
+          <img src="${url}">
+        </figure>`
+      );
     }
   },
   async fetch({ store, params }) {
@@ -163,34 +173,66 @@ export default {
   }
 
   &__gallery {
-    display: flex;
-    height: 100%;
-    align-items: stretch;
     align-content: stretch;
-    justify-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
 
-    &--desktop {
-      flex: calc(1024 / 768);
-      padding: ($gap / 3) 0;
+    &--half {
+      width: calc(50% - 0.5rem);
     }
 
-    &--tablet {
-      flex: calc(800 / 850);
-      padding: $gap / 3;
+    &--third {
+      width: calc(33.3% - 0.67rem);
     }
 
-    &--mobile {
-      flex: calc(411 / 731);
-      padding: ($gap / 3) 0;
+    &--quarter {
+      width: calc(25% - 0.75rem);
     }
 
     .image {
-      padding-bottom: 0;
+      margin-bottom: 1rem;
+
+      img {
+        box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.15),
+          0 0px 100px 0 rgba(51, 51, 51, 0.1);
+      }
     }
 
     &--title {
-      font-size: $size-6;
+      color: $blue;
+      font-size: $size-5;
+      font-style: italic;
     }
   }
+
+  &__buttons {
+    padding: ($gap / 2) 0;
+    background: $purple;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: $gap;
+    background: linear-gradient(135deg, $blue 0%, $purple 100%);
+  }
+
+  &__button {
+    color: $white;
+    font-size: $size-4;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.modal-content,
+.modal-card {
+  margin: 0 20px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  position: relative;
+  width: 100%;
 }
 </style>
