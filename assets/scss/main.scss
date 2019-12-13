@@ -1,0 +1,90 @@
+@import "~bulma/sass/utilities/_all.sass";
+
+$gap: 64px;
+
+$orange: #f6511d;
+$green: #7fb800;
+$darkgreen: #95bf47;
+$turquoise: #009084;
+$blue: #153968;
+$lightblue: #00a6ed;
+$yellow: #ffb400;
+$purple: #462da0;
+$red: #d11149;
+$white: #fbfbfb;
+$pink: lighten($red, 15%);
+
+$family-primary: "omnes-cond", sans-serif;
+$family-secondary: "omnes-cond", sans-serif;
+$primary: $blue;
+$link: $green;
+$info: $lightblue;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+$dark: #161616;
+$grey-dark: $blue;
+$grey-light: $white;
+$body-background-color: $white;
+$column-gap: 2rem;
+$card-transition: all 150ms ease;
+
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "orange": (
+    $orange,
+    $white
+  ),
+  "darkgreen": (
+    $darkgreen,
+    $white
+  ),
+  "repo": (
+    $purple,
+    $white
+  ),
+  "webpack": (
+    #83c6e9,
+    #145b92
+  ),
+  "vue": (
+    #41b882,
+    $white
+  )
+);
