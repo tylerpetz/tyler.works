@@ -2,7 +2,7 @@
   <section class="contact">
     <transition name="page">
       <div v-if="!formSubmitted">
-        <h1 v-if="intro" v-html="intro" class="list-item section-heading" />
+        <h1 v-if="intro" class="list-item section-heading" v-html="intro" />
         <h1 v-else class="list-item section-heading">
           Fill out this form. The form gets sent to my email because I made it
           do that.
@@ -10,10 +10,10 @@
         <div class="columns">
           <div class="column is-12-mobile">
             <form
-              @submit.prevent="submitForm"
               name="contact-form"
               class="contact__form"
               data-netlify="true"
+              @submit.prevent="submitForm"
             >
               <input type="hidden" name="form-name" value="contact-form" />
               <input v-model="form.botcheck" type="email" class="botcheck" />
@@ -24,11 +24,11 @@
                 <div class="control has-icons-right">
                   <input
                     id="name"
-                    @input="validateName"
                     name="name"
                     class="input is-large"
                     type="text"
                     placeholder="My name is Tyler Petz"
+                    @input="validateName"
                   />
                   <span class="icon is-large is-right">
                     <i :class="nameValid" />
@@ -42,11 +42,11 @@
                 <div class="control has-icons-right">
                   <input
                     id="email"
-                    @input="validateEmail"
                     name="email"
                     class="input is-large"
                     type="email"
                     placeholder="My email address is tylerpetz@gmail.com"
+                    @input="validateEmail"
                   />
                   <span class="icon is-large is-right">
                     <i :class="emailValid" />
@@ -76,17 +76,17 @@
               </div>
               <div class="field field--last">
                 <label
-                  v-html="selectedOption.label"
                   class="label is-large"
                   for="message"
+                  v-html="selectedOption.label"
                 />
                 <div class="control">
                   <textarea
                     id="message"
                     :placeholder="selectedOption.placeholder"
-                    @input="validateMessage"
                     name="message"
                     class="textarea is-large"
+                    @input="validateMessage"
                   />
                 </div>
               </div>
@@ -95,9 +95,9 @@
                   v-if="selected"
                   :class="selected"
                   :disabled="!isFormFilled"
-                  v-html="selectedOption.button"
                   type="submit"
                   class="button is-large"
+                  v-html="selectedOption.button"
                 />
                 <button
                   v-else

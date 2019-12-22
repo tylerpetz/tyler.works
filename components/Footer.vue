@@ -5,10 +5,10 @@
         <div class="column is-12-mobile footer__left">
           <h2 class="footer__title">Tyler Petz</h2>
           <p
+            class="footer__details"
             @mouseover="copyWrong"
             @mouseout="copyRight"
             v-html="copyText"
-            class="footer__details"
           />
         </div>
         <div class="column is-12-mobile footer__right">

@@ -73,6 +73,12 @@ export default {
     ProjectList,
     TechList
   },
+  async fetch({ store, params }) {
+    await Promise.all([
+      store.dispatch('posts/getPosts', params.slug),
+      store.dispatch('projects/getProjects', params.slug)
+    ])
+  },
   data() {
     return {
       baseUrl: process.env.BASE_URL,
@@ -93,12 +99,6 @@ export default {
     projects() {
       return this.$store.state.projects.projects
     }
-  },
-  async fetch({ store, params }) {
-    await Promise.all([
-      store.dispatch('posts/getPosts', params.slug),
-      store.dispatch('projects/getProjects', params.slug)
-    ])
   }
 }
 </script>

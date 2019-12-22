@@ -1,6 +1,6 @@
 <template>
   <section v-if="posts" class="blog">
-    <h1 v-html="intro" class="list-item section-heading" />
+    <h1 class="list-item section-heading" v-html="intro" />
     <div v-for="(post, index) in posts.slice(0, postCount)" :key="index">
       <article class="blog-post">
         <h2 class="blog-post__title">
@@ -15,7 +15,7 @@
         <p class="blog-post__content">{{ post.fields.description }}</p>
       </article>
     </div>
-    <p v-html="outro" class="list-item" />
+    <p class="list-item" v-html="outro" />
   </section>
 </template>
 
@@ -36,13 +36,13 @@ export default {
       default: 10
     }
   },
+  async fetch({ store, params }) {
+    await store.dispatch('posts/getPosts', params.slug)
+  },
   computed: {
     posts() {
       return this.$store.state.posts.posts
     }
-  },
-  async fetch({ store, params }) {
-    await store.dispatch('posts/getPosts', params.slug)
   },
   methods: {
     formatDate(date) {

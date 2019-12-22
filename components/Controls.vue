@@ -10,13 +10,13 @@
       >
         <a
           :class="{ active: buzzwords }"
-          @click="toggleBuzzwords"
           class="controls__button dropdown__link"
+          @click="toggleBuzzwords"
         >
           <i class="fas fa-bolt" />
         </a>
       </b-tooltip>
-      <a @click="scrollUp" class="controls__button dropdown__link scroll">
+      <a class="controls__button dropdown__link scroll" @click="scrollUp">
         <i class="fas fa-arrow-up" />
       </a>
     </footer>

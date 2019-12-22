@@ -5,7 +5,10 @@
         <h1 class="project__title">{{ project.fields.title }}</h1>
         <div :class="project.fields.slug" class="project__border" />
       </header>
-      <section v-html="$md.render(project.fields.body)" class="project__content content" />
+      <section
+        class="project__content content"
+        v-html="$md.render(project.fields.body)"
+      />
       <section class="gallery">
         <div
           v-for="thumbnailSet in project.fields.thumbnailSets"
@@ -33,13 +36,15 @@
           :href="project.fields.projectUrl"
           class="project__button"
           target="_blank"
-        >View this project on the internet.</a>
+          >View this project on the internet.</a
+        >
         <a
           v-if="project.fields.repoUrl"
           :href="project.fields.repoUrl"
           class="project__button"
           target="_blank"
-        >Check out this repository on Github.</a>
+          >Check out this repository on Github.</a
+        >
       </footer>
     </article>
     <ContactForm intro="Use this contact form to get in touch with me." />
@@ -53,18 +58,6 @@ export default {
   name: 'Project',
   components: {
     ContactForm
-  },
-  head() {
-    return {
-      title: `Tyler Petz - ${this.project.fields.title}`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.project.fields.description
-        }
-      ]
-    }
   },
   computed: {
     project() {
@@ -89,6 +82,18 @@ export default {
           <img src="${url}">
         </figure>`
       })
+    }
+  },
+  head() {
+    return {
+      title: `Tyler Petz - ${this.project.fields.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.project.fields.description
+        }
+      ]
     }
   }
 }

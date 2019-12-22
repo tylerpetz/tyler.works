@@ -16,7 +16,7 @@
     </nav>
     <header class="header">
       <div class="header__container container">
-        <a @click="quickScroll" class="header__link"
+        <a class="header__link" @click="quickScroll"
           >Tyler Petz - A web developer.</a
         >
       </div>

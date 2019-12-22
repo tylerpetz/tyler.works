@@ -1,6 +1,6 @@
 <template>
   <section class="resume">
-    <h1 v-if="intro" v-html="intro" class="section-heading" />
+    <h1 v-if="intro" class="section-heading" v-html="intro" />
     <h2 class="heading">Tyler Petz</h2>
     <h3 class="subheading"><em>Front-End Web Developer</em></h3>
     <div class="columns">

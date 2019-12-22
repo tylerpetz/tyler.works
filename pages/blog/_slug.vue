@@ -14,7 +14,10 @@
         <div class="post__border" />
       </header>
       <section>
-        <div v-html="$md.render(post.fields.body)" class="post__content content" />
+        <div
+          class="post__content content"
+          v-html="$md.render(post.fields.body)"
+        />
         <div v-if="post.fields.tags" class="post__tags">
           <div v-for="(tag, index) in post.fields.tags" :key="index">
             <i :class="'fa-' + tag.toLowerCase()" class="fab fa-2x" />
@@ -33,18 +36,6 @@ export default {
   name: 'Post',
   components: {
     ContactForm
-  },
-  head() {
-    return {
-      title: `Tyler Petz - ${this.post.fields.title}`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.post.fields.description
-        }
-      ]
-    }
   },
   computed: {
     post() {
@@ -65,6 +56,18 @@ export default {
         '-' +
         formatted.getFullYear()
       )
+    }
+  },
+  head() {
+    return {
+      title: `Tyler Petz - ${this.post.fields.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.fields.description
+        }
+      ]
     }
   }
 }
