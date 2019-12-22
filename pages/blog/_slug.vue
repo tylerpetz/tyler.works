@@ -2,25 +2,21 @@
   <div>
     <article v-if="!isLoading" class="post">
       <header class="post__header">
-        <h1 class="post__title">
-          {{ activePost.fields.title }}
-        </h1>
-        <time class="post__date"
-          >Published on:
-          <span v-html="formatDate(activePost.fields.publishDate)"
-        /></time>
-        <time class="post__date"
-          >Last Updated: <span v-html="formatDate(activePost.fields.updatedAt)"
-        /></time>
+        <h1 class="post__title">{{ post.fields.title }}</h1>
+        <time class="post__date">
+          Published on:
+          <span v-html="formatDate(post.fields.publishDate)" />
+        </time>
+        <time class="post__date">
+          Last Updated:
+          <span v-html="formatDate(post.fields.updatedAt)" />
+        </time>
         <div class="post__border" />
       </header>
       <section>
-        <div
-          v-html="$md.render(activePost.fields.body)"
-          class="post__content content"
-        />
-        <div v-if="activePost.fields.tags" class="post__tags">
-          <div v-for="(tag, index) in activePost.fields.tags" :key="index">
+        <div v-html="$md.render(post.fields.body)" class="post__content content" />
+        <div v-if="post.fields.tags" class="post__tags">
+          <div v-for="(tag, index) in post.fields.tags" :key="index">
             <i :class="'fa-' + tag.toLowerCase()" class="fab fa-2x" />
           </div>
         </div>
@@ -40,22 +36,22 @@ export default {
   },
   head() {
     return {
-      title: `Tyler Petz - ${this.activePost.fields.title}`,
+      title: `Tyler Petz - ${this.post.fields.title}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.activePost.fields.description
+          content: this.post.fields.description
         }
       ]
     }
   },
   computed: {
-    activePost() {
-      return this.$store.state.post.activePost
+    post() {
+      return this.$store.state.posts.activePost
     },
     isLoading() {
-      return this.$store.state.post.isLoading
+      return this.$store.state.posts.isLoading
     }
   },
   methods: {

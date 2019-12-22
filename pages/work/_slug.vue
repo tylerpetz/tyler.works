@@ -2,18 +2,13 @@
   <div v-if="!isLoading">
     <article class="project">
       <header class="project__header">
-        <h1 class="project__title">
-          {{ currentProject.fields.title }}
-        </h1>
-        <div :class="currentProject.fields.slug" class="project__border" />
+        <h1 class="project__title">{{ project.fields.title }}</h1>
+        <div :class="project.fields.slug" class="project__border" />
       </header>
-      <section
-        v-html="$md.render(currentProject.fields.body)"
-        class="project__content content"
-      />
+      <section v-html="$md.render(project.fields.body)" class="project__content content" />
       <section class="gallery">
         <div
-          v-for="thumbnailSet in currentProject.fields.thumbnailSets"
+          v-for="thumbnailSet in project.fields.thumbnailSets"
           :key="thumbnailSet.id"
           class="gallery"
         >
@@ -34,21 +29,17 @@
       </section>
       <footer class="project__buttons">
         <a
-          v-if="currentProject.fields.projectUrl"
-          :href="currentProject.fields.projectUrl"
+          v-if="project.fields.projectUrl"
+          :href="project.fields.projectUrl"
           class="project__button"
           target="_blank"
-        >
-          View this project on the internet.
-        </a>
+        >View this project on the internet.</a>
         <a
-          v-if="currentProject.fields.repoUrl"
-          :href="currentProject.fields.repoUrl"
+          v-if="project.fields.repoUrl"
+          :href="project.fields.repoUrl"
           class="project__button"
           target="_blank"
-        >
-          Check out this repository on Github.
-        </a>
+        >Check out this repository on Github.</a>
       </footer>
     </article>
     <ContactForm intro="Use this contact form to get in touch with me." />
@@ -65,18 +56,18 @@ export default {
   },
   head() {
     return {
-      title: `Tyler Petz - ${this.currentProject.fields.title}`,
+      title: `Tyler Petz - ${this.project.fields.title}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.currentProject.fields.description
+          content: this.project.fields.description
         }
       ]
     }
   },
   computed: {
-    currentProject() {
+    project() {
       return this.$store.state.projects.activeProject
     },
     isLoading() {
