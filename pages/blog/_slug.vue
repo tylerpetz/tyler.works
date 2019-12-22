@@ -34,6 +34,7 @@ import ContactForm from '~/components/ContactForm'
 
 export default {
   name: 'Post',
+  middleware: 'posts',
   components: {
     ContactForm
   },

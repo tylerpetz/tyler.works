@@ -20,7 +20,6 @@ const actions = {
     const res = await client.getEntries({
       content_type: 'blogPost'
     })
-    console.log('getposts', res)
     const posts = res.items || []
     commit('SET_POSTS', posts)
   }

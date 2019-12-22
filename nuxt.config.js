@@ -87,6 +87,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources',
+    // 'nuxt-purgecss',
     [
       '@nuxtjs/pwa',
       {
@@ -118,6 +119,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    // extractCSS: true,
     extend(config, ctx) {
       config.node = {
         fs: 'empty'

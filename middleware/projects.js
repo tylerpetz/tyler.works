@@ -1,3 +1,3 @@
 export default async function({ store, route }) {
-  await store.dispatch('posts/getProjectBySlug', route.params.slug)
+  await store.dispatch('projects/getProjectBySlug', route.params.slug)
 }
