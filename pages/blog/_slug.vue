@@ -1,6 +1,9 @@
 <template>
   <div>
-    <article v-if="!isLoading" class="post">
+    <article
+      v-if="!isLoading"
+      class="post"
+    >
       <header class="post__header">
         <h1 class="post__title">
           {{ post.fields.title }}
@@ -20,9 +23,18 @@
           class="post__content content"
           v-html="$md.render(post.fields.body)"
         />
-        <div v-if="post.fields.tags" class="post__tags">
-          <div v-for="(tag, index) in post.fields.tags" :key="index">
-            <i :class="'fa-' + tag.toLowerCase()" class="fab fa-2x" />
+        <div
+          v-if="post.fields.tags"
+          class="post__tags"
+        >
+          <div
+            v-for="(tag, index) in post.fields.tags"
+            :key="index"
+          >
+            <i
+              :class="'fa-' + tag.toLowerCase()"
+              class="fab fa-2x"
+            />
           </div>
         </div>
       </section>

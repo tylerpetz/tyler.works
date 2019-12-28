@@ -1,7 +1,16 @@
 <template>
-  <section v-if="posts" class="blog">
-    <h1 class="list-item section-heading" v-html="intro" />
-    <div v-for="(post, index) in posts.slice(0, postCount)" :key="index">
+  <section
+    v-if="posts"
+    class="blog"
+  >
+    <h1
+      class="list-item section-heading"
+      v-html="intro"
+    />
+    <div
+      v-for="(post, index) in posts.slice(0, postCount)"
+      :key="index"
+    >
       <article class="blog-post">
         <h2 class="blog-post__title">
           <nuxt-link :to="'/blog/' + post.fields.slug">
@@ -19,7 +28,10 @@
         </p>
       </article>
     </div>
-    <p class="list-item" v-html="outro" />
+    <p
+      class="list-item"
+      v-html="outro"
+    />
   </section>
 </template>
 

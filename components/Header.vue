@@ -5,20 +5,33 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <nuxt-link class="navigation__link" to="/" exact>
+      <nuxt-link
+        class="navigation__link"
+        to="/"
+        exact
+      >
         Home
       </nuxt-link>
-      <nuxt-link class="navigation__link" to="/work">
+      <nuxt-link
+        class="navigation__link"
+        to="/work"
+      >
         Work
       </nuxt-link>
       <!--<nuxt-link
         class="navigation__link"
       to="/blog">Blog</nuxt-link>-->
       <!-- <nuxt-link class="navbar-item nav-item" to="/about">About</nuxt-link> -->
-      <nuxt-link class="navigation__link" to="/contact">
+      <nuxt-link
+        class="navigation__link"
+        to="/contact"
+      >
         Contact
       </nuxt-link>
-      <nuxt-link class="navigation__link" to="/cv">
+      <nuxt-link
+        class="navigation__link"
+        to="/cv"
+      >
         CV
       </nuxt-link>
     </nav>

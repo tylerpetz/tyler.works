@@ -3,8 +3,15 @@
     <h1 class="list-item section-heading">
       <slot name="intro" />
     </h1>
-    <div v-if="projects" class="columns is-multiline">
-      <div v-for="(project, index) in projects.slice(0, count)" :key="index" class="column is-half">
+    <div
+      v-if="projects"
+      class="columns is-multiline"
+    >
+      <div
+        v-for="(project, index) in projects.slice(0, count)"
+        :key="index"
+        class="column is-half"
+      >
         <div class="card-container">
           <nuxt-link
             :to="'/work/' + project.fields.slug"
@@ -36,7 +43,10 @@
     <div v-else>
       <p class="list-item">
         This isn't all of them, that'd be nuts. The rest can be found
-        <nuxt-link class="list-item__link" to="/work">
+        <nuxt-link
+          class="list-item__link"
+          to="/work"
+        >
           on my work page
         </nuxt-link> though.
       </p>

@@ -5,7 +5,10 @@
         <h1 class="project__title">
           {{ project.fields.title }}
         </h1>
-        <div :class="project.fields.slug" class="project__border" />
+        <div
+          :class="project.fields.slug"
+          class="project__border"
+        />
       </header>
       <section
         class="project__content content"

@@ -8,15 +8,14 @@
       <em>I am one of those.</em> Want Proof?
     </h2>
     <p class="list-item">
-      I'm moving to Denver! I'm now a
+      I'm a
       <em>web developer</em> at
       <a
         href="http://www.booj.com"
         target="_blank"
         class="list-item__link"
-      >booj</a>. If I weren't a web developer I'd have no business there.
-      <span class="tag is-primary is-medium">New</span>
-      <span class="tag is-danger is-medium">Wow</span>
+        v-html="`booj`"
+      /> in Denver, CO. If I weren't a web developer I'd have no business there.
     </p>
     <p class="list-item">
       I worked as a
@@ -24,17 +23,17 @@
       <nuxt-link
         to="/work/strive-media"
         class="list-item__link"
-      >
-        Strive Media
-      </nuxt-link>. Call them, they'll tell you.
+        v-html="`Strive Media`"
+      />. Call them, they'll tell you.
     </p>
     <p class="list-item">
       I have also worked as a
       <em>web developer</em> for other companies, you can
-      <nuxt-link to="/cv" class="list-item__link">
-        check my resume
-      </nuxt-link>if
-      you don't believe me.
+      <nuxt-link
+        to="/cv"
+        class="list-item__link"
+        v-html="`check my resume`"
+      /> if you don't believe me.
     </p>
     <p class="list-item">
       I am currently
@@ -46,9 +45,8 @@
           }
         }"
         class="list-item__link"
-      >
-        accepting new clients
-      </nuxt-link>as a <em>web developer</em>. Seriously, why else would I be doing that?
+        v-html="`accepting new clients`"
+      /> as a <em>web developer</em>. Seriously, why else would I be doing that?
     </p>
     <p class="list-item">
       I share my
@@ -57,12 +55,22 @@
         href="https://github.com/tylerpetz"
         target="_blank"
         class="list-item__link"
-      >my github</a>. This is like a dead giveaway that I'm a web developer.
+        v-html="`my github`"
+      />. This is like a dead giveaway that I'm a web developer.
     </p>
-    <ProjectList :projects="projects" :count="2">
-      <template slot="intro" v-html="projectIntro" />
+    <ProjectList
+      :projects="projects"
+      :count="2"
+    >
+      <template
+        slot="intro"
+        v-html="projectIntro"
+      />
     </ProjectList>
-    <BlogList :intro="blogIntro" :post-count="2" />
+    <BlogList
+      :intro="blogIntro"
+      :post-count="2"
+    />
     <TechList :intro="techListIntro" />
     <ContactForm :intro="contactIntro" />
   </div>

@@ -121,7 +121,6 @@ export default {
 @import '~bulma/sass/elements/image.sass';
 @import '~bulma/sass/elements/progress.sass';
 @import '~bulma/sass/elements/table.sass';
-@import '~bulma/sass/elements/tag.sass';
 @import '~bulma/sass/elements/other.sass';
 @import '~bulma/sass/form/_all';
 @import '~bulma/sass/grid/_all';

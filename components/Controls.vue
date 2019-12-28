@@ -16,7 +16,10 @@
           <i class="fas fa-bolt" />
         </a>
       </b-tooltip>
-      <a class="controls__button dropdown__link scroll" @click="scrollUp">
+      <a
+        class="controls__button dropdown__link scroll"
+        @click="scrollUp"
+      >
         <i class="fas fa-arrow-up" />
       </a>
     </footer>

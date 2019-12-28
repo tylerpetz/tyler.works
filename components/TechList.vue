@@ -1,6 +1,10 @@
 <template>
   <section class="tech">
-    <h1 v-if="intro" class="list-item section-heading" v-html="intro" />
+    <h1
+      v-if="intro"
+      class="list-item section-heading"
+      v-html="intro"
+    />
     <div class="columns is-gapless is-mobile is-multiline">
       <div class="column is-half-mobile">
         <ul>

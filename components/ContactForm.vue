@@ -2,8 +2,15 @@
   <section class="contact">
     <transition name="page">
       <div v-if="!formSubmitted">
-        <h1 v-if="intro" class="list-item section-heading" v-html="intro" />
-        <h1 v-else class="list-item section-heading">
+        <h1
+          v-if="intro"
+          class="list-item section-heading"
+          v-html="intro"
+        />
+        <h1
+          v-else
+          class="list-item section-heading"
+        >
           Fill out this form. The form gets sent to my email because I made it
           do that.
         </h1>
@@ -15,13 +22,23 @@
               data-netlify="true"
               @submit.prevent="submitForm"
             >
-              <input type="hidden" name="form-name" value="contact-form">
-              <input v-model="form.botcheck" type="email" class="botcheck">
+              <input
+                type="hidden"
+                name="form-name"
+                value="contact-form"
+              >
+              <input
+                v-model="form.botcheck"
+                type="email"
+                class="botcheck"
+              >
               <div class="field">
                 <label
                   class="label is-large"
                   for="name"
-                >What is your name?</label>
+                >
+                  What is your name?
+                </label>
                 <div class="control has-icons-right">
                   <input
                     id="name"
@@ -40,7 +57,9 @@
                 <label
                   class="label is-large"
                   for="email"
-                >What is your e-mail address?</label>
+                >
+                  What is your e-mail address?
+                </label>
                 <div class="control has-icons-right">
                   <input
                     id="email"
@@ -55,15 +74,28 @@
                   </span>
                 </div>
               </div>
-              <div v-if="!slimForm" class="field">
+              <div
+                v-if="!slimForm"
+                class="field"
+              >
                 <label
                   class="label is-large"
                   for="type"
-                >Do you believe me now?</label>
+                >
+                  Do you believe me now?
+                </label>
                 <div class="control">
                   <div class="select is-large">
-                    <select id="type" v-model="selected" @change="onSelect()">
-                      <option :value="null" selected disabled>
+                    <select
+                      id="type"
+                      v-model="selected"
+                      @change="onSelect()"
+                    >
+                      <option
+                        :value="null"
+                        selected
+                        disabled
+                      >
                         Well...
                       </option>
                       <option value="job">

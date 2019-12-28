@@ -1,5 +1,8 @@
 <template>
-  <span :class="{ 'buzzword--highlighted': buzzwords }" class="buzzword">
+  <span
+    :class="{ 'buzzword--highlighted': buzzwords }"
+    class="buzzword"
+  >
     <slot />
   </span>
 </template>
