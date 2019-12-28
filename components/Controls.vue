@@ -55,7 +55,7 @@ export default {
       toggleDarkMode: 'app/toggleDarkMode'
     }),
     scrollUp() {
-      this.$toast.open({
+      this.$buefy.toast.open({
         duration: 1200,
         message: 'Lazy mode active.',
         position: 'is-bottom',

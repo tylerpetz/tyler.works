@@ -4,11 +4,7 @@
       <slot name="intro" />
     </h1>
     <div v-if="projects" class="columns is-multiline">
-      <div
-        v-for="(project, index) in projects.slice(0, count)"
-        :key="index"
-        class="column is-half"
-      >
+      <div v-for="(project, index) in projects.slice(0, count)" :key="index" class="column is-half">
         <div class="card-container">
           <nuxt-link
             :to="'/work/' + project.fields.slug"
@@ -19,10 +15,12 @@
               :src="project.fields.heroImage.fields.file.url"
               :alt="project.fields.heroImage.fields.title"
               class="card__image card__image--wide"
-            />
+            >
           </nuxt-link>
           <div class="card-description">
-            <h2 class="card-description__title">{{ project.fields.title }}</h2>
+            <h2 class="card-description__title">
+              {{ project.fields.title }}
+            </h2>
             <p class="card-description__details">
               {{ project.fields.description }}
             </p>
@@ -38,8 +36,9 @@
     <div v-else>
       <p class="list-item">
         This isn't all of them, that'd be nuts. The rest can be found
-        <nuxt-link class="list-item__link" to="/work">on my work page</nuxt-link
-        >though.
+        <nuxt-link class="list-item__link" to="/work">
+          on my work page
+        </nuxt-link> though.
       </p>
     </div>
   </section>

@@ -3,13 +3,14 @@
     <div class="container">
       <div class="columns">
         <div class="column is-12-mobile footer__left">
-          <h2 class="footer__title">Tyler Petz</h2>
+          <h2 class="footer__title">
+            Tyler Petz
+          </h2>
           <p
             class="footer__details"
-            @mouseover="copyWrong"
-            @mouseout="copyRight"
-            v-html="copyText"
-          />
+          >
+            &copy; {{ new Date().getFullYear() }}
+          </p>
         </div>
         <div class="column is-12-mobile footer__right">
           <a
@@ -39,19 +40,6 @@
 <script>
 export default {
   name: 'Footer',
-  data() {
-    return {
-      copyText: '&copy; 2018'
-    }
-  },
-  methods: {
-    copyRight() {
-      this.copyText = `&copy; 2018`
-    },
-    copyWrong() {
-      this.copyText = '&amp;copy; 2018'
-    }
-  }
 }
 </script>
 

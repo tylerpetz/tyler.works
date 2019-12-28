@@ -5,20 +5,29 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <nuxt-link class="navigation__link" to="/" exact>Home</nuxt-link>
-      <nuxt-link class="navigation__link" to="/work">Work</nuxt-link>
+      <nuxt-link class="navigation__link" to="/" exact>
+        Home
+      </nuxt-link>
+      <nuxt-link class="navigation__link" to="/work">
+        Work
+      </nuxt-link>
       <!--<nuxt-link
         class="navigation__link"
       to="/blog">Blog</nuxt-link>-->
       <!-- <nuxt-link class="navbar-item nav-item" to="/about">About</nuxt-link> -->
-      <nuxt-link class="navigation__link" to="/contact">Contact</nuxt-link>
-      <nuxt-link class="navigation__link" to="/cv">CV</nuxt-link>
+      <nuxt-link class="navigation__link" to="/contact">
+        Contact
+      </nuxt-link>
+      <nuxt-link class="navigation__link" to="/cv">
+        CV
+      </nuxt-link>
     </nav>
     <header class="header">
       <div class="header__container container">
-        <a class="header__link" @click="quickScroll"
-          >Tyler Petz - A web developer.</a
-        >
+        <a
+          class="header__link"
+          @click="quickScroll"
+        >Tyler Petz - A web developer.</a>
       </div>
     </header>
   </vue-headroom>
@@ -38,7 +47,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navigation {
   display: none;
   height: 100px;
@@ -57,13 +66,13 @@ export default {
   &__link {
     color: $blue;
     font-size: $size-4;
-    padding: 0 ($gap / 2);
+    margin-right: $gap;
     position: relative;
     transition: color 150ms ease-in-out;
 
     @include until($tablet) {
       font-size: $size-5;
-      padding: 0 ($gap / 4);
+      margin-right: $gap / 2;
     }
 
     &::before {
@@ -135,6 +144,8 @@ export default {
 }
 
 .headroom {
+  transform: none !important;
+
   .header {
     background: $blue;
     display: flex;

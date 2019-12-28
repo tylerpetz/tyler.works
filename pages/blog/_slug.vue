@@ -2,7 +2,9 @@
   <div>
     <article v-if="!isLoading" class="post">
       <header class="post__header">
-        <h1 class="post__title">{{ post.fields.title }}</h1>
+        <h1 class="post__title">
+          {{ post.fields.title }}
+        </h1>
         <time class="post__date">
           Published on:
           <span v-html="formatDate(post.fields.publishDate)" />

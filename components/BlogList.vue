@@ -4,15 +4,19 @@
     <div v-for="(post, index) in posts.slice(0, postCount)" :key="index">
       <article class="blog-post">
         <h2 class="blog-post__title">
-          <nuxt-link :to="'/blog/' + post.fields.slug">{{
-            post.fields.title
-          }}</nuxt-link>
+          <nuxt-link :to="'/blog/' + post.fields.slug">
+            {{
+              post.fields.title
+            }}
+          </nuxt-link>
         </h2>
         <time class="blog-post__date">
           Published on:
           <span v-html="formatDate(post.sys.createdAt)" />
         </time>
-        <p class="blog-post__content">{{ post.fields.description }}</p>
+        <p class="blog-post__content">
+          {{ post.fields.description }}
+        </p>
       </article>
     </div>
     <p class="list-item" v-html="outro" />

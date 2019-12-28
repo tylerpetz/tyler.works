@@ -4,27 +4,36 @@
       Looking for a
       <span>web developer?</span>
     </h1>
-    <h2 class="subheading"><em>I am one of those.</em> Want Proof?</h2>
+    <h2 class="subheading">
+      <em>I am one of those.</em> Want Proof?
+    </h2>
     <p class="list-item">
       I'm moving to Denver! I'm now a
       <em>web developer</em> at
-      <a href="http://www.booj.com" target="_blank" class="list-item__link"
-        >booj</a
-      >. If I weren't a web developer I'd have no business there.
+      <a
+        href="http://www.booj.com"
+        target="_blank"
+        class="list-item__link"
+      >booj</a>. If I weren't a web developer I'd have no business there.
       <span class="tag is-primary is-medium">New</span>
       <span class="tag is-danger is-medium">Wow</span>
     </p>
     <p class="list-item">
       I worked as a
       <em>web developer</em> at
-      <nuxt-link to="/work/strive-media" class="list-item__link"
-        >Strive Media</nuxt-link
-      >. Call them, they'll tell you.
+      <nuxt-link
+        to="/work/strive-media"
+        class="list-item__link"
+      >
+        Strive Media
+      </nuxt-link>. Call them, they'll tell you.
     </p>
     <p class="list-item">
       I have also worked as a
       <em>web developer</em> for other companies, you can
-      <nuxt-link to="/cv" class="list-item__link">check my resume</nuxt-link>if
+      <nuxt-link to="/cv" class="list-item__link">
+        check my resume
+      </nuxt-link>if
       you don't believe me.
     </p>
     <p class="list-item">
@@ -37,8 +46,9 @@
           }
         }"
         class="list-item__link"
-        >accepting new clients</nuxt-link
-      >as a <em>web developer</em>. Seriously, why else would I be doing that?
+      >
+        accepting new clients
+      </nuxt-link>as a <em>web developer</em>. Seriously, why else would I be doing that?
     </p>
     <p class="list-item">
       I share my
@@ -47,8 +57,7 @@
         href="https://github.com/tylerpetz"
         target="_blank"
         class="list-item__link"
-        >my github</a
-      >. This is like a dead giveaway that I'm a web developer.
+      >my github</a>. This is like a dead giveaway that I'm a web developer.
     </p>
     <ProjectList :projects="projects" :count="2">
       <template slot="intro" v-html="projectIntro" />

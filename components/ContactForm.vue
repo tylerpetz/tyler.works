@@ -15,12 +15,13 @@
               data-netlify="true"
               @submit.prevent="submitForm"
             >
-              <input type="hidden" name="form-name" value="contact-form" />
-              <input v-model="form.botcheck" type="email" class="botcheck" />
+              <input type="hidden" name="form-name" value="contact-form">
+              <input v-model="form.botcheck" type="email" class="botcheck">
               <div class="field">
-                <label class="label is-large" for="name"
-                  >What is your name?</label
-                >
+                <label
+                  class="label is-large"
+                  for="name"
+                >What is your name?</label>
                 <div class="control has-icons-right">
                   <input
                     id="name"
@@ -29,16 +30,17 @@
                     type="text"
                     placeholder="My name is Tyler Petz"
                     @input="validateName"
-                  />
+                  >
                   <span class="icon is-large is-right">
                     <i :class="nameValid" />
                   </span>
                 </div>
               </div>
               <div class="field">
-                <label class="label is-large" for="email"
-                  >What is your e-mail address?</label
-                >
+                <label
+                  class="label is-large"
+                  for="email"
+                >What is your e-mail address?</label>
                 <div class="control has-icons-right">
                   <input
                     id="email"
@@ -47,20 +49,23 @@
                     type="email"
                     placeholder="My email address is tylerpetz@gmail.com"
                     @input="validateEmail"
-                  />
+                  >
                   <span class="icon is-large is-right">
                     <i :class="emailValid" />
                   </span>
                 </div>
               </div>
               <div v-if="!slimForm" class="field">
-                <label class="label is-large" for="type"
-                  >Do you believe me now?</label
-                >
+                <label
+                  class="label is-large"
+                  for="type"
+                >Do you believe me now?</label>
                 <div class="control">
                   <div class="select is-large">
                     <select id="type" v-model="selected" @change="onSelect()">
-                      <option :value="null" selected disabled>Well...</option>
+                      <option :value="null" selected disabled>
+                        Well...
+                      </option>
                       <option value="job">
                         No further convincing neccessary, I'd like to hire you.
                       </option>
