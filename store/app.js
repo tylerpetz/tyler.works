@@ -25,8 +25,8 @@ const mutations = {
     const type = state.buzzwords ? 'is-repo' : 'is-success'
 
     Toast.open({
-      message: message,
-      type: type,
+      message,
+      type,
       position: 'is-bottom',
       duration: 600
     })
