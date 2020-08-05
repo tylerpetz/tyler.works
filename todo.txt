@@ -1,0 +1,4 @@
+add tailwindcss plugin
+setup tailwindcss plugin
+remove nuxt/dotenv and re-integrate normally
+check for outdated nuxt.config entries
