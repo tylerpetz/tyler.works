@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer p-6 md:p-8">
     <div class="container">
       <div class="columns">
         <div class="column is-12-mobile footer__left">
@@ -45,15 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  border: 0;
-  margin-bottom: 0;
-  outline: 0;
-  padding: $gap / 2;
   transform-style: preserve-3d;
-
-  @include until($tablet) {
-    padding: $gap / 2.5;
-  }
 
   &__left {
     flex-grow: 1;

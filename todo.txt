@@ -1,4 +1,5 @@
-add tailwindcss plugin
-setup tailwindcss plugin
+convert sass config to tailwind styles
+convert smallest component to tailwind, working your way up in size
+convert default layout to tailwind
 remove nuxt/dotenv and re-integrate normally
 check for outdated nuxt.config entries
