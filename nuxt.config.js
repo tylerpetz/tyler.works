@@ -76,18 +76,17 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/dotenv-module#setup
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // Doc: https://tailwindcss.nuxtjs.org/setup/
+    '@nuxtjs/tailwindcss',
   ],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources',
-    // 'nuxt-purgecss',
     [
       '@nuxtjs/pwa',
       {
@@ -97,12 +96,6 @@ export default {
       }
     ]
   ],
-  /*
-   ** Axios module configuration
-   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
 
   /*
    ** Processes markdown
@@ -115,23 +108,13 @@ export default {
    ** Build configuration
    */
   build: {
-    // analyze: true,
-    /*
-     ** You can extend webpack config here
-     */
-    // extractCSS: true,
+    analyze: true,
+    loaders: {
+      scss: { sourceMap: false },
+    },
     extend(config, ctx) {
       config.node = {
         fs: 'empty'
-      }
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
       }
     }
   },
