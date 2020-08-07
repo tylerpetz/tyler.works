@@ -18,7 +18,7 @@ export default {
     link: [
       {
         rel: 'preload',
-        href: 'https://use.typekit.net/mdz6hax.css',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap',
         as: 'style'
       },
       {
@@ -37,7 +37,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://use.typekit.net/mdz6hax.css'
+        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap'
       },
       {
         rel: 'stylesheet',

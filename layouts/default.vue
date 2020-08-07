@@ -142,7 +142,6 @@ html,
 body {
   background-color: $white;
   font-family: $family-secondary;
-  letter-spacing: 0.025rem;
 }
 
 html {
