@@ -108,7 +108,7 @@ export default {
    ** Build configuration
    */
   build: {
-    analyze: true,
+    // analyze: true,
     loaders: {
       scss: { sourceMap: false },
     },
@@ -151,5 +151,11 @@ export default {
   env: {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_CD_ACCESS_TOKEN: process.env.CTF_CD_ACCESS_TOKEN
+  },
+
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    },
   }
 }
