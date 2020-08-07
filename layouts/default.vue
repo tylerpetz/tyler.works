@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tyler-styles bg-theme-bg text-theme-text">
     <Header />
     <div class="container">
       <div class="columns">
@@ -138,19 +138,12 @@ html.is-clipped {
   overflow-y: scroll !important;
 }
 
-html,
-body {
-  background-color: $white;
-  font-family: $family-secondary;
-}
-
 html {
   min-height: 100vh;
 }
 
 ::selection {
-  background: $green;
-  color: $blue;
+  @apply text-theme-bg bg-theme-text;
 }
 
 .container {
@@ -195,10 +188,7 @@ html {
 }
 
 .list-item {
-  color: $blue;
-  font-size: $size-5;
-  margin-bottom: $gap / 4;
-  margin-top: $gap / 4;
+  @apply text-theme-text-l text-lg my-2;
 
   &__link {
     color: $green;

@@ -1,4 +1,4 @@
-import client from '@/plugins/contentful'
+import client from '@/api/contentful'
 
 const state = () => ({
   activeProject: {},

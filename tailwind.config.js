@@ -30,7 +30,6 @@ module.exports ={
         },
         alpha: {
           cap: 'var(--alpha-cap)',
-          'cap-side': 'var(--alpha-cap-side)',
           'cap-hover': 'var(--alpha-cap-hover)',
           'cap-press': 'var(--alpha-cap-press)',
           legend: 'var(--alpha-legend)',
@@ -39,7 +38,6 @@ module.exports ={
         },
         mod: {
           cap: 'var(--mod-cap)',
-          'cap-side': 'var(--mod-cap-side)',
           'cap-hover': 'var(--mod-cap-hover)',
           'cap-press': 'var(--mod-cap-press)',
           legend: 'var(--mod-legend)',
@@ -48,7 +46,6 @@ module.exports ={
         },
         accent: {
           cap: 'var(--accent-cap)',
-          'cap-side': 'var(--accent-cap-side)',
           'cap-hover': 'var(--accent-cap-hover)',
           'cap-press': 'var(--accent-cap-press)',
           legend: 'var(--accent-legend)',

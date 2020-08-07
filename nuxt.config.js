@@ -1,9 +1,16 @@
-import * as contentful from 'contentful'
+import client from './api/contentful'
 import pkg from './package'
-require('dotenv').config()
 
 export default {
   mode: 'universal',
+
+  /*
+   ** dotenv config
+   */
+  publicRuntimeConfig: {
+    contentfulSpaceId: process.env.CTF_SPACE_ID,
+    contentfulAccessToken: process.env.CTF_CD_ACCESS_TOKEN
+  },
 
   /*
    ** Headers of the page
@@ -57,7 +64,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss', '~/assets/themes.css'],
 
   /*
    ** Variables for use in Scoped SCSS
@@ -69,14 +76,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/buefy', '~/plugins/headroom', '~/plugins/contentful'],
+  plugins: ['~/plugins/buefy', '~/plugins/headroom'],
 
   /*
    ** Nuxt.js build modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/dotenv-module#setup
-    '@nuxtjs/dotenv',
     // Doc: https://tailwindcss.nuxtjs.org/setup/
     '@nuxtjs/tailwindcss',
   ],
@@ -124,11 +129,6 @@ export default {
    */
   generate: {
     routes: () => {
-      const client = contentful.createClient({
-        space: process.env.CTF_SPACE_ID,
-        accessToken: process.env.CTF_CD_ACCESS_TOKEN
-      })
-
       return Promise.all([
         client.getEntries({
           content_type: 'blogPost'
@@ -143,14 +143,6 @@ export default {
         ]
       })
     }
-  },
-
-  /*
-   ** Contentful config
-   */
-  env: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CD_ACCESS_TOKEN: process.env.CTF_CD_ACCESS_TOKEN
   },
 
   router: {
