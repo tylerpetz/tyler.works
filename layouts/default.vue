@@ -143,7 +143,7 @@ html {
 }
 
 ::selection {
-  @apply text-theme-bg bg-theme-text;
+  @apply text-theme-bg-d bg-theme-text-l;
 }
 
 .container {
@@ -200,12 +200,7 @@ html {
 }
 
 .section-heading {
-  color: $blue;
-  font-size: $size-3;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: $gap / 2;
-  margin-top: $gap;
+  @apply text-theme-text-l text-2xl font-bold leading-none mt-2 mb-4;
 
   @include until($tablet) {
     font-size: $size-4;

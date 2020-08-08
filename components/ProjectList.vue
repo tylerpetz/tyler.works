@@ -1,8 +1,6 @@
 <template>
   <section class="projects">
-    <h1 class="list-item section-heading">
-      <slot name="intro" />
-    </h1>
+    <slot name="header" />
     <div
       v-if="projects"
       class="columns is-multiline"
@@ -35,12 +33,7 @@
         </div>
       </div>
     </div>
-    <div v-if="$slots.outro">
-      <p class="list-item">
-        <slot name="outro" />
-      </p>
-    </div>
-    <div v-else>
+    <slot name="footer">
       <p class="list-item">
         This isn't all of them, that'd be nuts. The rest can be found
         <nuxt-link
@@ -50,7 +43,7 @@
           on my work page
         </nuxt-link> though.
       </p>
-    </div>
+    </slot>
   </section>
 </template>
 
