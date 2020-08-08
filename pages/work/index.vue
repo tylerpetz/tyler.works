@@ -1,11 +1,12 @@
 <template>
   <div>
     <ProjectList :projects="projects">
-      <template slot="intro">
-        <span v-html="projectIntro" />
+      <template slot="header">
+        Here are those projects I was talking about.
       </template>
-      <template slot="outro">
-        <span v-html="projectOutro" />
+      <template slot="footer">
+        Those are my favorite ones, the rest are on <a href="https://github.com/tylerpetz" target="_blank" class="list-item__link" rel="noopener noreferrer">my github</a>,
+        peep it.
       </template>
     </ProjectList>
     <ContactForm :intro="contactIntro" />
@@ -28,9 +29,7 @@ export default {
   },
   data () {
     return {
-      contactIntro: 'Cool projects huh? Get in touch with me if you wanna talk shop.',
-      projectIntro: 'Here are those projects I was talking about.',
-      projectOutro: 'Those are my favorite ones, the rest are on <a href=\'https://github.com/tylerpetz\' target=\'_blank\' class=\'list-item__link\' rel=\'noopener noreferrer\'>my github</a>, peep it.'
+      contactIntro: 'Cool projects huh? Get in touch with me if you wanna talk shop.'
     }
   },
   computed: {

@@ -1,10 +1,3 @@
-<template>
-  <div>
-    <BlogList :post-count="10" />
-    <ContactForm :intro="contactIntro" />
-  </div>
-</template>
-
 <script>
 import BlogList from '~/components/BlogList'
 import ContactForm from '~/components/ContactForm'
@@ -44,3 +37,10 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <BlogList :count="10" />
+    <ContactForm :intro="contactIntro" />
+  </div>
+</template>

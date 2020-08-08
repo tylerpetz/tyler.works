@@ -63,10 +63,7 @@ export default {
       Oh, you want some proof?
     </h3>
     <BragList />
-    <ProjectList
-      :projects="projects"
-      :count="2"
-    >
+    <ProjectList :projects="projects" :count="2">
       <h1 slot="header" class="list-item section-heading">
         I also <em>web developed</em> the projects that I have listed below:
       </h1>

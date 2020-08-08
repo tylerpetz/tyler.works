@@ -5,14 +5,6 @@ export default {
   mode: 'universal',
 
   /*
-   ** dotenv config
-   */
-  publicRuntimeConfig: {
-    contentfulSpaceId: process.env.CTF_SPACE_ID,
-    contentfulAccessToken: process.env.CTF_CD_ACCESS_TOKEN
-  },
-
-  /*
    ** Headers of the page
    */
   head: {
@@ -23,25 +15,6 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      {
-        rel: 'preload',
-        href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap',
-        as: 'style'
-      },
-      {
-        rel: 'preload',
-        href:
-          'https://use.fontawesome.com/releases/v5.6.1/webfonts/fa-solid-900.woff2',
-        as: 'font',
-        crossorigin: true
-      },
-      {
-        rel: 'preload',
-        href:
-          'https://use.fontawesome.com/releases/v5.6.1/webfonts/fa-brands-400.woff2',
-        as: 'font',
-        crossorigin: true
-      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap'
@@ -82,7 +55,6 @@ export default {
    ** Nuxt.js build modules
    */
   buildModules: [
-    // Doc: https://tailwindcss.nuxtjs.org/setup/
     '@nuxtjs/tailwindcss'
   ],
 
@@ -92,14 +64,6 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources'
-    // [
-    //   '@nuxtjs/pwa',
-    //   {
-    //     meta: {
-    //       ogHost: 'https://tyler.works'
-    //     }
-    //   }
-    // ]
   ],
 
   /*
@@ -145,6 +109,9 @@ export default {
     }
   },
 
+  /*
+   ** router config, don't abstract it to that one file
+   */
   router: {
     scrollBehavior (to, from, savedPosition) {
       return { x: 0, y: 0 }
