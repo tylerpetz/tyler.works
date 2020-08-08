@@ -1,5 +1,5 @@
 <script>
-import client from '@/api/contentful'
+// import client from '@/api/contentful'
 import BlogList from '@/components/BlogList'
 import BragList from '@/components/BragList'
 import ContactForm from '@/components/ContactForm'
@@ -15,18 +15,17 @@ export default {
     ProjectList,
     TechList
   },
-  async fetch({ store, params }) {
-    const res = await client.getEntries({
-        content_type: 'homepage'
-      })
-      // console.log(res.items[0].fields)
+  async fetch ({ store, params }) {
+    // const res = await client.getEntries({
+    //   content_type: 'homepage'
+    // })
+    // console.log(res.items[0].fields)
     await Promise.all([
-
       store.dispatch('posts/getPosts', params.slug),
       store.dispatch('projects/getProjects', params.slug)
     ])
   },
-  data() {
+  data () {
     return {
       blogIntro:
         'I have also written these blog posts on <em>web development</em>:',
@@ -37,21 +36,20 @@ export default {
     }
   },
   computed: {
-    posts() {
+    posts () {
       return this.$store.state.posts.posts
     },
-    projects() {
+    projects () {
       return this.$store.state.projects.projects
     },
-    listItems() {
+    listItems () {
       return [
-        `I'm a <em>web developer</em>`
+        'I\'m a <em>web developer</em>'
       ]
     }
   }
 }
 </script>
-
 
 <template>
   <div>
@@ -73,7 +71,7 @@ export default {
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </ProjectList>
-    <BlogList :post-count="2">
+    <BlogList :posts="posts" :count="2">
       <h1 slot="header" class="list-item section-heading">
         I have also written these blog posts on <em>web development</em>:
       </h1>

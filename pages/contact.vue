@@ -10,7 +10,7 @@ export default {
   components: {
     ContactForm
   },
-  head() {
+  head () {
     return {
       title: 'Here is my contact form.',
       meta: [

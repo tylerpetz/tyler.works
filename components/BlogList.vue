@@ -2,21 +2,17 @@
 export default {
   name: 'BlogList',
   props: {
-    postCount: {
+    count: {
       type: Number,
       default: 10
-    }
-  },
-  async fetch({ store, params }) {
-    await store.dispatch('posts/getPosts', params.slug)
-  },
-  computed: {
-    posts() {
-      return this.$store.state.posts.posts
+    },
+    posts: {
+      type: Array,
+      default: () => []
     }
   },
   methods: {
-    formatDate(date) {
+    formatDate (date) {
       const formatted = new Date(date)
       return (
         formatted.getMonth() +
@@ -38,15 +34,13 @@ export default {
   >
     <slot name="header" />
     <div
-      v-for="(post, index) in posts.slice(0, postCount)"
+      v-for="(post, index) in posts.slice(0, count)"
       :key="index"
     >
       <article class="blog-post">
         <h1 class="blog-post__title">
           <nuxt-link :to="'/blog/' + post.fields.slug">
-            {{
-              post.fields.title
-            }}
+            {{ post.fields.title }}
           </nuxt-link>
         </h1>
         <time class="blog-post__date">
@@ -61,5 +55,3 @@ export default {
     <slot name="footer" />
   </section>
 </template>
-
-

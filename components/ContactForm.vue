@@ -171,7 +171,7 @@
 <script>
 export default {
   name: 'ContactForm',
-  data() {
+  data () {
     return {
       emailRegex: /(.+)@(.+){2,}\.(.+){2,}/,
       formFilled: false,
@@ -185,17 +185,17 @@ export default {
       optionFields: {
         job: {
           label: 'Nice. Tell me a little bit about your project or company.',
-          button: `Click to send email.<span class="line-break">&nbsp;You're making the right choice!</span>`,
+          button: 'Click to send email.<span class="line-break">&nbsp;You\'re making the right choice!</span>',
           placeholder: 'The job pays...'
         },
         friend: {
           label: 'Oh yeah! When should we meet for beers?',
-          button: `Click to send email.<span class="line-break">&nbsp;Can't wait to hang!</span>`,
+          button: 'Click to send email.<span class="line-break">&nbsp;Can\'t wait to hang!</span>',
           placeholder: 'I am free tomorrow.'
         },
         troll: {
           label: 'Wow, okay. What will it take to convince you?',
-          button: `Click to send email.<span class="line-break">&nbsp;Show me what you got.</span>`,
+          button: 'Click to send email.<span class="line-break">&nbsp;Show me what you got.</span>',
           placeholder: 'I have all the free time in the world.'
         }
       },
@@ -209,16 +209,16 @@ export default {
     }
   },
   computed: {
-    formSubmitted() {
+    formSubmitted () {
       return this.$store.state.app.formSubmitted
     },
-    formError() {
+    formError () {
       return this.$store.state.app.formError
     },
-    selectedOption() {
+    selectedOption () {
       return this.selectedOptionFields
     },
-    isFormFilled() {
+    isFormFilled () {
       if (
         this.form.name &&
         this.validEmail &&
@@ -230,7 +230,7 @@ export default {
         return false
       }
     },
-    nameValid() {
+    nameValid () {
       if (this.form.name.length > 3) {
         return 'fas fa-smile filled'
       } else if (this.form.name) {
@@ -239,7 +239,7 @@ export default {
         return 'fas fa-frown empty'
       }
     },
-    emailValid() {
+    emailValid () {
       if (this.validEmail) {
         return 'fas fa-smile filled'
       } else if (this.form.email) {
@@ -249,36 +249,36 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     if (this.$route.params.goTo === 'job') {
       this.companyWantsToHireMe()
     }
   },
   methods: {
-    actProfessional() {
+    actProfessional () {
       this.slimForm = true
-      this.optionFields.job.placeholder = ``
-      this.intro = `Considering Tyler Petz as your next Web Developer is a great choice. Please fill out this form so I can harvest your... get to know you more.`
+      this.optionFields.job.placeholder = ''
+      this.intro = 'Considering Tyler Petz as your next Web Developer is a great choice. Please fill out this form so I can harvest your... get to know you more.'
     },
-    companyWantsToHireMe() {
+    companyWantsToHireMe () {
       this.actProfessional()
       this.selected = 'job'
       this.onSelect()
     },
-    onSelect() {
+    onSelect () {
       this.selectedOptionFields = this.optionFields[this.selected]
     },
-    submitForm() {
+    submitForm () {
       this.$root.$emit('submit', this.form)
     },
-    validateEmail(ev) {
+    validateEmail (ev) {
       this.form.email = ev.target.value
       this.validEmail = this.emailRegex.test(this.form.email)
     },
-    validateMessage(ev) {
+    validateMessage (ev) {
       this.form.message = ev.target.value
     },
-    validateName(ev) {
+    validateName (ev) {
       this.form.name = ev.target.value
     }
   }

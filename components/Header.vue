@@ -50,7 +50,7 @@
 export default {
   name: 'Header',
   methods: {
-    quickScroll() {
+    quickScroll () {
       window.scrollTo({
         behavior: 'smooth',
         top: 0

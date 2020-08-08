@@ -1,3 +1,3 @@
-export default async function({ store, route }) {
+export default async function ({ store, route }) {
   await store.dispatch('projects/getProjectBySlug', route.params.slug)
 }

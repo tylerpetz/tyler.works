@@ -33,22 +33,22 @@ export default {
   name: 'Controls',
   computed: {
     buzzwords: {
-      get() {
+      get () {
         return this.$store.state.app.buzzwords
       },
-      set() {
+      set () {
         this.toggleBuzzwords()
       }
     },
     darkMode: {
-      get() {
+      get () {
         return this.$store.state.app.darkMode
       },
-      set() {
+      set () {
         this.toggleDarkMode()
       }
     },
-    pageName() {
+    pageName () {
       return this.$store.state.app.pageName
     }
   },
@@ -57,7 +57,7 @@ export default {
       toggleBuzzwords: 'app/toggleBuzzwords',
       toggleDarkMode: 'app/toggleDarkMode'
     }),
-    scrollUp() {
+    scrollUp () {
       this.$buefy.toast.open({
         duration: 1200,
         message: 'Lazy mode active.',

@@ -10,7 +10,7 @@ export default {
   components: {
     Resume
   },
-  head() {
+  head () {
     return {
       title: 'Tyler Petz - Front-End Web Developer',
       meta: [

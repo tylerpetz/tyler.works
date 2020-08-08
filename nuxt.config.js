@@ -83,7 +83,7 @@ export default {
    */
   buildModules: [
     // Doc: https://tailwindcss.nuxtjs.org/setup/
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
 
   /*
@@ -91,15 +91,15 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/style-resources',
-    [
-      '@nuxtjs/pwa',
-      {
-        meta: {
-          ogHost: 'https://tyler.works'
-        }
-      }
-    ]
+    '@nuxtjs/style-resources'
+    // [
+    //   '@nuxtjs/pwa',
+    //   {
+    //     meta: {
+    //       ogHost: 'https://tyler.works'
+    //     }
+    //   }
+    // ]
   ],
 
   /*
@@ -115,9 +115,9 @@ export default {
   build: {
     // analyze: true,
     loaders: {
-      scss: { sourceMap: false },
+      scss: { sourceMap: false }
     },
-    extend(config, ctx) {
+    extend (config, ctx) {
       config.node = {
         fs: 'empty'
       }
@@ -146,8 +146,8 @@ export default {
   },
 
   router: {
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior (to, from, savedPosition) {
       return { x: 0, y: 0 }
-    },
+    }
   }
 }

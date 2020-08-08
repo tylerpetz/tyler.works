@@ -28,17 +28,17 @@ export default {
     Header,
     Footer
   },
-  data() {
+  data () {
     return {
       fontsLoaded: false,
       formSubmitted: false
     }
   },
-  mounted() {
+  mounted () {
     this.fixLinks()
     // this.loadWebfonts();
 
-    this.$root.$on('submit', form => {
+    this.$root.$on('submit', (form) => {
       this.handleSubmit(form)
     })
   },
@@ -47,14 +47,14 @@ export default {
       goodForm: 'app/formSubmitted',
       badForm: 'app/formError'
     }),
-    encode(data) {
+    encode (data) {
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
         )
         .join('&')
     },
-    fixLinks() {
+    fixLinks () {
       const links = document.querySelectorAll(
         'a[href]:not([href^=mailto]):not([class^=addfollow])'
       )
@@ -66,7 +66,7 @@ export default {
         }
       }
     },
-    handleSubmit(form) {
+    handleSubmit (form) {
       if (form.botcheck) {
         this.badForm('Failed bot check')
       } else {
@@ -83,12 +83,12 @@ export default {
           .then(() => {
             this.goodForm()
           })
-          .catch(e => {
+          .catch((e) => {
             this.badForm(e)
           })
       }
     },
-    loadWebfonts() {
+    loadWebfonts () {
       try {
         Typekit.load({
           loading: () => {

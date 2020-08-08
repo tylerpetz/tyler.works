@@ -1,3 +1,32 @@
+<script>
+import Tilt from 'vanilla-tilt'
+
+export default {
+  name: 'ProjectList',
+  props: {
+    count: {
+      type: Number,
+      default: 10
+    },
+    projects: {
+      type: Array,
+      default: () => []
+    }
+  },
+  mounted () {
+    const fullTilt = document.querySelectorAll('.full-tilt')
+    Tilt.init(fullTilt, {
+      glare: true,
+      max: 18,
+      'max-glare': 0.3,
+      perspective: 1400,
+      reset: false,
+      speed: 200
+    })
+  }
+}
+</script>
+
 <template>
   <section class="projects">
     <slot name="header" />
@@ -46,35 +75,6 @@
     </slot>
   </section>
 </template>
-
-<script>
-import Tilt from 'vanilla-tilt'
-
-export default {
-  name: 'ProjectList',
-  props: {
-    count: {
-      type: Number,
-      default: 10
-    },
-    projects: {
-      type: Array,
-      default: () => []
-    }
-  },
-  mounted() {
-    const fullTilt = document.querySelectorAll('.full-tilt')
-    Tilt.init(fullTilt, {
-      glare: true,
-      max: 18,
-      'max-glare': 0.3,
-      perspective: 1400,
-      reset: false,
-      speed: 200
-    })
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .projects {

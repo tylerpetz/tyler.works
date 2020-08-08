@@ -11,7 +11,7 @@
 export default {
   name: 'Buzzword',
   computed: {
-    buzzwords() {
+    buzzwords () {
       return this.$store.state.app.buzzwords
     }
   }

@@ -7,7 +7,7 @@ const state = () => ({
 })
 
 const actions = {
-  async getPostBySlug({ commit }, slug) {
+  async getPostBySlug ({ commit }, slug) {
     commit('SET_LOADING', true)
     const res = await client.getEntries({
       content_type: 'blogPost',
@@ -16,7 +16,7 @@ const actions = {
     commit('SET_ACTIVE_POST', res.items[0])
     commit('SET_LOADING', false)
   },
-  async getPosts({ commit }) {
+  async getPosts ({ commit }) {
     const res = await client.getEntries({
       content_type: 'blogPost'
     })
@@ -26,13 +26,13 @@ const actions = {
 }
 
 const mutations = {
-  SET_ACTIVE_POST(state, post) {
+  SET_ACTIVE_POST (state, post) {
     state.activePost = post
   },
-  SET_LOADING(state, loading) {
+  SET_LOADING (state, loading) {
     state.loading = loading
   },
-  SET_POSTS(state, posts) {
+  SET_POSTS (state, posts) {
     state.posts = posts
   }
 }

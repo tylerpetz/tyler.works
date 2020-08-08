@@ -15,10 +15,10 @@ export default {
     BlogList,
     ContactForm
   },
-  async fetch({ store, params }) {
+  async fetch ({ store, params }) {
     await store.dispatch('posts/getPosts', params.slug)
   },
-  data() {
+  data () {
     return {
       title: 'Here is my blog.',
       contactIntro:
@@ -26,11 +26,11 @@ export default {
     }
   },
   computed: {
-    posts() {
+    posts () {
       return this.$store.state.posts.posts
     }
   },
-  head() {
+  head () {
     return {
       title: this.title,
       meta: [

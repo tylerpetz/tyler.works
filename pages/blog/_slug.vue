@@ -53,15 +53,15 @@ export default {
     ContactForm
   },
   computed: {
-    post() {
+    post () {
       return this.$store.state.posts.activePost
     },
-    isLoading() {
+    isLoading () {
       return this.$store.state.posts.isLoading
     }
   },
   methods: {
-    formatDate(date) {
+    formatDate (date) {
       const formatted = new Date(date)
       return (
         formatted.getMonth() +
@@ -73,7 +73,7 @@ export default {
       )
     }
   },
-  head() {
+  head () {
     return {
       title: `Tyler Petz - ${this.post.fields.title}`,
       meta: [

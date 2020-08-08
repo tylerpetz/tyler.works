@@ -66,22 +66,22 @@ export default {
     ContactForm
   },
   computed: {
-    project() {
+    project () {
       return this.$store.state.projects.activeProject
     },
-    isLoading() {
+    isLoading () {
       return this.$store.state.projects.loading
     }
   },
   methods: {
-    getImageRatio(size) {
+    getImageRatio (size) {
       if (size === 'desktop') {
         return 'is-4by3'
       } else if (size === 'mobile') {
         return 'is-9by16'
       }
     },
-    imageModal(url, size) {
+    imageModal (url, size) {
       const sizeClass = this.getImageRatio(size)
       this.$modal.open({
         content: `<figure class="image ${sizeClass}">
@@ -90,7 +90,7 @@ export default {
       })
     }
   },
-  head() {
+  head () {
     return {
       title: `Tyler Petz - ${this.project.fields.title}`,
       meta: [

@@ -9,14 +9,14 @@ const state = () => ({
 })
 
 const mutations = {
-  formError(state, error) {
+  formError (state, error) {
     state.formError = error
     state.formSubmitted = true
   },
-  formSubmitted(state, submitted = true) {
+  formSubmitted (state, submitted = true) {
     state.formSubmitted = submitted
   },
-  toggleBuzzwords(state) {
+  toggleBuzzwords (state) {
     state.buzzwords = !state.buzzwords
     const message = state.buzzwords
       ? 'Highlighting Industry Buzzwords'
@@ -31,10 +31,10 @@ const mutations = {
       duration: 600
     })
   },
-  toggleDarkMode(state) {
+  toggleDarkMode (state) {
     state.darkMode = !state.darkMode
   },
-  updatePageName(state, pageName) {
+  updatePageName (state, pageName) {
     state.pageName = pageName
   }
 }
