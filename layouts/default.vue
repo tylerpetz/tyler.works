@@ -191,12 +191,10 @@ html {
   @apply text-theme-text-l text-lg my-2;
 
   &__link {
-    color: $green;
-    text-decoration: underline;
+    @apply text-theme-link underline;
 
     &:hover {
-      color: $orange;
-      text-decoration: none;
+      @apply text-theme-link-hover no-underline;
     }
   }
 }

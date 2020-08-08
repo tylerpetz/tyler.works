@@ -25,7 +25,7 @@ export default {
     link: [
       {
         rel: 'preload',
-        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap',
         as: 'style'
       },
       {
@@ -44,7 +44,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       },
       {
         rel: 'stylesheet',

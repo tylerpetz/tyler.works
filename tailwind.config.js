@@ -11,7 +11,7 @@ module.exports ={
   },
   theme: {
     fontFamily: {
-      body: ['omnes-cond', 'sans-serif']
+      body: ['Overpass', 'sans-serif']
     },
     extend: {
       colors: {
