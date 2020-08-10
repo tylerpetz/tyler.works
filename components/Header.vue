@@ -77,10 +77,7 @@ export default {
   }
 
   &__link {
-    color: $blue;
-    font-size: $size-4;
-    margin-right: $gap;
-    position: relative;
+    @apply text-theme-link text-xl mr-8 relative;
     transition: color 150ms ease-in-out;
 
     @include until($tablet) {
@@ -109,12 +106,11 @@ export default {
 
     &:hover,
     &:active {
-      color: $green;
+      @apply text-theme-link-hover;
     }
 
     &.nuxt-link-active {
-      color: $orange;
-      position: relative;
+      @apply text-theme-link-press;
 
       &::before {
         opacity: 1;
@@ -123,7 +119,7 @@ export default {
     }
 
     &.nuxt-link-exact-active {
-      color: $green;
+      @apply text-theme-text;
       text-decoration: none;
 
       &::before {
