@@ -1,7 +1,7 @@
 <template>
   <vue-headroom>
     <nav
-      class="navigation container"
+      class="navigation w-full max-w-screen-lg"
       role="navigation"
       aria-label="main navigation"
     >
@@ -36,7 +36,7 @@
       </nuxt-link>
     </nav>
     <header class="header">
-      <div class="header__container container">
+      <div class="w-full max-w-screen-lg flex items-center justify-between">
         <a
           class="header__link"
           @click="quickScroll"
@@ -131,12 +131,6 @@ export default {
 }
 
 .header {
-  &__container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__link {
     color: $white;
     font-size: $size-4;

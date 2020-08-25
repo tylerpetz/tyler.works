@@ -1,6 +1,6 @@
 <template>
   <footer class="footer p-6 md:p-8">
-    <div class="container">
+    <div class="w-full max-w-screen-lg">
       <div class="columns">
         <div class="column is-12-mobile footer__left">
           <h2 class="footer__title">

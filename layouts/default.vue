@@ -1,14 +1,10 @@
 <template>
   <div class="tyler-styles bg-theme-bg text-theme-text">
     <Header />
-    <div class="container">
-      <div class="columns">
-        <div class="column is-12-desktop">
-          <transition name="page">
-            <nuxt />
-          </transition>
-        </div>
-      </div>
+    <div class="w-full max-w-screen-lg">
+      <transition name="page">
+        <nuxt />
+      </transition>
     </div>
     <Controls />
     <Footer />
@@ -115,7 +111,6 @@ export default {
 @import '~bulma/sass/components/modal.sass';
 @import '~bulma/sass/elements/box.sass';
 @import '~bulma/sass/elements/button.sass';
-@import '~bulma/sass/elements/container.sass';
 @import '~bulma/sass/elements/content.sass';
 @import '~bulma/sass/elements/icon.sass';
 @import '~bulma/sass/elements/image.sass';
@@ -144,19 +139,6 @@ html {
 
 ::selection {
   @apply text-theme-bg-d bg-theme-text-l;
-}
-
-.container {
-  max-width: 1024px;
-  width: 100%;
-
-  @include until($desktop) {
-    padding: 0 ($gap / 1.5);
-  }
-
-  @include until($tablet) {
-    padding: 0 ($gap / 2.5);
-  }
 }
 
 .heading {

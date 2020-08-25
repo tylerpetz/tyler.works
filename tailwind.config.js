@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     content: [
@@ -52,11 +52,6 @@ module.exports ={
           'legend-hover': 'var(--accent-legend-hover)',
           'legend-press': 'var(--accent-legend-press)'
         }
-      },
-      spacing: {
-        72: '18rem',
-        80: '20rem',
-        96: '24rem'
       }
     }
   },
@@ -67,7 +62,7 @@ module.exports ={
   plugins: [
     require('tailwindcss-plugins/gradients'),
     require('tailwindcss-plugins/animations'),
-    require('tailwindcss-plugins/keyframes'),
-  ],
+    require('tailwindcss-plugins/keyframes')
+  ]
 
 }

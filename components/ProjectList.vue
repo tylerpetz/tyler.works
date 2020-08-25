@@ -39,7 +39,7 @@ export default {
         :key="index"
         class="column is-half"
       >
-        <div class="card-container">
+        <div class="relative">
           <nuxt-link
             :to="'/work/' + project.fields.slug"
             :class="project.fields.slug"
@@ -85,10 +85,6 @@ export default {
       padding-bottom: $gap / 2.5;
       padding-top: $gap / 2.5;
     }
-  }
-
-  .card-container {
-    position: relative;
   }
 
   .card {

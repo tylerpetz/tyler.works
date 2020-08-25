@@ -96,12 +96,6 @@ export default {
     margin-bottom: $gap / 2;
     padding-top: $gap;
     width: 100%;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 
   &__title {
