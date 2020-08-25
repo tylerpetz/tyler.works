@@ -1,7 +1,7 @@
 <template>
   <div class="tyler-styles bg-theme-bg text-theme-text">
     <Header />
-    <div class="w-full max-w-screen-lg">
+    <div class="w-full max-w-screen-lg mx-auto">
       <transition name="page">
         <nuxt />
       </transition>
