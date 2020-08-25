@@ -31,7 +31,7 @@ export default {
       <p>
         This isn't all of them, that'd be nuts. The rest can be found
         <nuxt-link
-          class=""
+          class="text-theme-link hover:text-theme-link-hover"
           to="/work"
         >
           on my work page

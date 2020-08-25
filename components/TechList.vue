@@ -1,10 +1,12 @@
-<template>
-  <section class="tech">
-    <h1
-      v-if="intro"
-      class="list-item section-heading"
-      v-html="intro"
-    />
+<script>
+export default {
+  name: 'TechList',
+}
+</script>
+
+<template functional>
+  <section class="mb-16">
+    <slot name="header" />
     <div class="columns is-gapless is-mobile is-multiline">
       <div class="column is-half-mobile">
         <ul>
@@ -85,15 +87,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: 'TechList',
-  props: {
-    intro: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>

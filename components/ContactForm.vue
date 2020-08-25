@@ -1,19 +1,129 @@
+<script>
+export default {
+  name: 'ContactForm',
+  data () {
+    return {
+      emailRegex: /(.+)@(.+){2,}\.(.+){2,}/,
+      formFilled: false,
+      form: {
+        name: '',
+        email: '',
+        message: '',
+        botcheck: null
+      },
+      intro: false,
+      optionFields: {
+        job: {
+          label: 'Nice. Tell me a little bit about your project or company.',
+          button: 'Click to send email.<span class="line-break">&nbsp;You\'re making the right choice!</span>',
+          placeholder: 'The job pays...'
+        },
+        friend: {
+          label: 'Oh yeah! When should we meet for beers?',
+          button: 'Click to send email.<span class="line-break">&nbsp;Can\'t wait to hang!</span>',
+          placeholder: 'I am free tomorrow.'
+        },
+        troll: {
+          label: 'Wow, okay. What will it take to convince you?',
+          button: 'Click to send email.<span class="line-break">&nbsp;Show me what you got.</span>',
+          placeholder: 'I have all the free time in the world.'
+        }
+      },
+      selected: null,
+      selectedOptionFields: {
+        label: "Got somethin' to say?",
+        placeholder: 'Hey dude.'
+      },
+      slimForm: false,
+      validEmail: false
+    }
+  },
+  computed: {
+    formSubmitted () {
+      return this.$store.state.app.formSubmitted
+    },
+    formError () {
+      return this.$store.state.app.formError
+    },
+    selectedOption () {
+      return this.selectedOptionFields
+    },
+    isFormFilled () {
+      if (
+        this.form.name &&
+        this.validEmail &&
+        this.form.message &&
+        this.selected
+      ) {
+        return true
+      } else {
+        return false
+      }
+    },
+    nameValid () {
+      if (this.form.name.length > 3) {
+        return 'fas fa-smile filled'
+      } else if (this.form.name) {
+        return 'fas fa-meh filling'
+      } else {
+        return 'fas fa-frown empty'
+      }
+    },
+    emailValid () {
+      if (this.validEmail) {
+        return 'fas fa-smile filled'
+      } else if (this.form.email) {
+        return 'fas fa-meh filling'
+      } else {
+        return 'fas fa-frown empty'
+      }
+    }
+  },
+  mounted () {
+    if (this.$route.params.goTo === 'job') {
+      this.companyWantsToHireMe()
+    }
+  },
+  methods: {
+    actProfessional () {
+      this.slimForm = true
+      this.optionFields.job.placeholder = ''
+      this.intro = 'Considering Tyler Petz as your next Web Developer is a great choice. Please fill out this form so I can harvest your... get to know you more.'
+    },
+    companyWantsToHireMe () {
+      this.actProfessional()
+      this.selected = 'job'
+      this.onSelect()
+    },
+    onSelect () {
+      this.selectedOptionFields = this.optionFields[this.selected]
+    },
+    submitForm () {
+      this.$root.$emit('submit', this.form)
+    },
+    validateEmail (ev) {
+      this.form.email = ev.target.value
+      this.validEmail = this.emailRegex.test(this.form.email)
+    },
+    validateMessage (ev) {
+      this.form.message = ev.target.value
+    },
+    validateName (ev) {
+      this.form.name = ev.target.value
+    }
+  }
+}
+</script>
+
 <template>
   <section class="contact">
     <transition name="page">
       <div v-if="!formSubmitted">
-        <h1
-          v-if="intro"
-          class="list-item section-heading"
-          v-html="intro"
-        />
-        <h1
-          v-else
-          class="list-item section-heading"
-        >
-          Fill out this form. The form gets sent to my email because I made it
-          do that.
-        </h1>
+        <slot name="header">
+          <h1 class="list-item section-heading">
+            If you aren't a robot, fill out this form to contact me. If you are a robot, we have already spoken.
+          </h1>
+        </slot>
         <div class="columns">
           <div class="column is-12-mobile">
             <form
@@ -167,123 +277,6 @@
     </transition>
   </section>
 </template>
-
-<script>
-export default {
-  name: 'ContactForm',
-  data () {
-    return {
-      emailRegex: /(.+)@(.+){2,}\.(.+){2,}/,
-      formFilled: false,
-      form: {
-        name: '',
-        email: '',
-        message: '',
-        botcheck: null
-      },
-      intro: false,
-      optionFields: {
-        job: {
-          label: 'Nice. Tell me a little bit about your project or company.',
-          button: 'Click to send email.<span class="line-break">&nbsp;You\'re making the right choice!</span>',
-          placeholder: 'The job pays...'
-        },
-        friend: {
-          label: 'Oh yeah! When should we meet for beers?',
-          button: 'Click to send email.<span class="line-break">&nbsp;Can\'t wait to hang!</span>',
-          placeholder: 'I am free tomorrow.'
-        },
-        troll: {
-          label: 'Wow, okay. What will it take to convince you?',
-          button: 'Click to send email.<span class="line-break">&nbsp;Show me what you got.</span>',
-          placeholder: 'I have all the free time in the world.'
-        }
-      },
-      selected: null,
-      selectedOptionFields: {
-        label: "Got somethin' to say?",
-        placeholder: 'Hey dude.'
-      },
-      slimForm: false,
-      validEmail: false
-    }
-  },
-  computed: {
-    formSubmitted () {
-      return this.$store.state.app.formSubmitted
-    },
-    formError () {
-      return this.$store.state.app.formError
-    },
-    selectedOption () {
-      return this.selectedOptionFields
-    },
-    isFormFilled () {
-      if (
-        this.form.name &&
-        this.validEmail &&
-        this.form.message &&
-        this.selected
-      ) {
-        return true
-      } else {
-        return false
-      }
-    },
-    nameValid () {
-      if (this.form.name.length > 3) {
-        return 'fas fa-smile filled'
-      } else if (this.form.name) {
-        return 'fas fa-meh filling'
-      } else {
-        return 'fas fa-frown empty'
-      }
-    },
-    emailValid () {
-      if (this.validEmail) {
-        return 'fas fa-smile filled'
-      } else if (this.form.email) {
-        return 'fas fa-meh filling'
-      } else {
-        return 'fas fa-frown empty'
-      }
-    }
-  },
-  mounted () {
-    if (this.$route.params.goTo === 'job') {
-      this.companyWantsToHireMe()
-    }
-  },
-  methods: {
-    actProfessional () {
-      this.slimForm = true
-      this.optionFields.job.placeholder = ''
-      this.intro = 'Considering Tyler Petz as your next Web Developer is a great choice. Please fill out this form so I can harvest your... get to know you more.'
-    },
-    companyWantsToHireMe () {
-      this.actProfessional()
-      this.selected = 'job'
-      this.onSelect()
-    },
-    onSelect () {
-      this.selectedOptionFields = this.optionFields[this.selected]
-    },
-    submitForm () {
-      this.$root.$emit('submit', this.form)
-    },
-    validateEmail (ev) {
-      this.form.email = ev.target.value
-      this.validEmail = this.emailRegex.test(this.form.email)
-    },
-    validateMessage (ev) {
-      this.form.message = ev.target.value
-    },
-    validateName (ev) {
-      this.form.name = ev.target.value
-    }
-  }
-}
-</script>
 
 <style lang="scss">
 .contact {

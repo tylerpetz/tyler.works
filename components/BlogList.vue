@@ -30,6 +30,7 @@ export default {
 <template>
   <section
     v-if="posts"
+    class="mb-16"
   >
     <slot name="header" />
     <div

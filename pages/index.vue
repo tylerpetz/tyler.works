@@ -25,16 +25,6 @@ export default {
       store.dispatch('projects/getProjects', params.slug)
     ])
   },
-  data () {
-    return {
-      blogIntro:
-        'I have also written these blog posts on <em>web development</em>:',
-      contactIntro:
-        'Still not convinced? Fill out this form.<br/>The form gets sent to my email because I made it do that.',
-      techListIntro:
-        'Here is some of my favorite technology to use. The kinds of things that <em>web developers</em> would know about.'
-    }
-  },
   computed: {
     posts () {
       return this.$store.state.posts.posts
@@ -42,11 +32,6 @@ export default {
     projects () {
       return this.$store.state.projects.projects
     },
-    listItems () {
-      return [
-        'I\'m a <em>web developer</em>'
-      ]
-    }
   }
 }
 </script>
@@ -62,19 +47,27 @@ export default {
     <h3 class="text-lg md:text-2xl mb-16">
       Oh, you want some proof?
     </h3>
-    <BragList />
-    <ProjectList :projects="projects" :count="2">
-      <h1 slot="header">
+    <brag-list />
+    <project-list :projects="projects" :count="2">
+      <h1 slot="header" class="text-lg md:text-2xl mb-6">
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
-    </ProjectList>
-    <BlogList :posts="posts" :count="2">
-      <h1 slot="header">
+    </project-list>
+    <blog-list :posts="posts" :count="2">
+      <h1 slot="header" class="text-lg md:text-2xl mb-6">
         I have also written these blog posts on <em>web development</em>:
       </h1>
-    </BlogList>
-    <TechList :intro="techListIntro" />
-    <ContactForm :intro="contactIntro" />
+    </blog-list>
+    <tech-list>
+      <h1 slot="header" class="text-lg md:text-2xl mb-6">
+        Here is some of my favorite technology to use. The kinds of things that <em>web developers</em> would know about.
+      </h1>
+    </tech-list>
+    <contact-form>
+      <h1 slot="header" class="text-lg md:text-2xl mb-6">
+        Still not convinced? Behold my greatest feat yet, the contact form.
+      </h1>
+    </contact-form>
   </div>
 </template>
 
