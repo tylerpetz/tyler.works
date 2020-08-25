@@ -1,48 +1,48 @@
 :root {
-  /* alpha caps */
-  --alpha-cap-h: 215;
-  --alpha-cap-s: 16%;
-  --alpha-cap-l: 64%;
+/* alpha caps */
+--alpha-cap-h: 207;
+--alpha-cap-s: 40%;
+--alpha-cap-l: 13%;
 
-  /* alpha legends */
-  --alpha-legend-h: 214;
-  --alpha-legend-s: 20%;
-  --alpha-legend-l: 21%;
+/* alpha legends */
+--alpha-legend-h: 173;
+--alpha-legend-s: 42%;
+--alpha-legend-l: 54%;
 
-  /* mod caps */
-  --mod-cap-h: 214;
-  --mod-cap-s: 20%;
-  --mod-cap-l: 21%;
+/* mod caps */
+--mod-cap-h: 173;
+--mod-cap-s: 42%;
+--mod-cap-l: 54%;
 
-  /* mod legends */
-  --mod-legend-h: 339;
-  --mod-legend-s: 99%;
-  --mod-legend-l: 67%;
+/* mod legends */
+--mod-legend-h: 207;
+--mod-legend-s: 40%;
+--mod-legend-l: 13%;
 
-  /* accent caps */
-  --accent-cap-h: 339;
-  --accent-cap-s: 99%;
-  --accent-cap-l: 67%;
+/* accent caps */
+--accent-cap-h: 40;
+--accent-cap-s: 78%;
+--accent-cap-l: 62%;
 
-  /* accent legends */
-  --accent-legend-h: 214;
-  --accent-legend-s: 20%;
-  --accent-legend-l: 21%;
+/* accent legends */
+--accent-legend-h: 207;
+--accent-legend-s: 40%;
+--accent-legend-l: 13%;
 
-  /* theme backgrounds */
-  --theme-bg-h: 215;
-  --theme-bg-s: 17%;
-  --theme-bg-l: 25%;
+/* theme backgrounds */
+--theme-bg-h: 207;
+--theme-bg-s: 40%;
+--theme-bg-l: 8%;
 
-  /* theme text */
-  --theme-text-h: 215;
-  --theme-text-s: 16%;
-  --theme-text-l: 64%;
+/* theme text */
+--theme-text-h: 173;
+--theme-text-s: 42%;
+--theme-text-l: 54%;
 
-  /* theme links/borders */
-  --theme-link-h: 339;
-  --theme-link-s: 99%;
-  --theme-link-l: 67%;
+/* theme links/borders */
+--theme-link-h: 11;
+--theme-link-s: 68%;
+--theme-link-l: 49%;
 }
 
 .tyler-styles, .tyler-styles * {
