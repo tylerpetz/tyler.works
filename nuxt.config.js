@@ -1,4 +1,4 @@
-import client from './api/contentful'
+import createClient from './api/contentful'
 import pkg from './package'
 
 export default {
@@ -80,11 +80,6 @@ export default {
     // analyze: true,
     loaders: {
       scss: { sourceMap: false }
-    },
-    extend (config, ctx) {
-      config.node = {
-        fs: 'empty'
-      }
     }
   },
 
@@ -93,6 +88,7 @@ export default {
    */
   generate: {
     routes: () => {
+      const client = createClient()
       return Promise.all([
         client.getEntries({
           content_type: 'blogPost'
@@ -113,7 +109,7 @@ export default {
    ** router config, don't abstract it to that one file
    */
   router: {
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior () {
       return { x: 0, y: 0 }
     }
   }

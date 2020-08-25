@@ -11,10 +11,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    '@nuxtjs',
     'plugin:vue/recommended',
-    'plugin:nuxt/recommended'
-
+    '@vue/standard'
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',

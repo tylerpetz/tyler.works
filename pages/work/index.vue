@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import Tilt from 'vanilla-tilt'
 import ContactForm from '~/components/ContactForm'
 import ProjectList from '~/components/ProjectList'
 
@@ -36,15 +35,6 @@ export default {
     projects () {
       return this.$store.state.projects.projects
     }
-  },
-  mounted () {
-    const fullTilt = document.querySelectorAll('.full-tilt')
-    Tilt.init(fullTilt, {
-      perspective: 1400,
-      max: 20,
-      speed: 200,
-      reset: false
-    })
   },
   head () {
     return {

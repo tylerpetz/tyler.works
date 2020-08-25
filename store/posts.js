@@ -1,4 +1,4 @@
-import client from '@/api/contentful'
+import createClient from '@/api/contentful'
 
 const state = () => ({
   activePost: {},
@@ -9,19 +9,26 @@ const state = () => ({
 const actions = {
   async getPostBySlug ({ commit }, slug) {
     commit('SET_LOADING', true)
-    const res = await client.getEntries({
-      content_type: 'blogPost',
-      'fields.slug': slug
-    })
-    commit('SET_ACTIVE_POST', res.items[0])
-    commit('SET_LOADING', false)
+    try {
+      const client = createClient()
+      const res = await client.getEntries({
+        content_type: 'blogPost',
+        'fields.slug': slug
+      })
+      commit('SET_ACTIVE_POST', res.items[0])
+    } catch (e) { } finally {
+      commit('SET_LOADING', false)
+    }
   },
   async getPosts ({ commit }) {
-    const res = await client.getEntries({
-      content_type: 'blogPost'
-    })
-    const posts = res.items || []
-    commit('SET_POSTS', posts)
+    try {
+      const client = createClient()
+      const res = await client.getEntries({
+        content_type: 'blogPost'
+      })
+      const posts = res.items || []
+      commit('SET_POSTS', posts)
+    } catch (e) { }
   }
 }
 
