@@ -5,7 +5,7 @@
   "author": "Tyler Petz",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 5000",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -22,7 +22,7 @@
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "nuxt": "^2.14.1",
-    "vanilla-tilt": "^1.7.0",
+    "tailwindcss-typography": "^3.1.0",
     "vue-headroom": "^0.10.1"
   },
   "devDependencies": {

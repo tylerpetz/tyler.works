@@ -64,12 +64,12 @@ export default {
     </h3>
     <BragList />
     <ProjectList :projects="projects" :count="2">
-      <h1 slot="header" class="list-item section-heading">
+      <h1 slot="header">
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </ProjectList>
     <BlogList :posts="posts" :count="2">
-      <h1 slot="header" class="list-item section-heading">
+      <h1 slot="header">
         I have also written these blog posts on <em>web development</em>:
       </h1>
     </BlogList>

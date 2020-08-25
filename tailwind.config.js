@@ -10,6 +10,10 @@ module.exports = {
     ]
   },
   theme: {
+    textShadow: { // defaults to {}
+      default: '0 2px 5px rgba(0, 0, 0, 0.5)',
+      lg: '0 2px 10px rgba(0, 0, 0, 0.5)'
+    },
     fontFamily: {
       body: ['Overpass', 'sans-serif']
     },
@@ -57,12 +61,20 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-    textColor: ['responsive', 'hover', 'focus', 'active']
+    textColor: ['responsive', 'hover', 'focus', 'active'],
+    textShadow: ['responsive']
   },
   plugins: [
     require('tailwindcss-plugins/gradients'),
     require('tailwindcss-plugins/animations'),
-    require('tailwindcss-plugins/keyframes')
+    require('tailwindcss-plugins/keyframes'),
+    require('tailwindcss-typography')({
+      // all these options default to the values specified here
+      ellipsis: true, // whether to generate ellipsis utilities
+      hyphens: true, // whether to generate hyphenation utilities
+      kerning: true, // whether to generate kerning utilities
+      textUnset: true, // whether to generate utilities to unset text properties
+      componentPrefix: 'c-' // the prefix to use for text style classes
+    })
   ]
-
 }
