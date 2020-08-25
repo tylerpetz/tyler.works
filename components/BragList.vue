@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <ul>
+  <ul class="mb-16">
     <li class="list-item">
       I'm a
       <em>web developer</em> at

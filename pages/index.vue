@@ -59,7 +59,7 @@ export default {
     <h2 class="text-xl md:text-3xl text-theme-link mt-2 mb-4 leading-snug border-b-2 border-theme-border inline-block">
       I am one of those.
     </h2>
-    <h3 class="text-lg md:text-2xl mb-8 ">
+    <h3 class="text-lg md:text-2xl mb-16">
       Oh, you want some proof?
     </h3>
     <BragList />

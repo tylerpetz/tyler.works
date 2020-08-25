@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav
-      class="w-full py-4"
+      class="w-full pt-4 pb-16"
       role="navigation"
       aria-label="main navigation"
     >
