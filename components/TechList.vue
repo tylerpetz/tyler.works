@@ -10,9 +10,9 @@ export default {
 </script>
 
 <template>
-  <section class="mb-16">
+  <section>
     <slot name="header" />
-    <ul class="grid grid-flow-col row-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <li v-for="favorite in favorites" :key="favorite" class="text-theme-text-l md:text-lg">{{ favorite }}</li>
     </ul>
   </section>

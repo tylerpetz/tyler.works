@@ -106,172 +106,172 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/base/_all';
-@import '~bulma/sass/components/modal.sass';
-@import '~bulma/sass/elements/box.sass';
-@import '~bulma/sass/elements/button.sass';
-@import '~bulma/sass/elements/content.sass';
-@import '~bulma/sass/elements/icon.sass';
-@import '~bulma/sass/elements/image.sass';
-@import '~bulma/sass/elements/progress.sass';
-@import '~bulma/sass/elements/table.sass';
-@import '~bulma/sass/elements/other.sass';
-@import '~bulma/sass/form/_all';
-@import '~bulma/sass/grid/_all';
-@import '~buefy/src/scss/utils/_all';
-@import '~buefy/src/scss/components/_icon';
-@import '~buefy/src/scss/components/_loading';
-@import '~buefy/src/scss/components/_message';
-@import '~buefy/src/scss/components/_notices';
-@import '~buefy/src/scss/components/_radio';
-@import '~buefy/src/scss/components/_select';
-@import '~buefy/src/scss/components/_switch';
-@import '~buefy/src/scss/components/_tooltip';
+// @import '~bulma/sass/utilities/_all';
+// @import '~bulma/sass/base/_all';
+// @import '~bulma/sass/components/modal.sass';
+// @import '~bulma/sass/elements/box.sass';
+// @import '~bulma/sass/elements/button.sass';
+// @import '~bulma/sass/elements/content.sass';
+// @import '~bulma/sass/elements/icon.sass';
+// @import '~bulma/sass/elements/image.sass';
+// @import '~bulma/sass/elements/progress.sass';
+// @import '~bulma/sass/elements/table.sass';
+// @import '~bulma/sass/elements/other.sass';
+// @import '~bulma/sass/form/_all';
+// @import '~bulma/sass/grid/_all';
+// @import '~buefy/src/scss/utils/_all';
+// @import '~buefy/src/scss/components/_icon';
+// @import '~buefy/src/scss/components/_loading';
+// @import '~buefy/src/scss/components/_message';
+// @import '~buefy/src/scss/components/_notices';
+// @import '~buefy/src/scss/components/_radio';
+// @import '~buefy/src/scss/components/_select';
+// @import '~buefy/src/scss/components/_switch';
+// @import '~buefy/src/scss/components/_tooltip';
 
-html.is-clipped {
-  overflow-y: scroll !important;
-}
+// html.is-clipped {
+//   overflow-y: scroll !important;
+// }
 
-html {
-  min-height: 100vh;
-}
+// html {
+//   min-height: 100vh;
+// }
 
-::selection {
-  @apply text-theme-bg-d bg-theme-text-l;
-}
+// ::selection {
+//   @apply text-theme-bg-d bg-theme-text-l;
+// }
 
-.heading {
-  color: $blue;
-  font-size: $size-1;
-  margin-top: 40px;
+// .heading {
+//   color: $blue;
+//   font-size: $size-1;
+//   margin-top: 40px;
 
-  span {
-    color: $green;
-  }
+//   span {
+//     color: $green;
+//   }
 
-  @include until($tablet) {
-    font-size: $size-3;
+//   @include until($tablet) {
+//     font-size: $size-3;
 
-    span {
-      white-space: nowrap;
-    }
-  }
-}
+//     span {
+//       white-space: nowrap;
+//     }
+//   }
+// }
 
-.subheading {
-  color: $blue;
-  font-size: $size-2;
-  margin-bottom: $gap;
+// .subheading {
+//   color: $blue;
+//   font-size: $size-2;
+//   margin-bottom: $gap;
 
-  @include until($tablet) {
-    font-size: $size-4;
-  }
-}
+//   @include until($tablet) {
+//     font-size: $size-4;
+//   }
+// }
 
-.list-item {
-  @apply text-theme-text-l text-lg my-2;
+// .list-item {
+//   @apply text-theme-text-l text-lg my-2;
 
-  &__link {
-    @apply text-theme-link underline;
+//   &__link {
+//     @apply text-theme-link underline;
 
-    &:hover {
-      @apply text-theme-link-hover no-underline;
-    }
-  }
-}
+//     &:hover {
+//       @apply text-theme-link-hover no-underline;
+//     }
+//   }
+// }
 
-.section-heading {
-  @apply text-theme-text-l text-2xl font-bold leading-none mt-2 mb-4;
+// .section-heading {
+//   @apply text-theme-text-l text-2xl font-bold leading-none mt-2 mb-4;
 
-  @include until($tablet) {
-    font-size: $size-4;
-  }
-}
+//   @include until($tablet) {
+//     font-size: $size-4;
+//   }
+// }
 
-@include until($tablet) {
-  .columns:last-child {
-    margin-bottom: -1rem;
-  }
+// @include until($tablet) {
+//   .columns:last-child {
+//     margin-bottom: -1rem;
+//   }
 
-  .columns {
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-top: -1rem;
-  }
+//   .columns {
+//     margin-left: -1rem;
+//     margin-right: -1rem;
+//     margin-top: -1rem;
+//   }
 
-  .column {
-    padding: 1rem;
-  }
-}
+//   .column {
+//     padding: 1rem;
+//   }
+// }
 
-.line-break {
-  @include until($tablet) {
-    display: none !important;
-  }
-}
+// .line-break {
+//   @include until($tablet) {
+//     display: none !important;
+//   }
+// }
 
-.tee-up-fore-autism {
-  background: linear-gradient(135deg, #649173, #dbd5a4);
-}
+// .tee-up-fore-autism {
+//   background: linear-gradient(135deg, #649173, #dbd5a4);
+// }
 
-.wishlisted {
-  background: linear-gradient(135deg, $purple, $red);
-}
+// .wishlisted {
+//   background: linear-gradient(135deg, $purple, $red);
+// }
 
-.strive-media {
-  background: linear-gradient(135deg, #464646, $grey);
-}
+// .strive-media {
+//   background: linear-gradient(135deg, #464646, $grey);
+// }
 
-.the-stadium-gallery {
-  background: linear-gradient(135deg, $blue, $lightblue);
-}
+// .the-stadium-gallery {
+//   background: linear-gradient(135deg, $blue, $lightblue);
+// }
 
-.overwatch {
-  background: linear-gradient(135deg, $blue, $lightblue);
-}
+// .overwatch {
+//   background: linear-gradient(135deg, $blue, $lightblue);
+// }
 
-.tylers-top-records-of-2017 {
-  background: linear-gradient(135deg, #4d9de0, #ed393a);
-}
+// .tylers-top-records-of-2017 {
+//   background: linear-gradient(135deg, #4d9de0, #ed393a);
+// }
 
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.35s ease;
-}
+// .page-enter-active,
+// .page-leave-active {
+//   transition: all 0.35s ease;
+// }
 
-.page-enter,
-.page-leave-active {
-  backface-visibility: hidden;
-  opacity: 0;
-  transform: translateZ(0);
-}
+// .page-enter,
+// .page-leave-active {
+//   backface-visibility: hidden;
+//   opacity: 0;
+//   transform: translateZ(0);
+// }
 
-.dropdown {
-  position: relative;
+// .dropdown {
+//   position: relative;
 
-  &.is-active {
-    color: $pink;
+//   &.is-active {
+//     color: $pink;
 
-    .dropdown__link {
-      background: $pink;
-      color: $white;
-    }
-  }
+//     .dropdown__link {
+//       background: $pink;
+//       color: $white;
+//     }
+//   }
 
-  .dropdown-menu {
-    position: absolute;
-    transition: box-shadow 250ms ease;
-    border: 1px solid #ddd;
-    box-shadow: 0 10px 35px -10px rgba(51, 51, 51, 0.3),
-      0 25px 50px 0 rgba(51, 51, 51, 0.15);
+//   .dropdown-menu {
+//     position: absolute;
+//     transition: box-shadow 250ms ease;
+//     border: 1px solid #ddd;
+//     box-shadow: 0 10px 35px -10px rgba(51, 51, 51, 0.3),
+//       0 25px 50px 0 rgba(51, 51, 51, 0.15);
 
-    .dropdown-content {
-      background: $white;
-      color: $blue;
-      padding: 1rem;
-      width: 300px;
-    }
-  }
-}
+//     .dropdown-content {
+//       background: $white;
+//       color: $blue;
+//       padding: 1rem;
+//       width: 300px;
+//     }
+//   }
+// }
 </style>

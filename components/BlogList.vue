@@ -17,9 +17,9 @@ export default {
       return (
         formatted.getMonth() +
         1 +
-        '-' +
+        '&middot;' +
         formatted.getDate() +
-        '-' +
+        '&middot;' +
         formatted.getFullYear()
       )
     }
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <div class="mb-12">
+  <div>
     <slot name="header" />
     <section>
       <template v-for="post in posts.slice(0, count)">
@@ -36,12 +36,11 @@ export default {
           <h1 class="text-theme-link text-2xl">
             {{ post.fields.title }}
           </h1>
-          <p class="text-theme-text text-shadow">
+          <p class="text-theme-text text-shadow mb-4">
             {{ post.fields.description }}
           </p>
-          <time class="blog-post__date">
-            Published on:
-            <span v-html="formatDate(post.sys.createdAt)" />
+          <time class="text-xs">
+            Published <span v-html="formatDate(post.sys.createdAt)" />
           </time>
         </article>
       </template>

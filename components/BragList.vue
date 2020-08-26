@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <ul class="mb-16">
+  <ul>
     <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"

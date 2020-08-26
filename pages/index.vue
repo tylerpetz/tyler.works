@@ -39,7 +39,7 @@ export default {
 <template>
   <div>
     <h1 class="text-2xl md:text-4xl">
-      Looking for a web developer?
+      Are you looking for a web developer?
     </h1>
     <h2 class="text-xl md:text-3xl text-theme-link mt-2 mb-4 leading-snug border-b-2 border-theme-border inline-block">
       I am one of those.
@@ -48,21 +48,25 @@ export default {
       Oh, you want some proof?
     </h3>
     <brag-list />
+    <hr class="my-16 border-b border-theme-border" />
     <project-list :projects="projects" :count="2">
       <h1 slot="header" class="text-lg md:text-2xl mb-6">
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </project-list>
+    <hr class="my-16 border-b border-theme-border" />
     <blog-list :posts="posts" :count="2">
       <h1 slot="header" class="text-lg md:text-2xl mb-6">
         I have also written these blog posts on <em>web development</em>:
       </h1>
     </blog-list>
+    <hr class="my-16 border-b border-theme-border" />
     <tech-list>
       <h1 slot="header" class="text-lg md:text-2xl mb-6">
         Here is some of my favorite technology to use. The kinds of things that <em>web developers</em> would know about.
       </h1>
     </tech-list>
+    <hr class="my-16 border-b border-theme-border" />
     <contact-form>
       <h1 slot="header" class="text-lg md:text-2xl mb-6">
         Still not convinced? Behold my greatest feat yet, the contact form.
