@@ -28,30 +28,24 @@ export default {
 </script>
 
 <template>
-  <section
-    v-if="posts"
-    class="mb-16"
-  >
+  <div class="mb-12">
     <slot name="header" />
-    <div
-      v-for="(post, index) in posts.slice(0, count)"
-      :key="index"
-    >
-      <article class="blog-post">
-        <h1 class="blog-post__title">
-          <nuxt-link :to="'/blog/' + post.fields.slug">
+    <section>
+      <template v-for="post in posts.slice(0, count)">
+        <article class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8" :key="post.sys.id">
+          <h1 class="text-theme-link text-2xl">
             {{ post.fields.title }}
-          </nuxt-link>
-        </h1>
-        <time class="blog-post__date">
-          Published on:
-          <span v-html="formatDate(post.sys.createdAt)" />
-        </time>
-        <p class="blog-post__content">
-          {{ post.fields.description }}
-        </p>
-      </article>
-    </div>
+          </h1>
+          <p class="text-theme-text text-shadow">
+            {{ post.fields.description }}
+          </p>
+          <time class="blog-post__date">
+            Published on:
+            <span v-html="formatDate(post.sys.createdAt)" />
+          </time>
+        </article>
+      </template>
+    </section>
     <slot name="footer" />
-  </section>
+  </div>
 </template>

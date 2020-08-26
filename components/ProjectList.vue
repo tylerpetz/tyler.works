@@ -22,9 +22,9 @@ export default {
 <template>
   <div class="mb-12">
     <slot name="header" />
-    <section v-if="projects" class="my-8 grid grid-cols-2 gap-8">
-      <template v-for="(project, index) in projects.slice(0, count)">
-        <project-list-item :project="project" :key="index" />
+    <section v-if="projects" class="my-8 grid grid-cols-1 gap-8">
+      <template v-for="project in projects.slice(0, count)">
+        <project-list-item :project="project" :key="project.sys.id" />
       </template>
     </section>
     <slot name="footer">

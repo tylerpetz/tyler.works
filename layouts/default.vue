@@ -1,5 +1,5 @@
 <template>
-  <div class="tyler-styles bg-theme-bg text-theme-text">
+  <div class="tyler-styles bg-theme-bg text-theme-text px-8">
     <Header />
     <div class="w-full max-w-screen-lg mx-auto">
       <transition name="page">

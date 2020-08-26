@@ -12,7 +12,7 @@ export default {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="mr-4 hover:text-theme-link transition-colors duration-75"
+        class="mr-4 hover:text-theme-link transition-colors duration-75 flex-shrink-0"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M9 21.5L17.5 13L13 10L15 2.5L6.5 11L11 14L9 21.5Z" fill="currentColor" />
@@ -34,7 +34,7 @@ export default {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="mr-4 hover:text-theme-link transition-colors duration-75"
+        class="mr-4 hover:text-theme-link transition-colors duration-75 flex-shrink-0"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M13 14H11V16H13V14Z" fill="currentColor" />
@@ -65,7 +65,7 @@ export default {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="mr-4 hover:text-theme-link transition-colors duration-75"
+        class="mr-4 hover:text-theme-link transition-colors duration-75 flex-shrink-0"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path d="M7 18H17V16H7V18Z" fill="currentColor" />
@@ -94,7 +94,7 @@ export default {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="mr-4 hover:text-theme-link transition-colors duration-75"
+        class="mr-4 hover:text-theme-link transition-colors duration-75 flex-shrink-0"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -124,7 +124,7 @@ export default {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        class="mr-4 hover:text-theme-link transition-colors duration-75"
+        class="mr-4 hover:text-theme-link transition-colors duration-75 flex-shrink-0"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
