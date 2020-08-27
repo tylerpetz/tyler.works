@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <footer class="px-8 py-4 bg-mod-cap text-mod-text">
+  <footer class="px-8 py-4 bg-mod-cap text-mod-legend">
     <div class="w-full max-w-screen-lg flex justify-between items-center">
       <p class="md:text-lg">
         Tyler Petz (the web developer) &copy; {{ new Date().getFullYear() }}

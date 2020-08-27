@@ -41,28 +41,28 @@ export default {
     <h1 class="text-2xl md:text-4xl">
       Are you looking for a web developer?
     </h1>
-    <h2 class="text-xl md:text-3xl text-theme-link mt-2 mb-4 leading-snug border-b-2 border-theme-border inline-block">
+    <h2 class="rounded-sm text-2xl md:text-4xl bg-accent-cap text-accent-legend my-4 pt-1 p-2 inline-block">
       I am one of those.
     </h2>
-    <h3 class="text-lg md:text-2xl mb-16">
+    <h3 class="text-theme-text-d text-lg md:text-2xl mb-16">
       Oh, you want some proof?
     </h3>
     <brag-list />
     <hr class="my-16 border-b border-theme-border" />
     <project-list :projects="projects" :count="2">
-      <h1 slot="header" class="text-lg md:text-2xl mb-6">
+      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </project-list>
     <hr class="my-16 border-b border-theme-border" />
     <blog-list :posts="posts" :count="2">
-      <h1 slot="header" class="text-lg md:text-2xl mb-6">
+      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
         I have also written these blog posts on <em>web development</em>:
       </h1>
     </blog-list>
     <hr class="my-16 border-b border-theme-border" />
     <tech-list>
-      <h1 slot="header" class="text-lg md:text-2xl mb-6">
+      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
         Here is some of my favorite technology to use. The kinds of things that <em>web developers</em> would know about.
       </h1>
     </tech-list>

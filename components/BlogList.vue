@@ -36,7 +36,7 @@ export default {
           <h1 class="text-theme-link text-2xl">
             {{ post.fields.title }}
           </h1>
-          <p class="text-theme-text text-shadow mb-4">
+          <p class="text-shadow mb-4">
             {{ post.fields.description }}
           </p>
           <time class="text-xs">

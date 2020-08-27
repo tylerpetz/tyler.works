@@ -6,7 +6,7 @@ export default {
 
 <template>
   <ul>
-    <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
+    <li class="text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"
         height="24"
@@ -28,7 +28,7 @@ export default {
       /> in Denver, CO. If I weren't a web developer I'd have no business there.
       </p>
     </li>
-    <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
+    <li class="text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"
         height="24"
@@ -59,7 +59,7 @@ export default {
         />. Call them, they'll tell you.
       </p>
     </li>
-    <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
+    <li class="text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"
         height="24"
@@ -88,7 +88,7 @@ export default {
         /> if you don't believe me.
       </p>
     </li>
-    <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
+    <li class="text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"
         height="24"
@@ -118,7 +118,7 @@ export default {
         /> as a <em>web developer</em>. Seriously, why else would I be doing that?
       </p>
     </li>
-    <li class="text-theme-text-l text-lg mb-6 flex flex-row items-center">
+    <li class="text-lg mb-6 flex flex-row items-center">
       <svg
         width="24"
         height="24"
