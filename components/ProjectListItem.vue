@@ -16,7 +16,7 @@ export default {
       <h1 class="text-theme-link text-2xl">
         {{ props.project.fields.title }}
       </h1>
-      <p class="text-shadow">
+      <p>
         {{ props.project.fields.description }}
       </p>
       <!-- <ul class="flex flex-row mt-4 space-x-2">

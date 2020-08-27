@@ -5,7 +5,8 @@ const state = () => ({
   darkMode: false,
   formSubmitted: false,
   formError: false,
-  pageName: 'index'
+  pageName: 'index',
+  theme: 'metropolis'
 })
 
 const mutations = {
@@ -36,6 +37,9 @@ const mutations = {
   },
   updatePageName (state, pageName) {
     state.pageName = pageName
+  },
+  setActiveTheme(state, theme) {
+    state.theme = theme
   }
 }
 

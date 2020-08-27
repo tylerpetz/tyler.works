@@ -1,20 +1,39 @@
 <script>
 import { mapMutations } from 'vuex'
-// import Controls from '../components/Controls'
+import Controls from '../components/Controls'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export default {
   name: 'Default',
   components: {
-    // Controls,
+    Controls,
     Header,
     Footer
   },
   data () {
     return {
       fontsLoaded: false,
-      formSubmitted: false
+      formSubmitted: false,
+      scrollY: 0,
+      links: [
+        {
+          url: '/',
+          text: 'Home'
+        },
+        {
+          url: '/work',
+          text: 'Work'
+        },
+        {
+          url: '/contact',
+          text: 'Contact'
+        },
+        {
+          url: '/cv',
+          text: 'CV'
+        }
+      ]
     }
   },
   mounted () {
@@ -24,12 +43,23 @@ export default {
     this.$root.$on('submit', (form) => {
       this.handleSubmit(form)
     })
+  },
+  computed: {
+    containerClass () {
+      // purgeable css classes
+      const { theme = '' } = this.$store.state.app
+      if (theme === '8008') return 'theme-8008'
+      if (theme === '9009') return 'theme-9009'
+      if (theme === 'dolch') return 'theme-dolch'
+      if (theme === 'milkshake') return 'theme-milkshake'
+      if (theme === 'oblivion') return 'theme-oblivion'
+      if (theme === 'laser') return 'theme-laser'
+      if (theme === 'bento') return 'theme-bento'
+      if (theme === 'metropolis') return 'theme-metropolis'
+      if (theme === 'wavez') return 'theme-wavez'
 
-    document.addEventListener('scroll', this.handleScroll)
-
-    this.$once('hook:destroyed', () => {
-      document.removeEventListener('scroll', this.handleScroll)
-    })
+      return 'theme-metropolis'
+    }
   },
   methods: {
     ...mapMutations({
@@ -94,25 +124,21 @@ export default {
         console.log('Fonts got messed up')
       }
     },
-    handleScroll () {
-      // Your scroll handling here
-      console.log(window.scrollY)
-    }
   },
 }
 </script>
 
 <template>
-  <div class="tyler-styles bg-theme-bg text-theme-text">
+  <div class="tyler-styles bg-theme-bg text-theme-text" :class="containerClass">
     <main class="px-8">
-      <Header />
+      <Header :links="links" />
       <div class="w-full max-w-screen-lg mx-auto">
         <transition name="page">
           <nuxt />
         </transition>
       </div>
     </main>
-    <!-- <Controls /> -->
+    <Controls :links="links" />
     <Footer />
   </div>
 </template>

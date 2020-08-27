@@ -1,3 +1,24 @@
+
+<script>
+export default {
+  name: 'Header',
+  props: {
+    links: {
+      type: Array,
+      required: true,
+    }
+  },
+  methods: {
+    quickScroll () {
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0
+      })
+    }
+  }
+}
+</script>
+
 <template>
   <header>
     <nav
@@ -19,42 +40,6 @@
     </nav>
   </header>
 </template>
-
-<script>
-export default {
-  name: 'Header',
-  data () {
-    return {
-      links: [
-        {
-          url: '/',
-          text: 'Home'
-        },
-        {
-          url: '/work',
-          text: 'Work'
-        },
-        {
-          url: '/contact',
-          text: 'Contact'
-        },
-        {
-          url: '/cv',
-          text: 'CV'
-        }
-      ]
-    }
-  },
-  methods: {
-    quickScroll () {
-      window.scrollTo({
-        behavior: 'smooth',
-        top: 0
-      })
-    }
-  }
-}
-</script>
 
 <style lang="scss">
 .nuxt-link-active {

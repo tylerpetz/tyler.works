@@ -22,14 +22,14 @@ export default {
 
 <template>
   <footer class="px-8 py-4 bg-mod-cap text-mod-legend">
-    <div class="w-full max-w-screen-lg flex justify-between items-center">
+    <div class="w-full max-w-screen-lg mx-auto flex justify-between items-center">
       <p class="md:text-lg">
         Tyler Petz (the web developer) &copy; {{ new Date().getFullYear() }}
       </p>
       <ul class="flex flex-row space-x-4 text-lg md:text-2xl">
         <li v-for="link in links" :key="link.name">
           <a
-            class="text-mod-legend hover:text-theme-link"
+            class="text-mod-legend hover:text-theme-link transition-colors duration-75"
             :href="link.url"
             target="_blank"
             rel="noopener noreferrer"
