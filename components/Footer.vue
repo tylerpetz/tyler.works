@@ -1,119 +1,44 @@
-<template>
-  <footer class="footer p-6 md:p-8">
-    <div class="w-full max-w-screen-lg">
-      <div class="columns">
-        <div class="column is-12-mobile footer__left">
-          <h2 class="footer__title">
-            Tyler Petz
-          </h2>
-          <p
-            class="footer__details"
-          >
-            &copy; {{ new Date().getFullYear() }}
-          </p>
-        </div>
-        <div class="column is-12-mobile footer__right">
-          <a
-            class="footer__button"
-            href="https://github.com/tylerpetz"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Tyler's Github"
-          >
-            <i class="fab fa-github" />
-          </a>
-          <a
-            class="footer__button"
-            href="https://www.linkedin.com/in/tyler-petz-11734818/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Tyler's LinkedIn"
-          >
-            <i class="fab fa-linkedin" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</template>
-
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      links: [
+        {
+          name: 'Github',
+          url: 'https://github.com/tylerpetz',
+          icon: 'fab fa-github'
+        },
+        {
+          name: 'Linkedin',
+          url: 'https://www.linkedin.com/in/tyler-petz-11734818/',
+          icon: 'fab fa-linkedin'
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style lang="scss" scoped>
-.footer {
-  transform-style: preserve-3d;
-
-  &__left {
-    flex-grow: 1;
-  }
-
-  &__right {
-    align-items: center;
-    display: flex;
-    flex-grow: 0;
-    justify-content: center;
-
-    @include until($tablet) {
-      flex-grow: 1;
-    }
-  }
-
-  &__title {
-    color: $blue;
-    font-size: $size-3;
-    opacity: 0;
-    opacity: 1;
-    transform: translate3d(-80px, 0, 0);
-    transform: translate3d(0, 0, 0);
-    transition: opacity 100ms ease-out, transform 450ms ease;
-
-    @include until($tablet) {
-      font-size: $size-4;
-      opacity: 1;
-      text-align: center;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  &__details {
-    color: $blue;
-    font-size: $size-5;
-    opacity: 0;
-    opacity: 1;
-    transform: translate3d(-50px, 0, 0);
-    transform: translate3d(0, 0, 0);
-    transition: opacity 150ms ease-out, transform 300ms ease;
-
-    @include until($tablet) {
-      opacity: 1;
-      text-align: center;
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  &__button {
-    color: $blue;
-    font-size: $size-2;
-    margin: 0 5px;
-    text-align: right;
-    transition: all 150ms ease;
-
-    .icon {
-      padding-right: 10px;
-    }
-
-    &:hover {
-      color: $pink;
-      text-shadow: 1px 1px 20px rgba(51, 51, 51, 0.4);
-    }
-
-    @include until($tablet) {
-      text-align: center;
-    }
-  }
-}
-</style>
+<template>
+  <footer class="px-8 py-4 bg-mod-cap text-mod-text">
+    <div class="w-full max-w-screen-lg flex justify-between items-center">
+      <p class="md:text-lg">
+        Tyler Petz (the web developer) &copy; {{ new Date().getFullYear() }}
+      </p>
+      <ul class="flex flex-row space-x-4 text-lg md:text-2xl">
+        <li v-for="link in links" :key="link.name">
+          <a
+            class="text-mod-legend hover:text-theme-link"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-label="`Tyler's ${link.name}`"
+          >
+            <i :class="link.icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</template>

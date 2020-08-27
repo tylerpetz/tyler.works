@@ -1,11 +1,13 @@
 <template>
-  <div class="tyler-styles bg-theme-bg text-theme-text px-8">
-    <Header />
-    <div class="w-full max-w-screen-lg mx-auto">
-      <transition name="page">
-        <nuxt />
-      </transition>
-    </div>
+  <div class="tyler-styles bg-theme-bg text-theme-tex">
+    <main class="px-8">
+      <Header />
+      <div class="w-full max-w-screen-lg mx-auto">
+        <transition name="page">
+          <nuxt />
+        </transition>
+      </div>
+    </main>
     <Controls />
     <Footer />
   </div>

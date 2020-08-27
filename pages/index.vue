@@ -67,11 +67,11 @@ export default {
       </h1>
     </tech-list>
     <hr class="my-16 border-b border-theme-border" />
-    <contact-form>
+    <!-- <contact-form>
       <h1 slot="header" class="text-lg md:text-2xl mb-6">
         Still not convinced? Behold my greatest feat yet, the contact form.
       </h1>
-    </contact-form>
+    </contact-form> -->
   </div>
 </template>
 
