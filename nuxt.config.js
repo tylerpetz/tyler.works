@@ -37,14 +37,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/scss/main.scss', '~/assets/themes.css'],
-
-  /*
-   ** Variables for use in Scoped SCSS
-   */
-  styleResources: {
-    scss: ['~/assets/scss/main.scss']
-  },
+  css: ['~/assets/themes.css'],
 
   /*
    ** Plugins to load before mounting the App

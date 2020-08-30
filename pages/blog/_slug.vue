@@ -89,56 +89,56 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.post {
-  &__header {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $gap / 2;
-    padding-top: $gap;
-    width: 100%;
-  }
+// .post {
+//   &__header {
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: $gap / 2;
+//     padding-top: $gap;
+//     width: 100%;
+//   }
 
-  &__title {
-    color: $blue;
-    font-size: $size-2;
-    font-weight: bold;
-    opacity: 1;
+//   &__title {
+//     color: $blue;
+//     font-size: $size-2;
+//     font-weight: bold;
+//     opacity: 1;
 
-    @include until($tablet) {
-      font-size: $size-4;
-    }
-  }
+//     @include until($tablet) {
+//       font-size: $size-4;
+//     }
+//   }
 
-  &__date {
-    color: darken($white, 30%);
-    font-size: $size-6;
-    font-style: italic;
-  }
+//   &__date {
+//     color: darken($white, 30%);
+//     font-size: $size-6;
+//     font-style: italic;
+//   }
 
-  &__border {
-    background: linear-gradient(160deg, $blue 0%, $purple 100%);
-    display: block;
-    height: 10px;
-    margin-top: $gap / 2;
-    width: 100%;
-  }
+//   &__border {
+//     background: linear-gradient(160deg, $blue 0%, $purple 100%);
+//     display: block;
+//     height: 10px;
+//     margin-top: $gap / 2;
+//     width: 100%;
+//   }
 
-  &__content {
-    font-size: $size-5;
+//   &__content {
+//     font-size: $size-5;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $green;
-      font-weight: normal;
-    }
-  }
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//       color: $green;
+//       font-weight: normal;
+//     }
+//   }
 
-  &__tags {
-    display: flex;
-  }
-}
+//   &__tags {
+//     display: flex;
+//   }
+// }
 </style>

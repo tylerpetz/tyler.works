@@ -279,123 +279,123 @@ export default {
 </template>
 
 <style lang="scss">
-.contact {
-  margin-bottom: $gap;
+// .contact {
+//   margin-bottom: $gap;
 
-  .field {
-    &--last {
-      margin-top: $gap / 2;
-    }
-  }
+//   .field {
+//     &--last {
+//       margin-top: $gap / 2;
+//     }
+//   }
 
-  .select {
-    width: 100%;
+//   .select {
+//     width: 100%;
 
-    select {
-      width: 100%;
+//     select {
+//       width: 100%;
 
-      &:focus {
-        option:disabled {
-          display: none;
-        }
-      }
-    }
-  }
+//       &:focus {
+//         option:disabled {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
 
-  .input {
-    & + .icon {
-      & > i {
-        transition: color 300ms ease;
+//   .input {
+//     & + .icon {
+//       & > i {
+//         transition: color 300ms ease;
 
-        &.empty {
-          color: #333;
-        }
+//         &.empty {
+//           color: #333;
+//         }
 
-        &.filled {
-          color: $green;
-        }
+//         &.filled {
+//           color: $green;
+//         }
 
-        &.filling {
-          color: $warning;
-        }
-      }
-    }
+//         &.filling {
+//           color: $warning;
+//         }
+//       }
+//     }
 
-    &:focus + .icon > i {
-      color: $danger;
+//     &:focus + .icon > i {
+//       color: $danger;
 
-      &.filled {
-        color: $green;
-      }
+//       &.filled {
+//         color: $green;
+//       }
 
-      &.filling {
-        color: $warning;
-      }
-    }
-  }
+//       &.filling {
+//         color: $warning;
+//       }
+//     }
+//   }
 
-  select,
-  input,
-  textarea {
-    &:hover {
-      border-color: $green;
-    }
-  }
+//   select,
+//   input,
+//   textarea {
+//     &:hover {
+//       border-color: $green;
+//     }
+//   }
 
-  figcaption {
-    position: absolute;
-  }
+//   figcaption {
+//     position: absolute;
+//   }
 
-  .label {
-    color: $green;
+//   .label {
+//     color: $green;
 
-    @include until($tablet) {
-      font-size: $size-5;
-    }
-  }
+//     @include until($tablet) {
+//       font-size: $size-5;
+//     }
+//   }
 
-  .button {
-    background: linear-gradient(135deg, $green 0%, $lightblue 100%);
-    color: $white;
-    transition: opacity 150ms ease;
-    width: 100%;
+//   .button {
+//     background: linear-gradient(135deg, $green 0%, $lightblue 100%);
+//     color: $white;
+//     transition: opacity 150ms ease;
+//     width: 100%;
 
-    & + .helper {
-      color: $red;
-      display: block;
-      opacity: 0;
-      transition: opacity 150ms ease;
-    }
+//     & + .helper {
+//       color: $red;
+//       display: block;
+//       opacity: 0;
+//       transition: opacity 150ms ease;
+//     }
 
-    &[disabled] {
-      &:hover {
-        & + .helper {
-          opacity: 1;
-        }
-      }
-    }
-  }
+//     &[disabled] {
+//       &:hover {
+//         & + .helper {
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
 
-  @include until($tablet) {
-    .control,
-    .icon,
-    input,
-    select,
-    label {
-      .is-large {
-        font-size: $size-5 !important;
-      }
-    }
+//   @include until($tablet) {
+//     .control,
+//     .icon,
+//     input,
+//     select,
+//     label {
+//       .is-large {
+//         font-size: $size-5 !important;
+//       }
+//     }
 
-    input {
-      padding-left: calc(0.625em - 1px) !important;
-    }
+//     input {
+//       padding-left: calc(0.625em - 1px) !important;
+//     }
 
-    .icon {
-      display: none;
-    }
-  }
-}
+//     .icon {
+//       display: none;
+//     }
+//   }
+// }
 
 .botcheck {
   display: none !important;

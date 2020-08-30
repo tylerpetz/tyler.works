@@ -19,10 +19,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.buzzword {
-  &--highlighted {
-    background: $purple;
-    color: $white;
-  }
-}
+// .buzzword {
+//   &--highlighted {
+//     background: $purple;
+//     color: $white;
+//   }
+// }
 </style>
