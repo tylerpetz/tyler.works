@@ -62,6 +62,7 @@ export default {
       const { theme = '' } = this.$store.state.app
       if (theme === '8008') return 'theme-8008'
       if (theme === '9009') return 'theme-9009'
+      if (theme === 'apollo') return 'theme-apollo'
       if (theme === 'bento') return 'theme-bento'
       if (theme === 'dolch') return 'theme-dolch'
       if (theme === 'laser') return 'theme-laser'

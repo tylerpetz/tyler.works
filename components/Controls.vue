@@ -14,6 +14,7 @@ export default {
       themes: [
         '8008',
         '9009',
+        'apollo',
         'bento',
         'dolch',
         'laser',

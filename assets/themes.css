@@ -185,6 +185,53 @@
   --theme-link-l: 67%;
 }
 
+.theme-apollo {
+  /* alpha caps */
+  --alpha-cap-h: 202;
+  --alpha-cap-s: 9%;
+  --alpha-cap-l: 39%;
+
+  /* alpha legends */
+  --alpha-legend-h: 0;
+  --alpha-legend-s: 0%;
+  --alpha-legend-l: 81%;
+
+  /* mod caps */
+  --mod-cap-h: 227;
+  --mod-cap-s: 11%;
+  --mod-cap-l: 25%;
+
+  /* mod legends */
+  --mod-legend-h: 30;
+  --mod-legend-s: 8%;
+  --mod-legend-l: 5%;
+
+  /* accent caps */
+  --accent-cap-h: 0;
+  --accent-cap-s: 0%;
+  --accent-cap-l: 81%;
+
+  /* accent legends */
+  --accent-legend-h: 227;
+  --accent-legend-s: 11%;
+  --accent-legend-l: 25%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 105;
+  --theme-bg-s: 100%;
+  --theme-bg-l: 1%;
+
+  /* theme text */
+  --theme-text-h: 0;
+  --theme-text-s: 0%;
+  --theme-text-l: 81%;
+
+  /* theme links/borders */
+  --theme-link-h: 224;
+  --theme-link-s: 10%;
+  --theme-link-l: 21%;
+}
+
 .theme-bento {
   /* alpha caps */
   --alpha-cap-h: 13;
