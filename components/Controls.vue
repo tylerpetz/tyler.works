@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-  <aside class="transform fixed bottom-0 right-0 mb-6 mr-4 transition-transform duration-150" :class="controlsClasses">
+  <aside class="transform fixed bottom-0 right-0 mb-5 mr-4 transition-transform duration-150" :class="controlsClasses">
     <ul class="flex-col items-center text-right mb-8">
       <li v-for="link in links" :key="link.text" class="mb-4">
         <nuxt-link
@@ -62,10 +62,9 @@ export default {
         </nuxt-link>
       </li>
     </ul>
-    <select @change="changeTheme($event.target.value)">
+    <select @change="changeTheme($event.target.value)" class="bg-accent-cap text-accent-legend rounded p-1">
       <option selected disabled>Theme</option>
       <option v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</option>
-
     </select>
   </aside>
 </template>

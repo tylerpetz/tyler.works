@@ -11,6 +11,18 @@ export default {
     Header,
     Footer
   },
+  head () {
+    return {
+      title: 'Tyler Petz - Front-End Web Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tyler Petz - Front-End Web Developer'
+        }
+      ]
+    }
+  },
   data () {
     return {
       fontsLoaded: false,
