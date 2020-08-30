@@ -4,6 +4,7 @@
 
 8008 - good
 9009 - link color needs work on bg
+apollo - add contrast
 bento - bg color needs to be dark?
 dolch - link color needs work on bg
 laser - good
