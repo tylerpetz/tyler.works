@@ -11,7 +11,6 @@ metropolis - good
 milkshake - needs a lot of work
 oblivion - pretty good, bg could be darker
 wavez - noice
-add the theme for your current keyboard - dcs midnight
 
 ## Sections
 

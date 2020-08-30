@@ -6,7 +6,7 @@ const state = () => ({
   formSubmitted: false,
   formError: false,
   pageName: 'index',
-  theme: 'metropolis'
+  theme: 'midnight'
 })
 
 const mutations = {

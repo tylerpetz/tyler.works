@@ -18,6 +18,7 @@ export default {
         'dolch',
         'laser',
         'metropolis',
+        'midnight',
         'milkshake',
         'oblivion',
         'wavez'

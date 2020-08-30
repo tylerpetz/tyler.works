@@ -62,15 +62,16 @@ export default {
       const { theme = '' } = this.$store.state.app
       if (theme === '8008') return 'theme-8008'
       if (theme === '9009') return 'theme-9009'
+      if (theme === 'bento') return 'theme-bento'
       if (theme === 'dolch') return 'theme-dolch'
+      if (theme === 'laser') return 'theme-laser'
+      if (theme === 'metropolis') return 'theme-metropolis'
+      if (theme === 'midnight') return 'theme-midnight'
       if (theme === 'milkshake') return 'theme-milkshake'
       if (theme === 'oblivion') return 'theme-oblivion'
-      if (theme === 'laser') return 'theme-laser'
-      if (theme === 'bento') return 'theme-bento'
-      if (theme === 'metropolis') return 'theme-metropolis'
       if (theme === 'wavez') return 'theme-wavez'
 
-      return 'theme-metropolis'
+      return 'theme-midnight'
     }
   },
   methods: {

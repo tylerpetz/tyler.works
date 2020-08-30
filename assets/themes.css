@@ -75,16 +75,16 @@
 
   /* modify hsl values like a boss */
   --theme-bg: hsl(var(--theme-bg-h), var(--theme-bg-s), var(--theme-bg-l));
-  --theme-bg-light: hsl(var(--theme-bg-h), var(--theme-bg-s), calc(var(--theme-bg-l) * 1.2) );
-  --theme-bg-dark: hsl(var(--theme-bg-h), var(--theme-bg-s), calc(var(--theme-bg-l) / 1.2));
+  --theme-bg-light: hsl(var(--theme-bg-h), var(--theme-bg-s), calc(var(--theme-bg-l) * 1.25) );
+  --theme-bg-dark: hsl(var(--theme-bg-h), var(--theme-bg-s), calc(var(--theme-bg-l) / 1.25));
 
   --theme-text: hsl(var(--theme-text-h), var(--theme-text-s), var(--theme-text-l));
-  --theme-text-light: hsl(var(--theme-text-h), var(--theme-text-s), calc(var(--theme-text-l) * 1.2));
-  --theme-text-dark: hsl(var(--theme-text-h), var(--theme-text-s), calc(var(--theme-text-l) / 1.2));
+  --theme-text-light: hsl(var(--theme-text-h), var(--theme-text-s), calc(var(--theme-text-l) * 1.25));
+  --theme-text-dark: hsl(var(--theme-text-h), var(--theme-text-s), calc(var(--theme-text-l) / 1.25));
 
   --theme-link: hsl(var(--theme-link-h), var(--theme-link-s), var(--theme-link-l));
-  --theme-link-hover: hsl(var(--theme-link-h), var(--theme-link-s), calc(var(--theme-link-l) * 1.2));
-  --theme-link-press: hsl(var(--theme-link-h), var(--theme-link-s), calc(var(--theme-link-l) / 1.2));
+  --theme-link-hover: hsl(var(--theme-link-h), var(--theme-link-s), calc(var(--theme-link-l) * 1.25));
+  --theme-link-press: hsl(var(--theme-link-h), var(--theme-link-s), calc(var(--theme-link-l) / 1.25));
 
   --theme-border: var(--theme-link);
   --theme-border-hover: var(--theme-link-hover);
@@ -231,7 +231,6 @@
   --theme-link-s: 62%;
   --theme-link-l: 69%;
 }
-
 
 .theme-dolch {
   /* alpha caps */
@@ -422,7 +421,50 @@
 }
 
 .theme-midnight {
+  /* alpha caps */
+  --alpha-cap-h: 90;
+  --alpha-cap-s: 5%;
+  --alpha-cap-l: 16%;
 
+  /* alpha legends */
+  --alpha-legend-h: 150;
+  --alpha-legend-s: 63%;
+  --alpha-legend-l: 70%;
+
+  /* mod caps */
+  --mod-cap-h: 220;
+  --mod-cap-s: 4%;
+  --mod-cap-l: 27%;
+
+  /* mod legends */
+  --mod-legend-h: 150;
+  --mod-legend-s: 63%;
+  --mod-legend-l: 79%;
+
+  /* accent caps */
+  --accent-cap-h: 40;
+  --accent-cap-s: 92%;
+  --accent-cap-l: 57%;
+
+  /* accent legends */
+  --accent-legend-h: 90;
+  --accent-legend-s: 5%;
+  --accent-legend-l: 16%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 150;
+  --theme-bg-s: 6%;
+  --theme-bg-l: 5%;
+
+  /* theme text */
+  --theme-text-h: 170;
+  --theme-text-s: 6%;
+  --theme-text-l: 60%;
+
+  /* theme links/borders */
+  --theme-link-h: 150;
+  --theme-link-s: 63%;
+  --theme-link-l: 79%;
 }
 
 .theme-oblivion {
