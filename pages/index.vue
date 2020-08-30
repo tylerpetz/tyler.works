@@ -38,15 +38,17 @@ export default {
 
 <template>
   <div>
-    <h1 class="text-2xl md:text-4xl">
-      Are you looking for a web developer?
-    </h1>
-    <h2 class="rounded-sm text-2xl md:text-4xl bg-accent-cap text-accent-legend my-4 pt-1 p-2 inline-block">
-      I am one of those.
-    </h2>
-    <h3 class="text-theme-text-d text-lg md:text-2xl mb-16">
-      Oh, you want some proof?
-    </h3>
+    <div class="flex flex-col items-center pt-32 pb-24">
+      <h1 class="text-center text-2xl md:text-4xl">
+        Are you looking for a web developer?
+      </h1>
+      <h2 class="text-center rounded-sm text-2xl md:text-3xl my-6 bg-accent-cap text-accent-legend py-1 px-3">
+        That's cool, because I am one.
+      </h2>
+      <h3 class="text-center text-theme-text-d text-lg md:text-2xl">
+        Keep reading if you don't believe me.
+      </h3>
+    </div>
     <brag-list />
     <hr class="my-16 border-b border-theme-border" />
     <project-list :projects="projects" :count="2">

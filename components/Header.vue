@@ -22,7 +22,7 @@ export default {
 <template>
   <header>
     <nav
-      class="w-full pt-4 pb-16"
+      class="w-full py-4 absolute top-0 left-0 right-0"
       role="navigation"
       aria-label="main navigation"
     >

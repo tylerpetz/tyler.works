@@ -1,3 +1,0 @@
-convert sass config to tailwind styles
-convert smallest component to tailwind, working your way up in size
-convert default layout to tailwind
