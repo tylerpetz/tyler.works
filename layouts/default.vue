@@ -50,7 +50,6 @@ export default {
   },
   mounted () {
     this.fixLinks()
-    // this.loadWebfonts();
 
     this.$root.$on('submit', (form) => {
       this.handleSubmit(form)
@@ -58,21 +57,8 @@ export default {
   },
   computed: {
     containerClass () {
-      // purgeable css classes
-      const { theme = '' } = this.$store.state.app
-      if (theme === '8008') return 'theme-8008'
-      if (theme === '9009') return 'theme-9009'
-      if (theme === 'apollo') return 'theme-apollo'
-      if (theme === 'bento') return 'theme-bento'
-      if (theme === 'dolch') return 'theme-dolch'
-      if (theme === 'laser') return 'theme-laser'
-      if (theme === 'metropolis') return 'theme-metropolis'
-      if (theme === 'midnight') return 'theme-midnight'
-      if (theme === 'milkshake') return 'theme-milkshake'
-      if (theme === 'oblivion') return 'theme-oblivion'
-      if (theme === 'wavez') return 'theme-wavez'
-
-      return 'theme-midnight'
+      const { theme = 'midnight' } = this.$store.state.app
+      return `theme-${theme}`
     }
   },
   methods: {
@@ -119,23 +105,6 @@ export default {
           .catch((e) => {
             this.badForm(e)
           })
-      }
-    },
-    loadWebfonts () {
-      try {
-        Typekit.load({
-          loading: () => {
-            // Javascript to execute when fonts start loading
-          },
-          active: () => {
-            this.fontsLoaded = true
-          },
-          inactive: () => {
-            this.fontsLoaded = true
-          }
-        })
-      } catch (e) {
-        console.log('Fonts got messed up')
       }
     },
   },
