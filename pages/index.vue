@@ -7,7 +7,7 @@ import TechList from '@/components/TechList'
 
 export default {
   name: 'Home',
-  middleware: 'homepage',
+  middleware: 'home',
   components: {
     BlogList,
     BragList,

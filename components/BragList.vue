@@ -1,7 +1,7 @@
 <script>
 export default {
-  name: 'BragList'
-}
+  name: "BragList",
+};
 </script>
 
 <template>
@@ -18,14 +18,13 @@ export default {
         <path d="M9 21.5L17.5 13L13 10L15 2.5L6.5 11L11 14L9 21.5Z" fill="currentColor" />
       </svg>
       <p>
-      I'm a
-      <em>web developer</em> at
-      <a
-        href="http://www.booj.com"
-        target="_blank"
-        class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        v-html="`booj`"
-      /> in Denver, CO. If I weren't a web developer I'd have no business there.
+        I'm a front-end chapter lead at
+        <a
+          href="http://www.booj.com"
+          target="_blank"
+          class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
+        >booj</a> in Denver, CO. If I weren't a
+        <em>web developer</em> I'd have no business there.
       </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
@@ -52,11 +51,11 @@ export default {
       <p>
         I worked as a
         <em>web developer</em> at
-        <nuxt-link
-          to="/work/strive-media"
+        <a
+          href="https://www.strivemedia.com"
+          target="_blank"
           class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-          v-html="`Strive Media`"
-        />. Call them, they'll tell you.
+        >Strive Media</a>. Call them, they'll tell you.
       </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
@@ -80,12 +79,11 @@ export default {
       </svg>
       <p>
         I have also worked as a
-        <em>web developer</em> for other companies, you can
+        <em>web developer</em> for some other folks, you can
         <nuxt-link
           to="/cv"
           class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-          v-html="`check my resume`"
-        /> if you don't believe me.
+        >check my resume</nuxt-link>, it's all legit.
       </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
@@ -114,8 +112,8 @@ export default {
             }
           }"
           class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-          v-html="`accepting new clients`"
-        /> as a <em>web developer</em>. Seriously, why else would I be doing that?
+        >accepting new clients</nuxt-link>as a
+        <em>web developer</em>. Seriously, why else would I be doing that?
       </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
@@ -139,8 +137,7 @@ export default {
           href="https://github.com/tylerpetz"
           target="_blank"
           class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-          v-html="`my github`"
-        />. This is like a dead giveaway that I'm a web developer.
+        >my github account</a>. This is like a dead giveaway that I'm a web developer.
       </p>
     </li>
   </ul>
