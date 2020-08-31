@@ -19,13 +19,6 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-        crossorigin: 'anonymous',
-        integrity:
-          'sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP'
-      }
     ]
   },
 
@@ -65,7 +58,6 @@ export default {
    ** Build configuration
    */
   build: {
-    // analyze: true,
     loaders: {
       scss: { sourceMap: false }
     }

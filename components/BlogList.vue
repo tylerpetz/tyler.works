@@ -45,6 +45,8 @@ export default {
         </article>
       </template>
     </section>
-    <slot name="footer" />
+    <slot name="footer">
+      <p>That actually is all of my blog posts. I do a lot more web development than blogging at the moment.</p>
+    </slot>
   </div>
 </template>

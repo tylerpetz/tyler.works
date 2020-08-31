@@ -29,13 +29,14 @@ export default {
     </section>
     <slot name="footer">
       <p>
-        This isn't all of them, that'd be nuts. The rest can be found
+        This isn't all of them, it seemed like a good design decision to just show a couple to save some scrolling.<br/>
+        You can find some more on
         <nuxt-link
           class="text-theme-link hover:text-theme-link-hover"
           to="/work"
         >
           on my work page
-        </nuxt-link> though.
+        </nuxt-link>.
       </p>
     </slot>
   </div>

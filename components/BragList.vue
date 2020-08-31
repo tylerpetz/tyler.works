@@ -112,7 +112,7 @@ export default {
             }
           }"
           class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        >accepting new clients</nuxt-link>as a
+        >accepting new clients</nuxt-link> as a
         <em>web developer</em>. Seriously, why else would I be doing that?
       </p>
     </li>

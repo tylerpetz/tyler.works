@@ -20,9 +20,8 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header class="w-full px-8 py-4 absolute top-0 left-0 right-0">
     <nav
-      class="w-full py-4 absolute top-0 left-0 right-0"
       role="navigation"
       aria-label="main navigation"
     >
