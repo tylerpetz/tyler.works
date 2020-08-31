@@ -40,11 +40,6 @@ export default {
   css: ['~/assets/themes.css'],
 
   /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ['~/plugins/buefy', '~/plugins/headroom'],
-
-  /*
    ** Nuxt.js build modules
    */
   buildModules: [
