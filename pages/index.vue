@@ -1,5 +1,4 @@
 <script>
-// import client from '@/api/contentful'
 import BlogList from '@/components/BlogList'
 import BragList from '@/components/BragList'
 import ContactForm from '@/components/ContactForm'
@@ -8,22 +7,13 @@ import TechList from '@/components/TechList'
 
 export default {
   name: 'Home',
+  middleware: 'homepage',
   components: {
     BlogList,
     BragList,
     ContactForm,
     ProjectList,
     TechList
-  },
-  async fetch ({ store, params }) {
-    // const res = await client.getEntries({
-    //   content_type: 'homepage'
-    // })
-    // console.log(res.items[0].fields)
-    await Promise.all([
-      store.dispatch('posts/getPosts', params.slug),
-      store.dispatch('projects/getProjects', params.slug)
-    ])
   },
   computed: {
     posts () {
@@ -76,9 +66,3 @@ export default {
     </contact-form> -->
   </div>
 </template>
-
-<style type="scss" scoped>
-.tag {
-  margin: 0 3px;
-}
-</style>

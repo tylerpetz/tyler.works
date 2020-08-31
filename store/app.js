@@ -1,11 +1,8 @@
-import { Toast } from 'buefy/dist/components/toast'
 
 const state = () => ({
   buzzwords: false,
-  darkMode: false,
   formSubmitted: false,
   formError: false,
-  pageName: 'index',
   theme: 'midnight'
 })
 
@@ -24,19 +21,6 @@ const mutations = {
       : 'Disabling Industry Buzzwords'
 
     const type = state.buzzwords ? 'is-repo' : 'is-success'
-
-    Toast.open({
-      message,
-      type,
-      position: 'is-bottom',
-      duration: 600
-    })
-  },
-  toggleDarkMode (state) {
-    state.darkMode = !state.darkMode
-  },
-  updatePageName (state, pageName) {
-    state.pageName = pageName
   },
   setActiveTheme(state, theme) {
     state.theme = theme
