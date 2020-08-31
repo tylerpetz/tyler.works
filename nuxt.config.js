@@ -30,7 +30,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/themes.css'],
+  css: ['~/assets/themes.css', '~/assets/tyler.css'],
 
   /*
    ** Nuxt.js build modules

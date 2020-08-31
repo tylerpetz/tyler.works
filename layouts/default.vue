@@ -125,30 +125,3 @@ export default {
     <Footer />
   </div>
 </template>
-
-
-<style lang="scss">
-html.is-clipped {
-  overflow-y: scroll !important;
-}
-
-html {
-  min-height: 100vh;
-}
-
-::selection {
-  @apply text-theme-bg-d bg-theme-text-l;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.35s ease;
-}
-
-.page-enter,
-.page-leave-active {
-  backface-visibility: hidden;
-  opacity: 0;
-  transform: translateZ(0);
-}
-</style>
