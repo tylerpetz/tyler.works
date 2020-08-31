@@ -32,10 +32,10 @@ export default {
       <h1 class="text-center text-2xl md:text-4xl">
         Are you looking for a web developer?
       </h1>
-      <h2 class="text-center rounded-sm text-2xl md:text-3xl my-6 bg-accent-cap text-accent-legend pt-1 px-3">
-        That's cool, because I am one.
+      <h2 class="text-center rounded-sm text-2xl md:text-3xl mt-4 mb-6 bg-accent-cap text-accent-legend pt-1 px-3">
+        That's cool, I am one.
       </h2>
-      <h3 class="text-center text-theme-text-d text-lg md:text-2xl">
+      <h3 class="text-center text-lg md:text-2xl">
         Keep reading if you don't believe me.
       </h3>
     </div>

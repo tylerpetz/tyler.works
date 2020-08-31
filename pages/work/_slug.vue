@@ -1,61 +1,3 @@
-<template>
-  <div v-if="!isLoading">
-    <article class="project">
-      <header class="project__header">
-        <h1 class="project__title">
-          {{ project.fields.title }}
-        </h1>
-        <div
-          :class="project.fields.slug"
-          class="project__border"
-        />
-      </header>
-      <section
-        class="project__content content"
-        v-html="$md.render(project.fields.body)"
-      />
-      <section class="gallery">
-        <div
-          v-for="thumbnailSet in project.fields.thumbnailSets"
-          :key="thumbnailSet.id"
-          class="gallery"
-        >
-          <h4 class="project__gallery--title">
-            {{ thumbnailSet.title }}
-          </h4>
-          <div class="project__gallery">
-            <figure
-              v-for="thumbs in thumbnailSet.thumbs"
-              :key="thumbs.url"
-              :class="`project__gallery--${thumbs.size}`"
-              class="image project__gallery--desktop"
-            >
-              <a @click="imageModal(thumbs.url, thumbs.size)">
-                <img :src="thumbs.url">
-              </a>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <footer class="project__buttons">
-        <a
-          v-if="project.fields.projectUrl"
-          :href="project.fields.projectUrl"
-          class="project__button"
-          target="_blank"
-        >View this project on the internet.</a>
-        <a
-          v-if="project.fields.repoUrl"
-          :href="project.fields.repoUrl"
-          class="project__button"
-          target="_blank"
-        >Check out this repository on Github.</a>
-      </footer>
-    </article>
-    <ContactForm intro="Use this contact form to get in touch with me." />
-  </div>
-</template>
-
 <script>
 import ContactForm from '~/components/ContactForm'
 
@@ -104,6 +46,64 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div v-if="!isLoading">
+    <article class="project">
+      <header class="project__header">
+        <h1 class="project__title">
+          {{ project.fields.title }}
+        </h1>
+        <div
+          :class="project.fields.slug"
+          class="project__border"
+        />
+      </header>
+      <section
+        class="project__content content prose"
+        v-html="$md.render(project.fields.body)"
+      />
+      <section class="gallery">
+        <div
+          v-for="thumbnailSet in project.fields.thumbnailSets"
+          :key="thumbnailSet.id"
+          class="gallery"
+        >
+          <h4 class="project__gallery--title">
+            {{ thumbnailSet.title }}
+          </h4>
+          <div class="project__gallery">
+            <figure
+              v-for="thumbs in thumbnailSet.thumbs"
+              :key="thumbs.url"
+              :class="`project__gallery--${thumbs.size}`"
+              class="image project__gallery--desktop"
+            >
+              <a @click="imageModal(thumbs.url, thumbs.size)">
+                <img :src="thumbs.url">
+              </a>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <footer class="project__buttons">
+        <a
+          v-if="project.fields.projectUrl"
+          :href="project.fields.projectUrl"
+          class="project__button"
+          target="_blank"
+        >View this project on the internet.</a>
+        <a
+          v-if="project.fields.repoUrl"
+          :href="project.fields.repoUrl"
+          class="project__button"
+          target="_blank"
+        >Check out this repository on Github.</a>
+      </footer>
+    </article>
+    <ContactForm intro="Use this contact form to get in touch with me." />
+  </div>
+</template>
 
 <style lang="scss">
 // .project {
