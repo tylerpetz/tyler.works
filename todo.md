@@ -52,15 +52,6 @@ add more projects
         <path d="M6 15H4V9H6V15Z" fill="currentColor" />
         <path d="M24 10H22V14H24V10Z" fill="currentColor" />
       </svg>
-      <p>
-        I worked as a
-        <em>web developer</em> at
-        <a
-          href="https://www.strivemedia.com"
-          target="_blank"
-          class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        >Strive Media</a>. Call them, they'll tell you.
-      </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
       <svg
@@ -81,14 +72,6 @@ add more projects
           fill="currentColor"
         />
       </svg>
-      <p>
-        I have also worked as a
-        <em>web developer</em> for some other folks, you can
-        <nuxt-link
-          to="/cv"
-          class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        >check my resume</nuxt-link>, it's all legit.
-      </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
       <svg
@@ -106,19 +89,6 @@ add more projects
           fill="currentColor"
         />
       </svg>
-      <p>
-        I am currently
-        <nuxt-link
-          :to="{
-            name: 'contact',
-            params: {
-              goTo: 'job'
-            }
-          }"
-          class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        >accepting new clients</nuxt-link> as a
-        <em>web developer</em>. Seriously, why else would I be doing that?
-      </p>
     </li>
     <li class="text-lg mb-6 flex flex-row items-center">
       <svg
@@ -134,13 +104,4 @@ add more projects
           fill="currentColor"
         />
       </svg>
-      <p>
-        I share my
-        <em>web development code</em> that I have written on
-        <a
-          href="https://github.com/tylerpetz"
-          target="_blank"
-          class="text-theme-link underline hover:text-theme-link-hover hover:no-underline"
-        >my github account</a>. This is like a dead giveaway that I'm a web developer.
-      </p>
     </li> -->

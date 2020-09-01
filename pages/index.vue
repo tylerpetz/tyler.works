@@ -31,7 +31,7 @@ export default {
 
 <template>
   <div>
-    <div class="flex flex-col items-center pt-32 pb-24">
+    <div class="flex flex-col items-center pt-40 pb-32">
       <h1 class="text-center text-2xl md:text-4xl">
         Are you looking for a web developer?
       </h1>

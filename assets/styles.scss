@@ -21,3 +21,23 @@ html {
   opacity: 0;
   transform: translateZ(0);
 }
+
+.content {
+  @apply text-lg;
+
+  @screen xl {
+    @apply text-xl;
+  }
+
+  a {
+    @apply text-theme-link underline;
+
+    &:hover {
+      @apply text-theme-link-hover no-underline;
+    }
+
+    &:active {
+      @apply text-theme-link-press no-underline;
+    }
+  }
+}

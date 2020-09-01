@@ -7,15 +7,15 @@ const state = () => ({
 
 const actions = {
   async getBrags ({ commit }) {
-    // try {
+    try {
       const client = createClient()
       const res = await client.getEntries({
-        content_type: 'brag'
+        content_type: 'brag',
+        order: 'sys.createdAt'
       })
       const brags = res.items || []
-      console.log('brags', brags)
       commit('SET_BRAGS', brags)
-    // } catch (e) { }
+    } catch (e) { }
   }
 }
 

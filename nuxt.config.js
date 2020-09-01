@@ -25,12 +25,12 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#462da0' },
+  loading: { color: 'var(--theme-color-border)' },
 
   /*
    ** Global CSS
    */
-  css: ['~/assets/themes.css', '~/assets/tyler.css'],
+  css: ['~/assets/themes.css', '~/assets/styles.scss'],
 
   /*
    ** Nuxt.js build modules
