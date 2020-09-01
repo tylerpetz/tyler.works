@@ -7846,6 +7846,11 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-interpolation@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/nuxt-interpolation/-/nuxt-interpolation-0.2.2.tgz#f5b20bb4167a5560bf6fb04a59a13b2dbdac673c"
+  integrity sha512-X7vcdH8YXDgCnbQb1LkcY5P6hM/Ey+Kn2om1oGQfsyPgbfrmg3mEMvj4ShTWUBHq4kD7lt3cTNls57qHLIScsQ==
+
 nuxt@^2.14.1:
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.14.1.tgz#e3e6e0a553a38c29b1d915d5ec75af9da2808c95"

@@ -61,6 +61,7 @@ export default {
       </header>
       <section
         class="project__content content prose"
+        v-interpolation
         v-html="$md.render(project.fields.body)"
       />
       <section class="gallery">

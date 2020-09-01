@@ -1,6 +1,7 @@
-export default async function ({ store, params }) {
+export default async function ({ store }) {
   await Promise.all([
-    store.dispatch('posts/getPosts', params.slug),
-    store.dispatch('projects/getProjects', params.slug)
+    store.dispatch('content/getBrags'),
+    store.dispatch('posts/getPosts'),
+    store.dispatch('projects/getProjects')
   ])
 }

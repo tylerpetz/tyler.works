@@ -21,6 +21,7 @@
       <section>
         <div
           class="post__content content"
+          v-interpolation
           v-html="$md.render(post.fields.body)"
         />
         <div

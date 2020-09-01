@@ -1,4 +1,3 @@
-
 const state = () => ({
   buzzwords: false,
   formSubmitted: false,

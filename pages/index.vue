@@ -16,6 +16,9 @@ export default {
     TechList
   },
   computed: {
+    brags () {
+      return this.$store.state.content.brags
+    },
     posts () {
       return this.$store.state.posts.posts
     },
@@ -39,7 +42,7 @@ export default {
         Keep reading if you don't believe me.
       </h3>
     </div>
-    <brag-list />
+    <brag-list :brags="brags" />
     <hr class="my-16 border-b border-theme-border" />
     <project-list :projects="projects" :count="2">
       <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">

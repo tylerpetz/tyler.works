@@ -44,7 +44,8 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-interpolation'
   ],
 
   /*
