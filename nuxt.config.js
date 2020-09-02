@@ -45,6 +45,7 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources',
+    '@nuxtjs/svg-sprite',
     'nuxt-interpolation'
   ],
 
