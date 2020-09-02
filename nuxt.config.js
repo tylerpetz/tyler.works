@@ -19,6 +19,11 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       },
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/favicon-laser.svg'
+      },
     ]
   },
 
