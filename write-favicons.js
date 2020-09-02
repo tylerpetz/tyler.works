@@ -58,7 +58,6 @@ const generateFavicons = (themes) => {
 
 const writeFaviconstoFile = (favicons) => {
   favicons.forEach((favicon) => {
-    console.log(Object.values(favicon))
     const filename = `static/favicon-${Object.keys(favicon)[0]}.svg`
     const svg = Object.values(favicon)[0]
     fs.writeFile(filename, svg, (err) => {
