@@ -65,6 +65,7 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
     loaders: {
       scss: { sourceMap: false }
     }
