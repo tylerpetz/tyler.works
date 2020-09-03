@@ -37,14 +37,14 @@ export default {
           url: '/work',
           text: 'Work'
         },
-        {
-          url: '/contact',
-          text: 'Contact'
-        },
-        {
-          url: '/cv',
-          text: 'CV'
-        }
+        // {
+        //   url: '/contact',
+        //   text: 'Contact'
+        // },
+        // {
+        //   url: '/cv',
+        //   text: 'CV'
+        // }
       ]
     }
   },
@@ -114,7 +114,7 @@ export default {
 <template>
   <div class="tyler-styles bg-theme-bg text-theme-text font-body" :class="containerClass">
     <Header :links="links" />
-    <main class="px-8">
+    <main class="px-8 min-h-screen">
       <div class="w-full max-w-screen-lg mx-auto">
         <transition name="page">
           <nuxt />

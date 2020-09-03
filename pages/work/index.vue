@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-40">
     <ProjectList :projects="projects">
       <template slot="header">
         Here are those projects I was talking about.
@@ -9,7 +9,7 @@
         peep it.
       </template>
     </ProjectList>
-    <ContactForm :intro="contactIntro" />
+    <!-- <ContactForm :intro="contactIntro" /> -->
   </div>
 </template>
 
