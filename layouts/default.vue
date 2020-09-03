@@ -14,12 +14,20 @@ export default {
   head () {
     return {
       title: 'Tyler Petz - Front-End Web Developer',
+      link: [
+        {
+          hid: 'favicon',
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: this.themeFavicon
+        },
+      ],
       meta: [
         {
           hid: 'description',
           name: 'description',
           content: 'Tyler Petz - Front-End Web Developer'
-        }
+        },
       ]
     }
   },
@@ -59,6 +67,10 @@ export default {
     containerClass () {
       const { theme = 'midnight' } = this.$store.state.app
       return `theme-${theme}`
+    },
+    themeFavicon() {
+      const { theme = 'midnight' } = this.$store.state.app
+      return `favicon-${theme}.svg`
     }
   },
   methods: {

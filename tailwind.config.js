@@ -59,4 +59,7 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     textColor: ['responsive', 'hover', 'focus', 'active'],
   },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }
