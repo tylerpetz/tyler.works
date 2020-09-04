@@ -1,12 +1,3 @@
-<template>
-  <span
-    :class="{ 'buzzword--highlighted': buzzwords }"
-    class="buzzword"
-  >
-    <slot />
-  </span>
-</template>
-
 <script>
 export default {
   name: 'Buzzword',
@@ -18,6 +9,16 @@ export default {
 }
 </script>
 
+<template>
+  <span
+    :class="{ 'buzzword--highlighted': buzzwords }"
+    class="buzzword"
+  >
+    <slot />
+  </span>
+</template>
+
+
 <style lang="scss" scoped>
 // .buzzword {
 //   &--highlighted {
@@ -26,3 +27,4 @@ export default {
 //   }
 // }
 </style>
+

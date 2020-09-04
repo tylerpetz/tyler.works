@@ -1,26 +1,9 @@
-<template>
-  <div class="pt-40">
-    <ProjectList :projects="projects">
-      <template slot="header">
-        Here are those projects I was talking about.
-      </template>
-      <template slot="footer">
-        Those are my favorite ones, the rest are on <a href="https://github.com/tylerpetz" target="_blank" class="list-item__link" rel="noopener noreferrer">my github</a>,
-        peep it.
-      </template>
-    </ProjectList>
-    <!-- <ContactForm :intro="contactIntro" /> -->
-  </div>
-</template>
-
 <script>
-import ContactForm from '~/components/ContactForm'
 import ProjectList from '~/components/ProjectList'
 
 export default {
   name: 'Work',
   components: {
-    ContactForm,
     ProjectList
   },
   async fetch ({ store, params }) {
@@ -50,3 +33,17 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="pt-40">
+    <ProjectList :projects="projects">
+      <template slot="header">
+        Here are those projects I was talking about.
+      </template>
+      <template slot="footer">
+        Those are my favorite ones, the rest are on <a href="https://github.com/tylerpetz" target="_blank" class="list-item__link" rel="noopener noreferrer">my github</a>,
+        peep it.
+      </template>
+    </ProjectList>
+  </div>
+</template>

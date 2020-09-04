@@ -1,12 +1,10 @@
 <script>
 import BlogList from '~/components/BlogList'
-import ContactForm from '~/components/ContactForm'
 
 export default {
   name: 'Blog',
   components: {
     BlogList,
-    ContactForm
   },
   async fetch ({ store, params }) {
     await store.dispatch('posts/getPosts', params.slug)
@@ -39,8 +37,5 @@ export default {
 </script>
 
 <template>
-  <div>
-    <BlogList :count="10" />
-    <ContactForm :intro="contactIntro" />
-  </div>
+  <BlogList :count="10" />
 </template>

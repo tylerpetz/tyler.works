@@ -1,3 +1,43 @@
+<script>
+export default {
+  name: 'Post',
+  middleware: 'post',
+  computed: {
+    post () {
+      return this.$store.state.posts.activePost
+    },
+    isLoading () {
+      return this.$store.state.posts.isLoading
+    }
+  },
+  methods: {
+    formatDate (date) {
+      const formatted = new Date(date)
+      return (
+        formatted.getMonth() +
+        1 +
+        '-' +
+        formatted.getDate() +
+        '-' +
+        formatted.getFullYear()
+      )
+    }
+  },
+  head () {
+    return {
+      title: `Tyler Petz - ${this.post.fields.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.fields.description
+        }
+      ]
+    }
+  }
+}
+</script>
+
 <template>
   <div>
     <article
@@ -40,54 +80,8 @@
         </div>
       </section>
     </article>
-    <ContactForm intro="Use this contact form to get in touch with me." />
   </div>
 </template>
-
-<script>
-import ContactForm from '~/components/ContactForm'
-
-export default {
-  name: 'Post',
-  middleware: 'post',
-  components: {
-    ContactForm
-  },
-  computed: {
-    post () {
-      return this.$store.state.posts.activePost
-    },
-    isLoading () {
-      return this.$store.state.posts.isLoading
-    }
-  },
-  methods: {
-    formatDate (date) {
-      const formatted = new Date(date)
-      return (
-        formatted.getMonth() +
-        1 +
-        '-' +
-        formatted.getDate() +
-        '-' +
-        formatted.getFullYear()
-      )
-    }
-  },
-  head () {
-    return {
-      title: `Tyler Petz - ${this.post.fields.title}`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.post.fields.description
-        }
-      ]
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 // .post {

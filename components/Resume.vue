@@ -1,3 +1,20 @@
+<script>
+import Buzzword from '~/components/Buzzword'
+
+export default {
+  name: 'Resume',
+  components: {
+    Buzzword
+  },
+  props: {
+    intro: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
+
 <template>
   <section class="resume">
     <h1
@@ -254,23 +271,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import Buzzword from '~/components/Buzzword'
-
-export default {
-  name: 'Resume',
-  components: {
-    Buzzword
-  },
-  props: {
-    intro: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 // .resume {

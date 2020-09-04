@@ -1,12 +1,7 @@
 <script>
-import ContactForm from '~/components/ContactForm'
-
 export default {
   name: 'Project',
   middleware: 'project',
-  components: {
-    ContactForm
-  },
   computed: {
     project () {
       return this.$store.state.projects.activeProject
@@ -102,7 +97,6 @@ export default {
         >Check out this repository on Github.</a>
       </footer>
     </article>
-    <ContactForm intro="Use this contact form to get in touch with me." />
   </div>
 </template>
 
