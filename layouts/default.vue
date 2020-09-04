@@ -12,7 +12,7 @@ export default {
   },
   head () {
     return {
-      title: 'Tyler Petz - Front-End Web Developer',
+      title: 'Tyler Petz - Web Developer',
       link: [
         {
           hid: 'favicon',
@@ -25,7 +25,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Tyler Petz - Front-End Web Developer'
+          content: 'Tyler Petz - Web Developer'
         },
       ]
     }

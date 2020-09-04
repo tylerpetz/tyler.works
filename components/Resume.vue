@@ -26,7 +26,7 @@ export default {
       Tyler Petz
     </h2>
     <h3 class="subheading">
-      <em>Front-End Web Developer</em>
+      <em>Web Developer</em>
     </h3>
     <div class="columns">
       <div class="column is-12-mobile is-12-tablet is-7-desktop">
