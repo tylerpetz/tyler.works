@@ -43,7 +43,6 @@ export default {
       this.scrollY = window.scrollY
     },
     changeTheme(theme) {
-      console.log(theme)
       this.$store.commit('app/setActiveTheme', theme)
     },
   }
@@ -63,7 +62,7 @@ export default {
         </nuxt-link>
       </li>
     </ul>
-    <select @change="changeTheme($event.target.value)" class="bg-accent-cap text-accent-legend rounded p-1">
+    <select @change="changeTheme($event.target.value)" :value="$store.state.app.theme" class="bg-accent-cap text-accent-legend rounded p-1">
       <option selected disabled>Theme</option>
       <option v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</option>
     </select>
