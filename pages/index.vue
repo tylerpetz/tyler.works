@@ -1,6 +1,7 @@
 <script>
 import BlogList from '@/components/BlogList'
 import BragList from '@/components/BragList'
+import ContactInfo from '@/components/ContactInfo'
 import ProjectList from '@/components/ProjectList'
 import TechList from '@/components/TechList'
 
@@ -10,6 +11,7 @@ export default {
   components: {
     BlogList,
     BragList,
+    ContactInfo,
     ProjectList,
     TechList
   },
@@ -60,5 +62,6 @@ export default {
       </h1>
     </tech-list>
     <hr class="my-16 border-b border-theme-border" />
+    <contact-info />
   </div>
 </template>
