@@ -3,7 +3,20 @@ export default {
   name: 'TechList',
   data() {
     return {
-      favorites: ['Vue', 'Nuxt', 'TailwindCSS', 'Netlify', 'Contentful', 'Babel/ES6+', 'SASS', 'Webpack', 'Lerna', 'Github', 'CircleCI', 'Google Tag Manager', 'Google Analytics', 'AWS', 'Mailchimp']
+      favorites: [
+        'Vue',
+        'Nuxt',
+        'TailwindCSS',
+        'Babel/ES6+',
+        'Yarn',
+        'Webpack',
+        'Sass',
+        'GitHub',
+        'Netlify',
+        'Contentful',
+        'Google Analytics',
+        'AWS',
+      ]
     }
   }
 }
@@ -12,8 +25,17 @@ export default {
 <template>
   <section>
     <slot name="header" />
-    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <li v-for="favorite in favorites" :key="favorite" class="text-theme-text-l md:text-lg">{{ favorite }}</li>
+    <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <li
+        v-for="favorite in favorites"
+        :key="favorite"
+        class="md:text-lg flex justify-center items-center py-2 rounded bg-mod-cap text-mod-legend hover:bg-accent-cap hover:text-accent-legend transition-colors duration-75"
+      >
+        {{ favorite }}
+      </li>
     </ul>
   </section>
 </template>
+
+
+

@@ -56,7 +56,7 @@ export default {
     <hr class="my-16 border-b border-theme-border" />
     <tech-list>
       <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
-        Here is some of my favorite technology to use. The kinds of things that <em>web developers</em> would know about.
+        Here is some of my favorite tech and platforms that I use. The kinds of things that <em>web developers</em> would know about.
       </h1>
     </tech-list>
     <hr class="my-16 border-b border-theme-border" />
