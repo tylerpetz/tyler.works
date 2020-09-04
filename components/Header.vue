@@ -27,7 +27,7 @@ export default {
       <ul class="max-w-screen-lg mx-auto flex flex-row items-center space-x-6 sm:space-x-8">
         <li v-for="link in links" :key="link.text">
           <nuxt-link
-            class="block relative text-theme-link hover:text-theme-link-hover sm:text-xl"
+            class="block relative text-theme-link hover:text-theme-link-hover sm:text-xl font-bold"
             :to="link.url"
             exact
           >

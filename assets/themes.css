@@ -1,50 +1,3 @@
-:root {
-/* alpha caps */
---alpha-cap-h: 207;
---alpha-cap-s: 40%;
---alpha-cap-l: 13%;
-
-/* alpha legends */
---alpha-legend-h: 173;
---alpha-legend-s: 42%;
---alpha-legend-l: 54%;
-
-/* mod caps */
---mod-cap-h: 173;
---mod-cap-s: 42%;
---mod-cap-l: 54%;
-
-/* mod legends */
---mod-legend-h: 207;
---mod-legend-s: 40%;
---mod-legend-l: 13%;
-
-/* accent caps */
---accent-cap-h: 40;
---accent-cap-s: 78%;
---accent-cap-l: 62%;
-
-/* accent legends */
---accent-legend-h: 207;
---accent-legend-s: 40%;
---accent-legend-l: 13%;
-
-/* theme backgrounds */
---theme-bg-h: 207;
---theme-bg-s: 40%;
---theme-bg-l: 8%;
-
-/* theme text */
---theme-text-h: 173;
---theme-text-s: 42%;
---theme-text-l: 54%;
-
-/* theme links/borders */
---theme-link-h: 11;
---theme-link-s: 68%;
---theme-link-l: 49%;
-}
-
 #__layout, #__layout * {
   --alpha-cap: hsl(var(--alpha-cap-h), var(--alpha-cap-s), var(--alpha-cap-l));
   --alpha-cap-side: hsl(var(--alpha-cap-h), var(--alpha-cap-s), calc(var(--alpha-cap-l) * .7));
@@ -172,7 +125,7 @@
   /* theme backgrounds */
   --theme-bg-h: 42;
   --theme-bg-s: 15%;
-  --theme-bg-l: 77%;
+  --theme-bg-l: 90%;
 
   /* theme text */
   --theme-text-h: 30;
@@ -182,7 +135,7 @@
   /* theme links/borders */
   --theme-link-h: 339;
   --theme-link-s: 99%;
-  --theme-link-l: 67%;
+  --theme-link-l: 60%;
 }
 
 .theme-apollo {
@@ -199,12 +152,12 @@
   /* mod caps */
   --mod-cap-h: 227;
   --mod-cap-s: 11%;
-  --mod-cap-l: 25%;
+  --mod-cap-l: 45%;
 
   /* mod legends */
   --mod-legend-h: 30;
   --mod-legend-s: 8%;
-  --mod-legend-l: 5%;
+  --mod-legend-l: 0%;
 
   /* accent caps */
   --accent-cap-h: 0;
@@ -214,12 +167,12 @@
   /* accent legends */
   --accent-legend-h: 227;
   --accent-legend-s: 11%;
-  --accent-legend-l: 25%;
+  --accent-legend-l: 45%;
 
   /* theme backgrounds */
   --theme-bg-h: 105;
-  --theme-bg-s: 100%;
-  --theme-bg-l: 1%;
+  --theme-bg-s: 5%;
+  --theme-bg-l: 8%;
 
   /* theme text */
   --theme-text-h: 0;
@@ -229,7 +182,7 @@
   /* theme links/borders */
   --theme-link-h: 224;
   --theme-link-s: 10%;
-  --theme-link-l: 31%;
+  --theme-link-l: 55%;
 }
 
 .theme-bento {
@@ -246,12 +199,12 @@
   /* mod caps */
   --mod-cap-h: 202;
   --mod-cap-s: 33%;
-  --mod-cap-l: 36%;
+  --mod-cap-l: 30%;
 
   /* mod legends */
   --mod-legend-h: 358;
   --mod-legend-s: 62%;
-  --mod-legend-l: 64%;
+  --mod-legend-l: 68%;
 
   /* accent caps */
   --accent-cap-h: 358;
@@ -275,7 +228,7 @@
 
   /* theme links/borders */
   --theme-link-h: 359;
-  --theme-link-s: 62%;
+  --theme-link-s: 68%;
   --theme-link-l: 69%;
 }
 
@@ -301,9 +254,9 @@
   --mod-legend-l: 95%;
 
   /* accent caps */
-  --accent-cap-h: 353;
-  --accent-cap-s: 39%;
-  --accent-cap-l: 35%;
+  --accent-cap-h: 350;
+  --accent-cap-s: 65%;
+  --accent-cap-l: 50%;
 
   /* accent legends */
   --accent-legend-h: 0;
@@ -313,7 +266,7 @@
   /* theme backgrounds */
   --theme-bg-h: 200;
   --theme-bg-s: 2%;
-  --theme-bg-l: 30%;
+  --theme-bg-l: 10%;
 
   /* theme text */
   --theme-text-h: 0;
@@ -321,9 +274,9 @@
   --theme-text-l: 95%;
 
   /* theme links/borders */
-  --theme-link-h: 353;
-  --theme-link-s: 42%;
-  --theme-link-l: 45%;
+  --theme-link-h: 350;
+  --theme-link-s: 65%;
+  --theme-link-l: 50%;
 }
 
 .theme-laser {
@@ -454,16 +407,16 @@
   /* theme backgrounds */
   --theme-bg-h: 220;
   --theme-bg-s: 8%;
-  --theme-bg-l: 64%;
+  --theme-bg-l: 34%;
 
   /* theme text */
   --theme-text-h: 227;
   --theme-text-s: 29%;
-  --theme-text-l: 19%;
+  --theme-text-l: 95%;
 
   /* theme links/borders */
   --theme-link-h: 271;
-  --theme-link-s: 48%;
+  --theme-link-s: 55%;
   --theme-link-l: 72%;
 }
 
@@ -548,7 +501,7 @@
   /* theme backgrounds */
   --theme-bg-h: 0;
   --theme-bg-s: 0%;
-  --theme-bg-l: 18%;
+  --theme-bg-l: 8%;
 
   /* theme text */
   --theme-text-h: 33;
