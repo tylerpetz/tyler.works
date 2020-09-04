@@ -71,7 +71,7 @@ export default {
 <template>
   <div class="tyler-styles bg-theme-bg text-theme-text font-body" :class="containerClass">
     <Header :links="links" />
-    <main class="px-8 min-h-screen">
+    <main class="px-4 md:px-8 min-h-screen">
       <div class="w-full max-w-screen-lg mx-auto">
         <transition name="page">
           <nuxt class="pt-40" />

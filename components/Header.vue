@@ -19,15 +19,15 @@ export default {
 </script>
 
 <template>
-  <header class="w-full px-8 py-4 absolute top-0 left-0 right-0">
+  <header class="w-full py-8 px-4 md:px-8 absolute top-0 left-0 right-0">
     <nav
       role="navigation"
       aria-label="main navigation"
     >
-      <ul class="max-w-screen-lg mx-auto flex flex-row items-center">
-        <li v-for="link in links" :key="link.text" class="mr-8">
+      <ul class="max-w-screen-lg mx-auto flex flex-row items-center space-x-6 sm:space-x-8">
+        <li v-for="link in links" :key="link.text">
           <nuxt-link
-            class="block relative text-theme-link hover:text-theme-link-hover text-xl"
+            class="block relative text-theme-link hover:text-theme-link-hover sm:text-xl"
             :to="link.url"
             exact
           >

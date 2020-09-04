@@ -22,9 +22,9 @@ export default {
 
 <template>
   <footer class="h-20 bg-mod-cap text-mod-legend flex items-center">
-    <div class="w-full max-w-screen-lg mx-auto flex justify-between items-center">
-      <p class="md:text-lg">
-        Tyler Petz (the web developer) &copy; {{ new Date().getFullYear() }}
+    <div class="w-full px-4 md:px-8 max-w-screen-lg mx-auto flex justify-between items-center">
+      <p class="text-sm sm:text-base md:text-lg">
+        Tyler Petz <span class="hidden sm:inline">(the web developer)</span> &copy; {{ new Date().getFullYear() }}
       </p>
       <ul class="flex flex-row space-x-4 text-lg md:text-2xl">
         <li v-for="link in links" :key="link.name">
