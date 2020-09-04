@@ -34,8 +34,8 @@ export default {
   },
   computed: {
     controlsClasses() {
-      if (this.scrollY < 200) return 'translate-y-64'
-      return 'translate-y-0'
+      if (this.scrollY < 200) return 'translate-x-32'
+      return 'translate-x-0'
     }
   },
   methods: {
@@ -50,8 +50,8 @@ export default {
 </script>
 
 <template>
-  <aside class="transform fixed bottom-0 right-0 mb-5 mr-4 transition-transform duration-150" :class="controlsClasses">
-    <ul class="flex-col items-center text-right mb-8">
+  <aside class="fixed bottom-0 right-0 mb-5 mr-4 transition-transform duration-150" >
+    <ul class="flex-col items-center text-right mb-8 transform transition-transform duration-150 ease-in-out" :class="controlsClasses">
       <li v-for="link in links" :key="link.text" class="mb-4">
         <nuxt-link
           class="block relative text-theme-link hover:text-theme-link-hover text-xl"
@@ -62,8 +62,7 @@ export default {
         </nuxt-link>
       </li>
     </ul>
-    <select @change="changeTheme($event.target.value)" :value="$store.state.app.theme" class="bg-accent-cap text-accent-legend rounded p-1">
-      <option selected disabled>Theme</option>
+    <select @change="changeTheme($event.target.value)" :value="$store.state.app.theme" class="bg-accent-cap text-accent-legend rounded h-10 pr-1 pt-1 font-semibold">
       <option v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</option>
     </select>
   </aside>

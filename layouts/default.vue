@@ -74,7 +74,7 @@ export default {
     <main class="px-8 min-h-screen">
       <div class="w-full max-w-screen-lg mx-auto">
         <transition name="page">
-          <nuxt />
+          <nuxt class="pt-40" />
         </transition>
       </div>
     </main>
