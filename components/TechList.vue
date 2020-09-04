@@ -33,7 +33,7 @@ export default {
       <li
         v-for="favorite in favorites"
         :key="favorite"
-        class="md:text-lg flex justify-center items-center py-2 rounded bg-mod-cap text-mod-legend hover:bg-accent-cap hover:text-accent-legend transition-colors duration-75"
+        class="cursor-default md:text-lg flex justify-center items-center py-2 rounded bg-mod-cap text-mod-legend hover:bg-accent-cap hover:text-accent-legend transition-colors duration-75"
       >
         {{ favorite }}
       </li>
