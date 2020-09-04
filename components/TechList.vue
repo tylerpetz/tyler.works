@@ -8,12 +8,16 @@ export default {
         'Nuxt',
         'TailwindCSS',
         'Babel/ES6+',
+        'Jest',
         'Yarn',
         'Webpack',
         'Sass',
+        'VS Code',
+        'ZSH',
         'GitHub',
         'Netlify',
         'Contentful',
+        'Figma',
         'Google Analytics',
         'AWS',
       ]
@@ -25,7 +29,7 @@ export default {
 <template>
   <section>
     <slot name="header" />
-    <ul class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <li
         v-for="favorite in favorites"
         :key="favorite"

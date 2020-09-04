@@ -44,10 +44,10 @@ export default {
           url: '/work',
           text: 'Work'
         },
-        // {
-        //   url: '/contact',
-        //   text: 'Contact'
-        // },
+        {
+          url: '/contact',
+          text: 'Contact'
+        },
         // {
         //   url: '/cv',
         //   text: 'CV'
