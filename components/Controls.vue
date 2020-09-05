@@ -68,7 +68,5 @@ export default {
         <option v-for="theme in themes" :key="theme" :value="theme">{{ theme }}</option>
       </select>
     </div>
-    <div class="fixed inset-0 transition-colors duration-300 ease-in-out z-0 pointer-events-none opacity-50" :class="hoveringControls ? 'bg-theme-bg-d' : 'bg-transparent'" />
   </aside>
 </template>
-
