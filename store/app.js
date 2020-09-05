@@ -1,6 +1,6 @@
 const state = () => ({
   buzzwords: false,
-  theme: 'midnight'
+  theme: '8008'
 })
 
 const mutations = {

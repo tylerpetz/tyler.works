@@ -48,12 +48,10 @@ export default {
   },
   computed: {
     containerClass () {
-      const { theme = 'midnight' } = this.$store.state.app
-      return `theme-${theme}`
+      return `theme-${this.$store.state.app.theme}`
     },
     themeFavicon() {
-      const { theme = 'midnight' } = this.$store.state.app
-      return `favicon-${theme}.svg`
+      return `favicon-${this.$store.state.app.theme}.svg`
     }
   },
 }
