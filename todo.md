@@ -21,3 +21,4 @@ hook up buzzwords to contentful
 
 add something that changes the title when you leave the tab
 add more projects
+hotkeys for theme switchin

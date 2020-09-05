@@ -34,7 +34,7 @@ export default {
         You can find some more on
         <nuxt-link
           class="text-theme-link hover:text-theme-link-hover"
-          to="/work"
+          to="/projects"
         >
           on my work page
         </nuxt-link>.

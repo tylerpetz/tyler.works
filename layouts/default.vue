@@ -32,17 +32,17 @@ export default {
           text: 'Home'
         },
         {
-          url: '/work',
-          text: 'Work'
+          url: '/projects',
+          text: 'Projects'
         },
         {
           url: '/hit-me-up',
-          text: 'Contact Me'
+          text: 'Hit Me Up'
         },
-        // {
-        //   url: '/cv',
-        //   text: 'CV'
-        // }
+        {
+          url: '/my-resume',
+          text: 'Resumé'
+        }
       ]
     }
   },

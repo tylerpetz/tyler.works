@@ -82,10 +82,10 @@ export default {
         client.getEntries({
           content_type: 'project'
         })
-      ]).then(([blogs, projects]) => {
+      ]).then(([writing, projects]) => {
         return [
-          ...blogs.items.map(entry => `/blog/${entry.fields.slug}`),
-          ...projects.items.map(entry => `/work/${entry.fields.slug}`)
+          ...writing.items.map(entry => `/writing/${entry.fields.slug}`),
+          ...projects.items.map(entry => `/projects/${entry.fields.slug}`)
         ]
       })
     }

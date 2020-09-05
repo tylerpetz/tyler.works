@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-  <my-resume />
+  <the-resume />
 </template>

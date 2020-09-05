@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'my-resume',
+  name: 'the-resume',
   props: {
     intro: {
       type: String,
