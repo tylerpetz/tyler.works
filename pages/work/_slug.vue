@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Project',
+  name: 'project',
   middleware: 'project',
   computed: {
     project () {

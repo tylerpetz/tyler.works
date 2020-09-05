@@ -1,11 +1,6 @@
 <script>
-import BlogList from '~/components/BlogList'
-
 export default {
-  name: 'Blog',
-  components: {
-    BlogList,
-  },
+  name: 'blog',
   async fetch ({ store, params }) {
     await store.dispatch('posts/getPosts', params.slug)
   },
@@ -37,5 +32,5 @@ export default {
 </script>
 
 <template>
-  <BlogList :count="10" />
+  <blog-list :count="10" />
 </template>

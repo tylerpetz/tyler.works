@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Buzzword',
+  name: 'buzzword',
   computed: {
     buzzwords () {
       return this.$store.state.app.buzzwords

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'ProjectListItem',
+  name: 'project-list-item',
   props: {
     project: {
       type: Object,

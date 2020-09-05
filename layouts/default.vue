@@ -1,15 +1,6 @@
 <script>
-import Controls from '../components/Controls'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-
 export default {
-  name: 'Default',
-  components: {
-    Controls,
-    Header,
-    Footer
-  },
+  name: 'default',
   head () {
     return {
       title: 'Tyler Petz - Web Developer',
@@ -45,8 +36,8 @@ export default {
           text: 'Work'
         },
         {
-          url: '/contact',
-          text: 'Contact'
+          url: '/hit-me-up',
+          text: 'Contact Me'
         },
         // {
         //   url: '/cv',
@@ -69,8 +60,11 @@ export default {
 </script>
 
 <template>
-  <div class="tyler-styles bg-theme-bg text-theme-text font-body" :class="containerClass">
-    <Header :links="links" />
+  <div
+    class="tyler-styles bg-theme-bg text-theme-text font-body"
+    :class="containerClass"
+  >
+    <the-cap :links="links" />
     <main class="px-4 md:px-8 min-h-screen">
       <div class="w-full max-w-screen-lg mx-auto">
         <transition name="page">
@@ -78,7 +72,7 @@ export default {
         </transition>
       </div>
     </main>
-    <Controls :links="links" />
-    <Footer />
+    <the-pocket :links="links" />
+    <the-shoes />
   </div>
 </template>

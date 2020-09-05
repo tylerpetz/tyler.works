@@ -1,4 +1,4 @@
-import createClient from '@/api/contentful'
+import createClient from '@/utils/contentful'
 
 const state = () => ({
   activeProject: {},
@@ -16,7 +16,9 @@ const actions = {
         'fields.slug': slug
       })
       commit('SET_ACTIVE_PROJECT', res.items[0])
-    } catch (e) { } finally {
+    } catch (e) {
+      console.debug(e)
+    } finally {
       commit('SET_LOADING', false)
     }
   },
@@ -29,7 +31,9 @@ const actions = {
       })
       const projects = res.items || []
       commit('SET_PROJECTS', projects)
-    } catch (e) {}
+    } catch (e) {
+      console.debug(e)
+    }
   }
 }
 

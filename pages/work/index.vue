@@ -1,11 +1,6 @@
 <script>
-import ProjectList from '~/components/ProjectList'
-
 export default {
-  name: 'Work',
-  components: {
-    ProjectList
-  },
+  name: 'work',
   async fetch ({ store, params }) {
     await store.dispatch('projects/getProjects', params.slug)
   },
@@ -36,14 +31,19 @@ export default {
 
 <template>
   <div class="pt-40">
-    <ProjectList :projects="projects">
+    <project-list :projects="projects">
       <template slot="header">
         Here are those projects I was talking about.
       </template>
       <template slot="footer">
-        Those are my favorite ones, the rest are on <a href="https://github.com/tylerpetz" target="_blank" class="list-item__link" rel="noopener noreferrer">my github</a>,
+        Those are my favorite ones, the rest are on <a
+          href="https://github.com/tylerpetz"
+          target="_blank"
+          class="list-item__link"
+          rel="noopener noreferrer"
+        >my github</a>,
         peep it.
       </template>
-    </ProjectList>
+    </project-list>
   </div>
 </template>

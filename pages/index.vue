@@ -1,20 +1,7 @@
 <script>
-import BlogList from '@/components/BlogList'
-import BragList from '@/components/BragList'
-import ContactInfo from '@/components/ContactInfo'
-import ProjectList from '@/components/ProjectList'
-import TechList from '@/components/TechList'
-
 export default {
-  name: 'Home',
+  name: 'home',
   middleware: 'home',
-  components: {
-    BlogList,
-    BragList,
-    ContactInfo,
-    ProjectList,
-    TechList
-  },
   computed: {
     brags () {
       return this.$store.state.content.brags
@@ -43,25 +30,40 @@ export default {
       </h3>
     </div>
     <brag-list :brags="brags" />
-    <hr class="my-16 border-b border-theme-border" />
-    <project-list :projects="projects" :count="2">
-      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
+    <hr class="my-16 border-b border-theme-border">
+    <project-list
+      :projects="projects"
+      :count="2"
+    >
+      <h1
+        slot="header"
+        class="text-theme-text-d text-lg md:text-2xl mb-6"
+      >
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </project-list>
-    <hr class="my-16 border-b border-theme-border" />
-    <blog-list :posts="posts" :count="2">
-      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
+    <hr class="my-16 border-b border-theme-border">
+    <blog-list
+      :posts="posts"
+      :count="2"
+    >
+      <h1
+        slot="header"
+        class="text-theme-text-d text-lg md:text-2xl mb-6"
+      >
         I have also written these blog posts on <em>web development</em>:
       </h1>
     </blog-list>
-    <hr class="my-16 border-b border-theme-border" />
+    <hr class="my-16 border-b border-theme-border">
     <tech-list>
-      <h1 slot="header" class="text-theme-text-d text-lg md:text-2xl mb-6">
+      <h1
+        slot="header"
+        class="text-theme-text-d text-lg md:text-2xl mb-6"
+      >
         Here is some of my favorite tech and platforms that I use. The kinds of things that <em>web developers</em> would know about.
       </h1>
     </tech-list>
-    <hr class="my-16 border-b border-theme-border" />
+    <hr class="my-16 border-b border-theme-border">
     <contact-info />
   </div>
 </template>

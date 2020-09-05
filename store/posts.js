@@ -1,4 +1,4 @@
-import createClient from '@/api/contentful'
+import createClient from '@/utils/contentful'
 
 const state = () => ({
   activePost: {},
@@ -16,7 +16,9 @@ const actions = {
         'fields.slug': slug
       })
       commit('SET_ACTIVE_POST', res.items[0])
-    } catch (e) { } finally {
+    } catch (e) {
+      console.debug(e)
+    } finally {
       commit('SET_LOADING', false)
     }
   },
@@ -28,7 +30,9 @@ const actions = {
       })
       const posts = res.items || []
       commit('SET_POSTS', posts)
-    } catch (e) { }
+    } catch (e) {
+      console.debug(e)
+    }
   }
 }
 

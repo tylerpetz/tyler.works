@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Footer',
+  name: 'the-shoes',
   data() {
     return {
       links: [
@@ -27,7 +27,10 @@ export default {
         Tyler Petz <span class="hidden sm:inline">(web developer)</span> &copy; {{ new Date().getFullYear() }}
       </p>
       <ul class="flex flex-row space-x-4 text-lg md:text-2xl">
-        <li v-for="link in links" :key="link.name">
+        <li
+          v-for="link in links"
+          :key="link.name"
+        >
           <a
             class="text-mod-legend hover:text-theme-link transition-colors duration-75"
             :href="link.url"

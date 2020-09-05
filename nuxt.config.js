@@ -1,4 +1,4 @@
-import createClient from './api/contentful'
+import createClient from './utils/contentful'
 
 export default {
   mode: 'universal',
@@ -24,6 +24,11 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: 'var(--theme-color-border)' },
+
+  /*
+   ** Auto import components
+   */
+  components: true,
 
   /*
    ** Global CSS

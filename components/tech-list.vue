@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'TechList',
+  name: 'tech-list',
   data() {
     return {
       favorites: [

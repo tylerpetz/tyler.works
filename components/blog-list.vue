@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'BlogList',
+  name: 'blog-list',
   props: {
     count: {
       type: Number,
@@ -32,7 +32,10 @@ export default {
     <slot name="header" />
     <section>
       <template v-for="post in posts.slice(0, count)">
-        <article class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8" :key="post.sys.id">
+        <article
+          class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8"
+          :key="post.sys.id"
+        >
           <h1 class="text-theme-link text-2xl">
             {{ post.fields.title }}
           </h1>

@@ -8,12 +8,17 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    'plugin:vue/recommended',
-    '@vue/standard'
+    'eslint:recommended',
+    'plugin:vue/strongly-recommended',
   ],
+  plugins: ['vue'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/no-v-html': 'off',
+    "vue/name-property-casing": ["error", "kebab-case"],
+    "vue/component-name-in-template-casing": ["error", "kebab-case"],
+    "vue/component-definition-name-casing": ["error", "kebab-case"],
+    "vue/no-reserved-component-names": ["error"]
   }
 }

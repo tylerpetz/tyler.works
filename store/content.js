@@ -1,4 +1,4 @@
-import createClient from '@/api/contentful'
+import createClient from '@/utils/contentful'
 
 const state = () => ({
   brags: [],
@@ -15,7 +15,9 @@ const actions = {
       })
       const brags = res.items || []
       commit('SET_BRAGS', brags)
-    } catch (e) { }
+    } catch (e) {
+      console.debug(e)
+    }
   }
 }
 

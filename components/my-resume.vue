@@ -1,11 +1,6 @@
 <script>
-import Buzzword from '~/components/Buzzword'
-
 export default {
-  name: 'Resume',
-  components: {
-    Buzzword
-  },
+  name: 'my-resume',
   props: {
     intro: {
       type: String,
@@ -69,14 +64,14 @@ export default {
               Strive Media
             </h2>
             <p class="job__description resume__content">
-              I developed <Buzzword>high-traffic</Buzzword>
-              <Buzzword>high-performance</Buzzword> web sites and
-              <Buzzword>landing pages</Buzzword> for awesome brands like Trips
+              I developed <buzzword>high-traffic</buzzword>
+              <buzzword>high-performance</buzzword> web sites and
+              <buzzword>landing pages</buzzword> for awesome brands like Trips
               to Discover, Insider Car News, and Grocery Coupon Cart. I built a
               lot of cool features, like
-              <Buzzword>reporting dashboards</Buzzword> and
-              <Buzzword>analytics</Buzzword>, email building platforms, and
-              <Buzzword>subscription funnels</Buzzword>.
+              <buzzword>reporting dashboards</buzzword> and
+              <buzzword>analytics</buzzword>, email building platforms, and
+              <buzzword>subscription funnels</buzzword>.
             </p>
             <ul class="job__tools">
               <li class="job__tools--title">
@@ -109,7 +104,7 @@ export default {
             </h2>
             <p class="job__description resume__content">
               Doing anything (web-related) that the clients ask for, day and
-              night. Lots of <Buzzword>UI Design</Buzzword>, e-commerce, server
+              night. Lots of <buzzword>UI Design</buzzword>, e-commerce, server
               setup, website creation, graphic design. A Tyler of all trades.
             </p>
             <ul class="job__tools">
@@ -144,7 +139,7 @@ export default {
             <p class="job__description resume__content">
               Worked on a small team to quickly develop websites for local
               businesses. I primarily created
-              <Buzzword>responsive Wordpress themes</Buzzword> from Photoshop
+              <buzzword>responsive Wordpress themes</buzzword> from Photoshop
               design files and wired them up.
             </p>
             <ul class="job__tools">
@@ -172,7 +167,7 @@ export default {
             <p class="job__description resume__content">
               Worked with a marketing team to create websites for booking and
               purchasing cruise tickets.
-              <Buzzword>Highly secure</Buzzword> websites that generated lots of
+              <buzzword>Highly secure</buzzword> websites that generated lots of
               revenue.
             </p>
             <ul class="job__tools">

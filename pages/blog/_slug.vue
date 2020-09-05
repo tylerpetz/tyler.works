@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Post',
+  name: 'post',
   middleware: 'post',
   computed: {
     post () {
