@@ -12,9 +12,4 @@ const themes = [
   'wavez'
 ]
 
-const themesWithPrefix = themes.map(theme => `theme-${theme}`)
-
-module.exports = {
-  themes,
-  themesWithPrefix
-}
+export default themes

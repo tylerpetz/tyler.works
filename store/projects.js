@@ -1,4 +1,4 @@
-import createClient from '@/utils/contentful'
+import createClient from '@/app/contentful'
 
 const state = () => ({
   activeProject: {},

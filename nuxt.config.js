@@ -1,4 +1,4 @@
-import createClient from './utils/contentful'
+import createClient from './app/contentful'
 
 export default {
   mode: 'universal',
@@ -88,15 +88,6 @@ export default {
           ...projects.items.map(entry => `/projects/${entry.fields.slug}`)
         ]
       })
-    }
-  },
-
-  /*
-   ** router config, don't abstract it to that one file
-   */
-  router: {
-    scrollBehavior () {
-      return { x: 0, y: 0 }
     }
   }
 }

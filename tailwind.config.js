@@ -1,5 +1,3 @@
-const themesWithPrefix = require('./utils/themes.js')
-
 module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'production',
@@ -10,9 +8,6 @@ module.exports = {
       'plugins/**/*.js',
       'nuxt.config.js'
     ],
-  },
-  options: {
-    whitelist: themesWithPrefix,
   },
   theme: {
     extend: {
