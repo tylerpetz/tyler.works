@@ -69,6 +69,7 @@ export default {
       <select
         @change="changeTheme($event.target.value)"
         :value="$store.state.app.theme"
+        aria-label="Themes"
         class="bg-accent-cap text-accent-legend rounded h-10 pr-1 pt-1 font-semibold"
       >
         <option
