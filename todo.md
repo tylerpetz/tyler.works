@@ -8,7 +8,6 @@ add a buzzwords section, words that i use commonly as a web developer
 
 ## Pages
 
-re-add contact page
 update cv page
 add interests page for morty, records, keyboards
 
@@ -20,4 +19,3 @@ hook up tech list to contentful
 
 add something that changes the title when you leave the tab
 add more projects
-hotkeys for theme switchin

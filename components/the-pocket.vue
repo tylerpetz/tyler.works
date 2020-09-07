@@ -20,7 +20,7 @@ export default {
     controlsClasses() {
       if (this.scrollY < 200 && !this.hoveringControls) return 'translate-x-32'
       return 'translate-x-0'
-    }
+    },
   },
   mounted() {
     // todo: remove dom manipulation, use head method
