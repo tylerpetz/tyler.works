@@ -35,7 +35,7 @@ export default {
       this.scrollY = window.scrollY
     },
     changeTheme(theme) {
-      this.$store.commit('app/setActiveTheme', theme)
+      this.$store.commit('app/SET_ACTIVE_THEME', theme)
     },
   }
 }

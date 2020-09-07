@@ -33,11 +33,19 @@ export default {
     themeFavicon() {
       return `favicon-${this.$store.state.app.theme}.svg`
     },
-    hotkeys() {
+    keymap() {
       return {
         'shift+up': this.prevTheme,
         'shift+down': this.nextTheme,
       }
+    }
+  },
+  methods: {
+    nextTheme() {
+      this.$store.commit('app/SET_NEXT_THEME')
+    },
+    prevTheme() {
+      this.$store.commit('app/SET_PREV_THEME')
     }
   },
   head () {
@@ -65,6 +73,7 @@ export default {
 
 <template>
   <div
+    v-hotkey="keymap"
     class="tyler-styles bg-theme-bg text-theme-text font-body"
     :class="containerClass"
   >

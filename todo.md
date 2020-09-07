@@ -15,7 +15,6 @@ add interests page for morty, records, keyboards
 ## Data
 
 hook up tech list to contentful
-hook up buzzwords to contentful
 
 ## Cool stuff
 
