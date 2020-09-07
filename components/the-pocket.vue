@@ -16,6 +16,12 @@ export default {
       themes,
     }
   },
+  computed: {
+    controlsClasses() {
+      if (this.scrollY < 200 && !this.hoveringControls) return 'translate-x-32'
+      return 'translate-x-0'
+    }
+  },
   mounted() {
     // todo: remove dom manipulation, use head method
     document.addEventListener('scroll', this.handleScroll)
@@ -23,12 +29,6 @@ export default {
     this.$once('hook:destroyed', () => {
       document.removeEventListener('scroll', this.handleScroll)
     })
-  },
-  computed: {
-    controlsClasses() {
-      if (this.scrollY < 200 && !this.hoveringControls) return 'translate-x-32'
-      return 'translate-x-0'
-    }
   },
   methods: {
     handleScroll () {
@@ -67,10 +67,10 @@ export default {
         </li>
       </ul>
       <select
-        @change="changeTheme($event.target.value)"
         :value="$store.state.app.theme"
         aria-label="Themes"
         class="bg-accent-cap text-accent-legend rounded h-10 pr-1 pt-1 font-semibold"
+        @change="changeTheme($event.target.value)"
       >
         <option
           v-for="theme in themes"

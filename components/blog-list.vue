@@ -33,8 +33,8 @@ export default {
     <section>
       <template v-for="post in posts.slice(0, count)">
         <article
-          class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8"
           :key="post.sys.id"
+          class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8"
         >
           <h1 class="text-theme-link text-2xl">
             {{ post.fields.title }}

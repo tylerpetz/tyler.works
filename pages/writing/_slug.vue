@@ -60,8 +60,8 @@ export default {
       </header>
       <section>
         <div
-          class="post__content content"
           v-interpolation
+          class="post__content content"
           v-html="$md.render(post.fields.body)"
         />
         <div

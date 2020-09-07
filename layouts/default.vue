@@ -1,26 +1,6 @@
 <script>
 export default {
   name: 'default',
-  head () {
-    return {
-      title: 'Tyler Petz - Web Developer',
-      link: [
-        {
-          hid: 'favicon',
-          rel: 'icon',
-          type: 'image/svg+xml',
-          href: this.themeFavicon
-        },
-      ],
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Tyler Petz - Web Developer'
-        },
-      ]
-    }
-  },
   data () {
     return {
       fontsLoaded: false,
@@ -58,6 +38,26 @@ export default {
         'shift+up': this.prevTheme,
         'shift+down': this.nextTheme,
       }
+    }
+  },
+  head () {
+    return {
+      title: 'Tyler Petz - Web Developer',
+      link: [
+        {
+          hid: 'favicon',
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: this.themeFavicon
+        },
+      ],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Tyler Petz - Web Developer'
+        },
+      ]
     }
   },
 }

@@ -23,8 +23,8 @@ export default {
     >
       <template v-for="project in projects.slice(0, count)">
         <project-list-item
-          :project="project"
           :key="project.sys.id"
+          :project="project"
         />
       </template>
     </section>
