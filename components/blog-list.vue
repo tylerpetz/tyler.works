@@ -11,19 +11,6 @@ export default {
       default: () => []
     }
   },
-  methods: {
-    formatDate (date) {
-      const formatted = new Date(date)
-      return (
-        formatted.getMonth() +
-        1 +
-        '&middot;' +
-        formatted.getDate() +
-        '&middot;' +
-        formatted.getFullYear()
-      )
-    }
-  }
 }
 </script>
 
@@ -31,22 +18,11 @@ export default {
   <div>
     <slot name="header" />
     <section>
-      <template v-for="post in posts.slice(0, count)">
-        <article
-          :key="post.sys.id"
-          class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8"
-        >
-          <h1 class="text-theme-link text-2xl">
-            {{ post.fields.title }}
-          </h1>
-          <p class="mb-4">
-            {{ post.fields.description }}
-          </p>
-          <time class="text-xs">
-            Published <span v-html="formatDate(post.sys.createdAt)" />
-          </time>
-        </article>
-      </template>
+      <blog-list-item
+        v-for="post in posts.slice(0, count)"
+        :key="post.sys.id"
+        :post="post"
+      />
     </section>
     <slot name="footer">
       <p>That actually is all of my blog posts. I do a lot more web development than blogging at the moment.</p>
