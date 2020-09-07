@@ -1,13 +1,13 @@
 <script>
 export default {
-  name: "brag-list",
+  name: 'brag-list',
   props: {
     brags: {
       type: Array,
       default: () => []
     }
   },
-};
+}
 </script>
 
 <template>

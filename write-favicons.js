@@ -62,8 +62,8 @@ const writeFaviconstoFile = (favicons) => {
     const filename = `static/favicon-${Object.keys(favicon)[0]}.svg`
     const svg = Object.values(favicon)[0]
     fs.writeFile(filename, svg, (err) => {
-      if (err) throw err;
-      console.log(filename, 'saved!');
+      if (err) throw err
+      console.log(filename, 'saved!')
     })
   })
 }

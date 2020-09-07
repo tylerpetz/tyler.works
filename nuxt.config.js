@@ -56,6 +56,13 @@ export default {
   ],
 
   /*
+   ** Nuxt.js plugins
+   */
+  plugins: [
+    '~/app/hotkeys.js'
+  ],
+
+  /*
    ** Processes markdown
    */
   markdownit: {

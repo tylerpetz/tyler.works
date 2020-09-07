@@ -52,6 +52,12 @@ export default {
     },
     themeFavicon() {
       return `favicon-${this.$store.state.app.theme}.svg`
+    },
+    hotkeys() {
+      return {
+        'shift+up': this.prevTheme,
+        'shift+down': this.nextTheme,
+      }
     }
   },
 }

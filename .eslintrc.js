@@ -13,12 +13,14 @@ module.exports = {
   ],
   plugins: ['vue'],
   rules: {
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/no-v-html': 'off',
-    "vue/name-property-casing": ["error", "kebab-case"],
-    "vue/component-name-in-template-casing": ["error", "kebab-case"],
-    "vue/component-definition-name-casing": ["error", "kebab-case"],
-    "vue/no-reserved-component-names": ["error"]
+    'vue/name-property-casing': ['error', 'kebab-case'],
+    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+    'vue/component-definition-name-casing': ['error', 'kebab-case'],
+    'vue/no-reserved-component-names': ['error']
   }
 }
