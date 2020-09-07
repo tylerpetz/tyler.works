@@ -64,14 +64,14 @@ export default {
               Strive Media
             </h2>
             <p class="job__description resume__content">
-              I developed <buzzword>high-traffic</buzzword>
-              <buzzword>high-performance</buzzword> web sites and
-              <buzzword>landing pages</buzzword> for awesome brands like Trips
+              I developed high-traffic
+              high-performance web sites and
+              landing pages for awesome brands like Trips
               to Discover, Insider Car News, and Grocery Coupon Cart. I built a
               lot of cool features, like
-              <buzzword>reporting dashboards</buzzword> and
-              <buzzword>analytics</buzzword>, email building platforms, and
-              <buzzword>subscription funnels</buzzword>.
+              reporting dashboards and
+              analytics, email building platforms, and
+              subscription funnels.
             </p>
             <ul class="job__tools">
               <li class="job__tools--title">
@@ -104,7 +104,7 @@ export default {
             </h2>
             <p class="job__description resume__content">
               Doing anything (web-related) that the clients ask for, day and
-              night. Lots of <buzzword>UI Design</buzzword>, e-commerce, server
+              night. Lots of UI Design, e-commerce, server
               setup, website creation, graphic design. A Tyler of all trades.
             </p>
             <ul class="job__tools">
@@ -139,7 +139,7 @@ export default {
             <p class="job__description resume__content">
               Worked on a small team to quickly develop websites for local
               businesses. I primarily created
-              <buzzword>responsive Wordpress themes</buzzword> from Photoshop
+              responsive Wordpress themes from Photoshop
               design files and wired them up.
             </p>
             <ul class="job__tools">
@@ -167,7 +167,7 @@ export default {
             <p class="job__description resume__content">
               Worked with a marketing team to create websites for booking and
               purchasing cruise tickets.
-              <buzzword>Highly secure</buzzword> websites that generated lots of
+              Highly secure websites that generated lots of
               revenue.
             </p>
             <ul class="job__tools">
