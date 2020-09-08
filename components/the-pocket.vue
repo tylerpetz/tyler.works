@@ -42,8 +42,8 @@ export default {
 </script>
 
 <template>
-  <aside>
-    <div
+  <aside aria-hidden="true">
+    <nav
       class="fixed bottom-0 right-0 pl-12 pt-12 pb-5 pr-4 z-20"
       @mouseover="hoveringControls = true"
       @mouseout="hoveringControls = false"
@@ -80,6 +80,6 @@ export default {
           {{ theme }}
         </option>
       </select>
-    </div>
+    </nav>
   </aside>
 </template>

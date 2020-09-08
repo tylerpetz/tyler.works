@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <div class="pt-40">
+  <div>
     <project-list :projects="projects">
       <template slot="header">
         Here are those projects I was talking about.

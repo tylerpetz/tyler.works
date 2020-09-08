@@ -41,8 +41,3 @@ html {
     }
   }
 }
-
-// global fancy transitions, todo: find out a way to apply only when changing
-.tyler-styles, .tyler-styles * {
-  @apply transition-colors duration-500 ease-in-out;
-}

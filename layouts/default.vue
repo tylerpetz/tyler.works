@@ -74,14 +74,14 @@ export default {
 <template>
   <div
     v-hotkey="keymap"
-    class="tyler-styles bg-theme-bg text-theme-text font-body"
+    class="bg-theme-bg text-theme-text font-body transition-colors duration-500 ease-in-out"
     :class="containerClass"
   >
     <the-cap :links="links" />
     <main class="px-4 md:px-8 min-h-screen">
-      <div class="w-full max-w-screen-lg mx-auto">
+      <div class="w-full max-w-screen-lg mx-auto pt-40">
         <transition name="page">
-          <nuxt class="pt-40" />
+          <nuxt />
         </transition>
       </div>
     </main>
