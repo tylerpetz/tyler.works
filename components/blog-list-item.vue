@@ -7,36 +7,34 @@ export default {
       default: () => {}
     }
   },
-  computed: {
-    date() {
-      if (!this.post.sys.createdAt) return false
-      const formatted = new Date(this.post.sys.createdAt)
-      return {
-        month: formatted.getMonth() + 1,
-        day: formatted.getDate(),
-        year: formatted.getFullYear(),
-      }
-    },
+  date(createdAt = '') {
+    if (!createdAt) return false
+    const formatted = new Date(createdAt)
+    return {
+      month: formatted.getMonth() + 1,
+      day: formatted.getDate(),
+      year: formatted.getFullYear(),
+    }
   },
 }
 </script>
 
-<template>
+<template functional>
   <article
-    :key="post.sys.id"
+    :key="props.post.sys.id"
     class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75 cursor-pointer mb-8"
   >
     <h1 class="text-theme-link text-2xl">
-      {{ post.fields.title }}
+      {{ props.post.fields.title }}
     </h1>
     <p class="mb-4">
-      {{ post.fields.description }}
+      {{ props.post.fields.description }}
     </p>
     <time
-      v-if="date"
+      v-if="$options.date(props.post.sys.createdAt)"
       class="text-xs"
     >
-      Published {{ date.month }}&middot;{{ date.day }}&middot;{{ date.year }}
+      Published {{ $options.date(props.post.sys.createdAt).month }}&middot;{{ $options.date(props.post.sys.createdAt).day }}&middot;{{ $options.date(props.post.sys.createdAt).year }}
     </time>
     <time
       v-else
