@@ -15,17 +15,15 @@ export default {
 </script>
 
 <template>
-  <div>
+  <section>
     <slot name="header" />
-    <section>
-      <blog-list-item
-        v-for="post in posts.slice(0, count)"
-        :key="post.sys.id"
-        :post="post"
-      />
-    </section>
+    <blog-list-item
+      v-for="post in posts.slice(0, count)"
+      :key="post.sys.id"
+      :post="post"
+    />
     <slot name="footer">
       <p>That actually is all of my blog posts. I do a lot more web development than blogging at the moment.</p>
     </slot>
-  </div>
+  </section>
 </template>
