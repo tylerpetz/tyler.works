@@ -9,20 +9,28 @@ export default {
       links: [
         {
           url: '/',
-          text: 'Home'
+          text: 'TP'
         },
         {
-          url: '/projects',
+          url: '/on-projects',
           text: 'Projects'
         },
+        // {
+        //   url: '/on-writing',
+        //   text: 'Projects'
+        // },
         {
-          url: '/hit-me-up',
-          text: 'Hit Me Up'
+          url: '/on-networking',
+          text: 'Contact'
         },
         {
-          url: '/my-resume',
-          text: 'Resumé'
-        }
+          url: '/for-people',
+          text: 'CV'
+        },
+        // {
+        //   url: '/but-he-is-still-a-person',
+        //   text: 'About'
+        // },
       ]
     }
   },

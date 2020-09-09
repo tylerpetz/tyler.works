@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'blog',
+  name: 'posts',
   async fetch ({ store, params }) {
     await store.dispatch('posts/getPosts', params.slug)
   },

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'hit-me-up',
+  name: 'on-networking',
 }
 </script>
 

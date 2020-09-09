@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'work',
+  name: 'projects',
   async fetch ({ store, params }) {
     await store.dispatch('projects/getProjects', params.slug)
   },

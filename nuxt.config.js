@@ -94,8 +94,8 @@ export default {
         })
       ]).then(([writing, projects]) => {
         return [
-          ...writing.items.map(entry => `/writing/${entry.fields.slug}`),
-          ...projects.items.map(entry => `/projects/${entry.fields.slug}`)
+          ...writing.items.map(entry => `/on-writing/${entry.fields.slug}`),
+          ...projects.items.map(entry => `/on-projects/${entry.fields.slug}`)
         ]
       })
     }
