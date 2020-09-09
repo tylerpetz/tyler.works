@@ -26,7 +26,9 @@ export default {
         That's cool, I am one.
       </h2>
       <h3 class="text-center sm:text-lg md:text-2xl">
-        Keep reading if you don't believe me.
+        Keep reading if you don't <hint-tooltip text="SUP">
+          believe
+        </hint-tooltip> me.
       </h3>
     </div>
     <brag-list :brags="brags" />
