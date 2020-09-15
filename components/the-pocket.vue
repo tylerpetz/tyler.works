@@ -74,10 +74,10 @@ export default {
       >
         <option
           v-for="theme in themes"
-          :key="theme"
-          :value="theme"
+          :key="theme.id"
+          :value="theme.id"
         >
-          {{ theme }}
+          {{ theme.name }}
         </option>
       </select>
     </nav>
