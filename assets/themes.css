@@ -232,18 +232,63 @@
   --theme-link-l: 69%;
 }
 
+.theme-camping {
+  /* alpha caps */
+  --alpha-cap-h: 36;
+  --alpha-cap-s: 47%;
+  --alpha-cap-l: 88%;
+
+  /* alpha legends */
+  --alpha-legend-h: 120;
+  --alpha-legend-s: 15%;
+  --alpha-legend-l: 42%;
+
+  /* mod caps */
+  --mod-cap-h: 120;
+  --mod-cap-s: 15%;
+  --mod-cap-l: 42%;
+
+  /* mod legends */
+  --mod-legend-h: 36;
+  --mod-legend-s: 47%;
+  --mod-legend-l: 88%;
+
+  /* accent caps */
+  --accent-cap-h: 36;
+  --accent-cap-s: 47%;
+  --accent-cap-l: 95%;
+
+  /* accent legends */
+  --accent-legend-h: 0;
+  --accent-legend-s: 36%;
+  --accent-legend-l: 36%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 120;
+  --theme-bg-s: 15%;
+  --theme-bg-l: 90%;
+
+  /* theme text */
+  --theme-text-h: 0;
+  --theme-text-s: 36%;
+  --theme-text-l: 20%;
+
+  /* theme links/borders */
+  --theme-link-h: 120;
+  --theme-link-s: 25%;
+  --theme-link-l: 40%;
+}
+
 .theme-coral {
   /* alpha caps */
   --alpha-cap-h: 47;
   --alpha-cap-s: 60%;
   --alpha-cap-l: 97%;
-  /* hsl(47, 60%, 97%) */
 
   /* alpha legends */
   --alpha-legend-h: 8;
   --alpha-legend-s: 64%;
   --alpha-legend-l: 62%;
-  /* hsl(8, 64%, 62%) */
 
   /* mod caps */
   --mod-cap-h: 8;
@@ -373,6 +418,53 @@
   --theme-link-h: 350;
   --theme-link-s: 65%;
   --theme-link-l: 50%;
+}
+
+.theme-hammerhead {
+  /* alpha caps */
+  --alpha-cap-h: 216;
+  --alpha-cap-s: 25%;
+  --alpha-cap-l: 71%;
+
+  /* alpha legends */
+  --alpha-legend-h: 221;
+  --alpha-legend-s: 37%;
+  --alpha-legend-l: 20%;
+
+  /* mod caps */
+  --mod-cap-h: 221;
+  --mod-cap-s: 37%;
+  --mod-cap-l: 20%;
+
+  /* mod legends */
+  --mod-legend-h: 171;
+  --mod-legend-s: 51%;
+  --mod-legend-l: 53%;
+
+  /* accent caps */
+  --accent-cap-h: 171;
+  --accent-cap-s: 51%;
+  --accent-cap-l: 53%;
+
+  /* accent legends */
+  --accent-legend-h: 221;
+  --accent-legend-s: 37%;
+  --accent-legend-l: 20%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 216;
+  --theme-bg-s: 25%;
+  --theme-bg-l: 94%;
+
+  /* theme text */
+  --theme-text-h: 221;
+  --theme-text-s: 37%;
+  --theme-text-l: 20%;
+
+  /* theme links/borders */
+  --theme-link-h: 171;
+  --theme-link-s: 51%;
+  --theme-link-l: 40%;
 }
 
 .theme-laser {

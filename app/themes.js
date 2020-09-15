@@ -17,6 +17,10 @@ export const themes = [
     name: 'bento',
   },
   {
+    id: 'camping',
+    name: 'camping',
+  },
+  {
     id: 'coral',
     name: 'coral',
   },
@@ -27,6 +31,10 @@ export const themes = [
   {
     id: 'dolch',
     name: 'dolch',
+  },
+  {
+    id: 'hammerhead',
+    name: 'hammerhead',
   },
   {
     id: 'laser',
