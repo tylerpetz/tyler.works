@@ -1,7 +1,7 @@
-import themes from '@/app/themes.js'
+import { themes, defaultTheme } from '@/app/themes.js'
 
 const state = () => ({
-  theme: '8008'
+  theme: defaultTheme
 })
 
 const mutations = {
@@ -9,7 +9,7 @@ const mutations = {
     state.theme = theme
   },
   SET_PREV_THEME(state) {
-    const currentThemeIndex = themes.findIndex(theme => theme === state.theme)
+    const currentThemeIndex = themes.findIndex(theme => theme.id === state.theme)
 
     let theme = ''
     if (currentThemeIndex - 1 < 0) {
@@ -18,10 +18,10 @@ const mutations = {
       theme = themes[currentThemeIndex - 1]
     }
 
-    state.theme = theme
+    state.theme = theme.id
   },
   SET_NEXT_THEME(state) {
-    const currentThemeIndex = themes.findIndex(theme => theme === state.theme)
+    const currentThemeIndex = themes.findIndex(theme => theme.id === state.theme)
 
     let theme = ''
     if (currentThemeIndex + 1 > themes.length - 1) {
@@ -30,7 +30,7 @@ const mutations = {
       theme = themes[currentThemeIndex + 1]
     }
 
-    state.theme = theme
+    state.theme = theme.id
   }
 }
 

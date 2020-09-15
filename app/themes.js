@@ -1,18 +1,5 @@
-// const themes = [
-//   '8008',
-//   '9009',
-//   'apollo',
-//   'bento',
-//   'dolch',
-//   'laser',
-//   'metropolis',
-//   'midnight',
-//   'milkshake',
-//   'oblivion',
-//   'wavez'
-// ]
-
-const themes = [
+export const defaultTheme = 'coral'
+export const themes = [
   {
     id: '8008',
     name: '8008',
@@ -28,6 +15,10 @@ const themes = [
   {
     id: 'bento',
     name: 'bento',
+  },
+  {
+    id: 'coral',
+    name: 'coral',
   },
   {
     id: 'devtty',
@@ -62,5 +53,3 @@ const themes = [
     name: 'wavez',
   },
 ]
-
-export default themes

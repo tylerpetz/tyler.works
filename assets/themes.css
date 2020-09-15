@@ -232,6 +232,55 @@
   --theme-link-l: 69%;
 }
 
+.theme-coral {
+  /* alpha caps */
+  --alpha-cap-h: 47;
+  --alpha-cap-s: 60%;
+  --alpha-cap-l: 97%;
+  /* hsl(47, 60%, 97%) */
+
+  /* alpha legends */
+  --alpha-legend-h: 8;
+  --alpha-legend-s: 64%;
+  --alpha-legend-l: 62%;
+  /* hsl(8, 64%, 62%) */
+
+  /* mod caps */
+  --mod-cap-h: 8;
+  --mod-cap-s: 64%;
+  --mod-cap-l: 62%;
+
+  /* mod legends */
+  --mod-legend-h: 47;
+  --mod-legend-s: 60%;
+  --mod-legend-l: 97%;
+
+  /* accent caps */
+  --accent-cap-h: 173;
+  --accent-cap-s: 37%;
+  --accent-cap-l: 70%;
+
+  /* accent legends */
+  --accent-legend-h: 8;
+  --accent-legend-s: 37%;
+  --accent-legend-l: 100%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 173;
+  --theme-bg-s: 37%;
+  --theme-bg-l: 100%;
+
+  /* theme text */
+  --theme-text-h: 8;
+  --theme-text-s: 64%;
+  --theme-text-l: 50%;
+
+  /* theme links/borders */
+  --theme-link-h: 8;
+  --theme-link-s: 89%;
+  --theme-link-l: 39%;
+}
+
 .theme-devtty {
   /* alpha caps */
   --alpha-cap-h: 80;

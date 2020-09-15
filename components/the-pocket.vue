@@ -1,5 +1,5 @@
 <script>
-import themes from '@/app/themes.js'
+import { themes } from '@/app/themes.js'
 
 export default {
   name: 'the-pocket',
