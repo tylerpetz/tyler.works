@@ -31,7 +31,7 @@ const themes = [
   },
   {
     id: 'devtty',
-    name: 'dev/tty',
+    name: '/dev/tty',
   },
   {
     id: 'dolch',

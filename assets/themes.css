@@ -232,6 +232,53 @@
   --theme-link-l: 69%;
 }
 
+.theme-devtty {
+  /* alpha caps */
+  --alpha-cap-h: 80;
+  --alpha-cap-s: 14%;
+  --alpha-cap-l: 91%;
+
+  /* alpha legends */
+  --alpha-legend-h: 40;
+  --alpha-legend-s: 6%;
+  --alpha-legend-l: 10%;
+
+  /* mod caps */
+  --mod-cap-h: 34;
+  --mod-cap-s: 7%;
+  --mod-cap-l: 82%;
+
+  /* mod legends */
+  --mod-legend-h: 40;
+  --mod-legend-s: 6%;
+  --mod-legend-l: 10%;
+
+  /* accent caps */
+  --accent-cap-h: 5;
+  --accent-cap-s: 75%;
+  --accent-cap-l: 48%;
+
+  /* accent legends */
+  --accent-legend-h: 40;
+  --accent-legend-s: 6%;
+  --accent-legend-l: 10%;
+
+  /* theme backgrounds */
+  --theme-bg-h: 0;
+  --theme-bg-s: 0%;
+  --theme-bg-l: 94%;
+
+  /* theme text */
+  --theme-text-h: 40;
+  --theme-text-s: 6%;
+  --theme-text-l: 10%;
+
+  /* theme links/borders */
+  --theme-link-h: 8;
+  --theme-link-s: 89%;
+  --theme-link-l: 39%;
+}
+
 .theme-dolch {
   /* alpha caps */
   --alpha-cap-h: 69;
