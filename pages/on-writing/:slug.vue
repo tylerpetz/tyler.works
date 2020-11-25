@@ -1,11 +1,24 @@
 <script>
+import createClient from '@/app/contentful'
+
 export default {
   name: 'post',
-  middleware: 'post',
+  async asyncData({ $config, params }) {
+    const client = createClient($config.spaceId, $config.accessToken)
+    const res = await client.getEntries({
+      content_type: 'blogPost',
+      'fields.slug': params.slug
+    })
+    return {
+      post: res.items[0]
+    }
+  },
+  data() {
+    return {
+      post: {}
+    }
+  },
   computed: {
-    post () {
-      return this.$store.state.posts.activePost
-    },
     isLoading () {
       return this.$store.state.posts.isLoading
     }

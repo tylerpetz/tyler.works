@@ -1,13 +1,26 @@
 <script>
+import createClient from '@/app/contentful'
+
 export default {
   name: 'project',
-  middleware: 'project',
+  async asyncData({ $config, params }) {
+    const client = createClient($config.spaceId, $config.accessToken)
+    const res = await client.getEntries({
+      content_type: 'project',
+      'fields.slug': params.slug
+    })
+    return {
+      project: res.items[0]
+    }
+  },
+  data() {
+    return {
+      project: {}
+    }
+  },
   computed: {
-    project () {
-      return this.$store.state.projects.activeProject
-    },
     isLoading () {
-      return !Object.keys(this.$store.state.projects.activeProject).length
+      return !Object.keys(this.project).length
     }
   },
   methods: {

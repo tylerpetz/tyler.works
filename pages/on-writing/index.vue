@@ -1,19 +1,24 @@
 <script>
+import createClient from '@/app/contentful'
+
 export default {
   name: 'posts',
-  async fetch ({ store, params }) {
-    await store.dispatch('posts/getPosts', params.slug)
+   async asyncData({ $config }) {
+    const client = createClient($config.spaceId, $config.accessToken)
+    const res = await client.getEntries({
+      content_type: 'blogPost',
+      order: 'sys.createdAt'
+    })
+    return {
+      posts: res.items
+    }
   },
   data () {
     return {
       title: 'Here is my blog.',
       contactIntro:
-        'Want to talk some more about that stuff that I blogged about?'
-    }
-  },
-  computed: {
-    posts () {
-      return this.$store.state.posts.posts
+        'Want to talk some more about that stuff that I blogged about?',
+      posts: []
     }
   },
   head () {

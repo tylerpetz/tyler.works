@@ -1,17 +1,22 @@
 <script>
+import createClient from '@/app/contentful'
+
 export default {
   name: 'projects',
-  async fetch ({ store, params }) {
-    await store.dispatch('projects/getProjects', params.slug)
+  async asyncData({ $config }) {
+    const client = createClient($config.spaceId, $config.accessToken)
+    const res = await client.getEntries({
+      content_type: 'project',
+      order: 'sys.createdAt'
+    })
+    return {
+      projects: res.items
+    }
   },
   data () {
     return {
-      contactIntro: 'Cool projects huh? Get in touch with me if you wanna talk shop.'
-    }
-  },
-  computed: {
-    projects () {
-      return this.$store.state.projects.projects
+      contactIntro: 'Cool projects huh? Get in touch with me if you wanna talk shop.',
+      projects: []
     }
   },
   head () {

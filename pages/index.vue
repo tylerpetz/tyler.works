@@ -1,18 +1,38 @@
 <script>
+import createClient from '@/app/contentful'
+
 export default {
   name: 'home',
-  middleware: 'home',
-  computed: {
-    brags () {
-      return this.$store.state.content.brags
-    },
-    posts () {
-      return this.$store.state.posts.posts
-    },
-    projects () {
-      return this.$store.state.projects.projects
-    },
-  }
+  asyncData({ $config }) {
+    const client = createClient($config.spaceId, $config.accessToken)
+    return Promise.all([
+      client.getEntries({
+        content_type: 'blogPost',
+        order: 'sys.createdAt'
+      }),
+      client.getEntries({
+        content_type: 'project',
+        order: 'sys.createdAt'
+      }),
+      client.getEntries({
+        content_type: 'brag',
+        order: 'sys.createdAt'
+      })
+    ]).then(([posts,projects,brags]) => {
+      return {
+        posts: posts.items,
+        projects: projects.items,
+        brags: brags.items,
+      }
+    })
+  },
+  data() {
+    return {
+      brags: [],
+      posts: [],
+      projects: [],
+    }
+  },
 }
 </script>
 

@@ -64,8 +64,8 @@ export default {
    ** Nuxt.js plugins
    */
   plugins: [
-    '~/app/hotkeys.js',
-    '~/app/contentful.js'
+    { src: '~/app/hotkeys.js', mode: 'client' },
+    { src: '~/app/contentful.js', mode: 'server' }
   ],
 
   /*
@@ -82,6 +82,19 @@ export default {
     extractCSS: true,
     loaders: {
       scss: { sourceMap: false }
+    },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true
+    },
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].js' : '[name]-[contenthash:7].js',
+      chunk: ({ isDev }) => isDev ? '[name].js' : '[name]-[contenthash:7].js',
+      css: ({ isDev }) => isDev ? '[name].css' : '[name]-[contenthash:7].css',
+      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name]-[contenthash:7].[ext]',
+      font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
+      video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
     },
     build: {
       extend(config, ctx) {
