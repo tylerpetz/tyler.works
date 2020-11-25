@@ -20,7 +20,7 @@ export default {
   <div>
     <div class="flex flex-col items-center pb-32">
       <h1 class="text-center text-xl sm:text-2xl md:text-4xl">
-        Are you looking for a <strong class="whitespace-no-wrap">web developer?</strong>
+        Are you looking for a <strong class="whitespace-nowrap">web developer?</strong>
       </h1>
       <h2 class="text-center rounded-sm text-lg sm:text-2xl md:text-3xl mt-4 mb-6 bg-accent-cap text-accent-legend pt-1 px-3">
         That's cool, I am one.

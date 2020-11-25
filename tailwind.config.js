@@ -10,10 +10,10 @@ module.exports = {
     ],
   },
   theme: {
+    fontFamily: {
+      body: ['Overpass', 'sans-serif']
+    },
     extend: {
-      fontFamily: {
-        body: ['Overpass', 'sans-serif']
-      },
       colors: {
         theme: {
           bg: 'var(--theme-bg)',
@@ -58,8 +58,5 @@ module.exports = {
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     textColor: ['responsive', 'hover', 'focus', 'active'],
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
   },
 }

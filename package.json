@@ -17,10 +17,13 @@
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.4.11",
+    "autoprefixer": "^10.0.2",
     "contentful": "^7.11.3",
     "cross-env": "^7.0.2",
     "nuxt": "^2.14.1",
     "nuxt-interpolation": "^0.2.2",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.0.1",
     "v-hotkey": "^0.8.0"
   },
   "devDependencies": {
