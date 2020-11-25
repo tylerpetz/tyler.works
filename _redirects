@@ -1,2 +1,5 @@
 # Redirect default Netlify subdomain to primary domain
 https://tyler-petz-works.netlify.com/* https://tyler.works/:splat 301!
+
+# Redirect to 404 page
+/* /404.html
