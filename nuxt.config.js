@@ -96,6 +96,7 @@ export default {
    ** Generate routes serverside
    */
   generate: {
+    fallback: true,
     routes: () => {
       const client = createClient(process.env.CTF_SPACE_ID, process.env.CTF_CD_ACCESS_TOKEN)
       return Promise.all([
