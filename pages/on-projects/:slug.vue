@@ -7,7 +7,7 @@ export default {
       return this.$store.state.projects.activeProject
     },
     isLoading () {
-      return this.$store.state.projects.loading
+      return !Object.keys(this.$store.state.projects.activeProject).length
     }
   },
   methods: {

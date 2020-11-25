@@ -10,7 +10,7 @@ const actions = {
   async getPostBySlug ({ commit }, slug) {
     commit('SET_LOADING', true)
     try {
-      const client = createClient()
+      const client = createClient(this.$config.spaceId, this.$config.accessToken)
       const res = await client.getEntries({
         content_type: 'blogPost',
         'fields.slug': slug
@@ -24,7 +24,7 @@ const actions = {
   },
   async getPosts ({ commit }) {
     try {
-      const client = createClient()
+      const client = createClient(this.$config.spaceId, this.$config.accessToken)
       const res = await client.getEntries({
         content_type: 'blogPost'
       })

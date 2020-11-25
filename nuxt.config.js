@@ -1,7 +1,7 @@
 import createClient from './app/contentful'
 
 export default {
-  mode: 'universal',
+  target: 'static',
 
   /*
    ** Headers of the page
@@ -21,6 +21,11 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap'
       },
     ]
+  },
+
+  publicRuntimeConfig: {
+    spaceId: process.env.CTF_SPACE_ID,
+    accessToken: process.env.CTF_CD_ACCESS_TOKEN
   },
 
   /*
@@ -59,7 +64,8 @@ export default {
    ** Nuxt.js plugins
    */
   plugins: [
-    '~/app/hotkeys.js'
+    '~/app/hotkeys.js',
+    '~/app/contentful.js'
   ],
 
   /*
@@ -91,7 +97,7 @@ export default {
    */
   generate: {
     routes: () => {
-      const client = createClient()
+      const client = createClient(process.env.CTF_SPACE_ID, process.env.CTF_CD_ACCESS_TOKEN)
       return Promise.all([
         client.getEntries({
           content_type: 'blogPost'

@@ -8,7 +8,7 @@ const state = () => ({
 const actions = {
   async getBrags ({ commit }) {
     try {
-      const client = createClient()
+      const client = createClient(this.$config.spaceId, this.$config.accessToken)
       const res = await client.getEntries({
         content_type: 'brag',
         order: 'sys.createdAt'

@@ -10,7 +10,7 @@ const actions = {
   async getProjectBySlug ({ commit }, slug) {
     commit('SET_LOADING', true)
     try {
-      const client = createClient()
+      const client = createClient(this.$config.spaceId, this.$config.accessToken)
       const res = await client.getEntries({
         content_type: 'project',
         'fields.slug': slug
@@ -24,7 +24,7 @@ const actions = {
   },
   async getProjects ({ commit }) {
     try {
-      const client = createClient()
+      const client = createClient(this.$config.spaceId, this.$config.accessToken)
       const res = await client.getEntries({
         content_type: 'project',
         order: 'sys.createdAt'
