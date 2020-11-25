@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     isLoading () {
-      return this.$store.state.posts.isLoading
+      return !Object.keys(this.posts).length
     }
   },
   methods: {
