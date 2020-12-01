@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     isLoading () {
-      return !Object.keys(this.posts).length
+      return !Object.keys(this.post).length
     }
   },
   methods: {

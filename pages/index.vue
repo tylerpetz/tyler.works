@@ -8,11 +8,11 @@ export default {
     return Promise.all([
       client.getEntries({
         content_type: 'blogPost',
-        order: 'sys.createdAt'
+        order: '-sys.createdAt'
       }),
       client.getEntries({
         content_type: 'project',
-        order: 'sys.createdAt'
+        order: '-sys.createdAt'
       }),
       client.getEntries({
         content_type: 'brag',
@@ -62,7 +62,7 @@ export default {
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </project-list>
-    <hr class="my-16 border-b border-theme-border">
+    <!--<hr class="my-16 border-b border-theme-border">
     <blog-list
       :posts="posts"
       :count="2"
@@ -73,7 +73,7 @@ export default {
       >
         I have also written these blog posts on <em>web development</em>:
       </h1>
-    </blog-list>
+    </blog-list> -->
     <hr class="my-16 border-b border-theme-border">
     <tech-list>
       <h1

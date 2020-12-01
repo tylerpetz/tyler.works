@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template functional>
-  <router-link
+  <nuxt-link
     :to="`/on-projects/${props.project.fields.slug}`"
     :title="props.project.fields.title"
   >
@@ -22,17 +22,6 @@ export default {
       <p>
         {{ props.project.fields.description }}
       </p>
-      <!-- <ul class="flex flex-row mt-4 space-x-2">
-        <li class="bg-mod-cap text-mod-legend rounded text-sm flex items-center px-1">
-          Wordpress
-        </li>
-        <li class="bg-mod-cap text-mod-legend rounded text-sm flex items-center px-1">
-          Paypal SDK
-        </li>
-        <li class="bg-mod-cap text-mod-legend rounded text-sm flex items-center px-1">
-          AWS
-        </li>
-      </ul> -->
     </article>
-  </router-link>
+  </nuxt-link>
 </template>

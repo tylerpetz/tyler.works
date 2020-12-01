@@ -7,7 +7,7 @@ export default {
     const client = createClient($config.spaceId, $config.accessToken)
     const res = await client.getEntries({
       content_type: 'blogPost',
-      order: 'sys.createdAt'
+      order: '-sys.createdAt'
     })
     return {
       posts: res.items
