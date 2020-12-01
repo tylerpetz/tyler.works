@@ -71,27 +71,11 @@ export default {
         </time>
         <div class="post__border" />
       </header>
-      <section>
-        <div
-          v-interpolation
-          class="post__content content"
-          v-html="$md.render(post.fields.body)"
-        />
-        <div
-          v-if="post.fields.tags"
-          class="post__tags"
-        >
-          <div
-            v-for="(tag, index) in post.fields.tags"
-            :key="index"
-          >
-            <i
-              :class="'fa-' + tag.toLowerCase()"
-              class="fab fa-2x"
-            />
-          </div>
-        </div>
-      </section>
+      <section
+        v-interpolation
+        class="prose lg:prose-xl"
+        v-html="$md.render(post.fields.body)"
+      />
     </article>
   </div>
 </template>

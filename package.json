@@ -17,6 +17,7 @@
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.4.11",
+    "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.2",
     "contentful": "^7.11.3",
     "cross-env": "^7.0.2",

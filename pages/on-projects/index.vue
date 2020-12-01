@@ -43,7 +43,6 @@ export default {
       Those are my favorite ones, the rest are on <a
         href="https://github.com/tylerpetz"
         target="_blank"
-        class="list-item__link"
         rel="noopener noreferrer"
       >my github</a>,
       peep it.

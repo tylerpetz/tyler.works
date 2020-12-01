@@ -52,6 +52,42 @@ module.exports = {
           'legend-hover': 'var(--accent-legend-hover)',
           'legend-press': 'var(--accent-legend-press)'
         }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: 'var(--theme-text)',
+            maxWidth: '100%',
+            h1: {
+              color: 'var(--theme-text)',
+            },
+            h2: {
+              color: 'var(--theme-text)',
+            },
+            h3: {
+              color: 'var(--theme-text)',
+            },
+            h4: {
+              color: 'var(--theme-text)',
+            },
+            h5: {
+              color: 'var(--theme-text)',
+            },
+            h6: {
+              color: 'var(--theme-text)',
+            },
+            a: {
+              color: 'var(--theme-link)',
+              '&:hover': {
+                color: 'var(--theme-link-hover)',
+              },
+            },
+            pre: {
+              backgroundColor: 'var(--theme-bg-dark)',
+              color: 'var(--theme-text)',
+            }
+          }
+        }
       }
     }
   },
@@ -59,4 +95,7 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'active'],
     textColor: ['responsive', 'hover', 'focus', 'active'],
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
