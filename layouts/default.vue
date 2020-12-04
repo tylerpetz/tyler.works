@@ -73,6 +73,57 @@ export default {
           name: 'description',
           content: 'Tyler Petz - Web Developer'
         },
+      ],
+      style: [
+        {
+          cssText: `body {
+            /* alpha caps */
+            --alpha-cap-h: 188;
+            --alpha-cap-s: 56%;
+            --alpha-cap-l: 17%;
+
+            /* alpha legends */
+            --alpha-legend-h: 104;
+            --alpha-legend-s: 75%;
+            --alpha-legend-l: 58%;
+
+            /* mod caps */
+            --mod-cap-h: 202;
+            --mod-cap-s: 21%;
+            --mod-cap-l: 17%;
+
+            /* mod legends */
+            --mod-legend-h: 104;
+            --mod-legend-s: 75%;
+            --mod-legend-l: 58%;
+
+            /* accent caps */
+            --accent-cap-h: 104;
+            --accent-cap-s: 75%;
+            --accent-cap-l: 58%;
+
+            /* accent legends */
+            --accent-legend-h: 202;
+            --accent-legend-s: 21%;
+            --accent-legend-l: 17%;
+
+            /* theme backgrounds */
+            --theme-bg-h: 193;
+            --theme-bg-s: 100%;
+            --theme-bg-l: 10%;
+
+            /* theme text */
+            --theme-text-h: 0;
+            --theme-text-s: 0%;
+            --theme-text-l: 95%;
+
+            /* theme links/borders */
+            --theme-link-h: 104;
+            --theme-link-s: 75%;
+            --theme-link-l: 58%;
+          }`,
+          type: 'text/css'
+        }
       ]
     }
   },

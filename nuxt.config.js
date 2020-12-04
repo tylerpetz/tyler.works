@@ -41,7 +41,20 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/themes.css', '~/assets/styles.scss'],
+  css: [
+    {
+      src: '~/assets/themes.css',
+      lang: 'css'
+    },
+    {
+      src: '~/assets/styles.scss',
+      lang: 'scss'
+    },
+    {
+      src: '~/node_modules/highlight.js/styles/dracula.css',
+      lang: 'css'
+    }
+  ],
 
   /*
    ** Nuxt.js build modules
@@ -75,6 +88,9 @@ export default {
    */
   markdownit: {
     injected: true,
+    use: [
+      'markdown-it-highlightjs'
+    ]
   },
 
   /*
