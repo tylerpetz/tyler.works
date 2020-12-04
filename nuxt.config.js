@@ -66,14 +66,15 @@ export default {
    */
   plugins: [
     { src: '~/app/hotkeys.js', mode: 'client' },
-    { src: '~/app/contentful.js', mode: 'server' }
+    { src: '~/app/contentful.js', mode: 'server' },
+    { src: '~/app/markdown-renderer.js' },
   ],
 
   /*
    ** Processes markdown
    */
   markdownit: {
-    injected: true
+    injected: true,
   },
 
   /*
