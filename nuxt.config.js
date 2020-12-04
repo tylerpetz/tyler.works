@@ -54,6 +54,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/robots',
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',

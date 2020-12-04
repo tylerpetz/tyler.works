@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
+    "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.4.11",
     "@tailwindcss/typography": "^0.3.1",
