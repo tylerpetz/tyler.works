@@ -3,7 +3,7 @@ html.is-clipped {
 }
 
 html {
-  min-height: 100vh;
+  @apply min-h-screen;
 }
 
 html * {
@@ -12,6 +12,14 @@ html * {
 
 ::selection {
   @apply text-theme-bg-d bg-theme-text-l;
+}
+
+.nuxt-link-active {
+  @apply text-theme-link-press;
+}
+
+.nuxt-link-exact-active {
+  @apply text-theme-text no-underline;
 }
 
 .page-enter-active,

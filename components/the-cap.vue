@@ -41,14 +41,3 @@ export default {
     </nav>
   </header>
 </template>
-
-<style lang="scss">
-.nuxt-link-active {
-  @apply text-theme-link-press;
-}
-
-.nuxt-link-exact-active {
-  @apply text-theme-text;
-  text-decoration: none;
-}
-</style>
