@@ -11,8 +11,8 @@ export default {
 </script>
 
 <template functional>
-  <span class="tooltip">
+  <span class="group">
     <slot />
-    <span class="tooltip-text">{{ props.text }}</span>
+    <span class="invisible p-4 absolute z-50 inline-block ml-4 text-sm w-auto rounded-lg bg-gray-700 text-white group-hover:visible">{{ props.text }}</span>
   </span>
 </template>

@@ -1,7 +1,3 @@
-html.is-clipped {
-  overflow-y: scroll !important;
-}
-
 html {
   @apply min-h-screen;
 }
@@ -24,20 +20,11 @@ html * {
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.35s ease;
+  @apply transition-all duration-300 ease-out;
 }
 
 .page-enter,
 .page-leave-active {
+  @apply opacity-0 transform-gpu;
   backface-visibility: hidden;
-  opacity: 0;
-  transform: translateZ(0);
-}
-
-.tooltip .tooltip-text {
-  @apply invisible p-4 absolute z-50 inline-block ml-4 text-sm w-auto rounded-lg bg-gray-700 text-white;
-}
-
-.tooltip:hover .tooltip-text {
-  @apply visible;
 }
