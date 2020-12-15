@@ -15,10 +15,10 @@ export default {
           url: '/on-projects',
           text: 'Projects'
         },
-        // {
-        //   url: '/on-writing',
-        //   text: 'Projects'
-        // },
+        {
+          url: '/on-writing',
+          text: 'Blog'
+        },
         {
           url: '/on-networking',
           text: 'Contact'
@@ -27,10 +27,6 @@ export default {
           url: '/for-people',
           text: 'CV'
         },
-        // {
-        //   url: '/but-he-is-still-a-person',
-        //   text: 'About'
-        // },
       ]
     }
   },

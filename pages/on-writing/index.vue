@@ -37,5 +37,8 @@ export default {
 </script>
 
 <template>
-  <blog-list :count="10" />
+  <blog-list
+    :posts="posts"
+    :count="10"
+  />
 </template>

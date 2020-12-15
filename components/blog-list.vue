@@ -28,7 +28,7 @@ export default {
       />
     </ul>
     <slot name="footer">
-      <p>That actually is all of my blog posts. I do a lot more web development than blogging at the moment.</p>
+      <p>That's all my posts. I assure you, I plan on writing more.</p>
     </slot>
   </section>
 </template>
