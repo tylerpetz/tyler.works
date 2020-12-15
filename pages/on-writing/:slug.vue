@@ -52,30 +52,27 @@ export default {
 </script>
 
 <template>
-  <div>
-    <article
-      v-if="!isLoading"
-      class="post"
-    >
-      <header class="post__header">
-        <h1 class="post__title">
-          {{ post.fields.title }}
-        </h1>
-        <time class="post__date">
+  <base-content-full v-if="!isLoading">
+    <template slot="header">
+      {{ post.fields.title }}
+    </template>
+    <section
+      v-interpolation
+      v-html="$md.render(post.fields.body)"
+    />
+    <template slot="footer">
+      <footer class="prose group-hover:prose-theme-text prose-sm">
+        <time class="text-theme-text-d">
           Published on:
           <span v-html="formatDate(post.fields.publishDate)" />
         </time>
-        <time class="post__date">
+        <time
+          v-if="post.fields.updatedAt"
+        >
           Last Updated:
           <span v-html="formatDate(post.fields.updatedAt)" />
         </time>
-        <div class="post__border" />
-      </header>
-      <section
-        v-interpolation
-        class="prose lg:prose-xl"
-        v-html="$md.render(post.fields.body)"
-      />
-    </article>
-  </div>
+      </footer>
+    </template>
+  </base-content-full>
 </template>

@@ -15,10 +15,10 @@ export default {
 </script>
 
 <template>
-  <div>
+  <section>
     <slot name="header" />
-    <section
-      v-if="projects"
+    <ul
+      v-if="projects.length"
       class="my-8 grid grid-cols-1 lg:grid-cols-2 gap-8"
     >
       <project-list-item
@@ -26,18 +26,17 @@ export default {
         :key="project.sys.id"
         :project="project"
       />
-    </section>
+    </ul>
     <slot name="footer">
       <p>
-        This isn't all of them, it seemed like a good design decision to just show a couple to save some scrolling.<br>
-        You can find some more on
+        You can find some more on my
         <nuxt-link
           class="text-theme-link hover:text-theme-link-hover"
           to="/on-projects"
         >
-          on my work page
-        </nuxt-link>.
+          projects
+        </nuxt-link> page.
       </p>
     </slot>
-  </div>
+  </section>
 </template>

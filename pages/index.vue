@@ -50,7 +50,7 @@ export default {
       </h3>
     </div>
     <brag-list :brags="brags" />
-    <hr class="my-16 border-b border-theme-border">
+    <base-divider />
     <project-list
       :projects="projects"
       :count="2"
@@ -62,8 +62,8 @@ export default {
         I also <em>web developed</em> the projects that I have listed below:
       </h1>
     </project-list>
-    <!--<hr class="my-16 border-b border-theme-border">
-    <blog-list
+    <base-divider />
+    <!-- <blog-list
       :posts="posts"
       :count="2"
     >
@@ -73,8 +73,8 @@ export default {
       >
         I have also written these blog posts on <em>web development</em>:
       </h1>
-    </blog-list> -->
-    <hr class="my-16 border-b border-theme-border">
+    </blog-list>
+    <base-divider /> -->
     <tech-list>
       <h1
         slot="header"
@@ -83,7 +83,7 @@ export default {
         Here is some of my favorite tech and platforms that I use. The kinds of things that <em>web developers</em> would know about.
       </h1>
     </tech-list>
-    <hr class="my-16 border-b border-theme-border">
+    <base-divider />
     <contact-info />
   </div>
 </template>

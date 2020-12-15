@@ -56,33 +56,16 @@ export default {
 </script>
 
 <template>
-  <div v-if="!isLoading">
-    <article>
-      <header class="prose prose-theme-text flex flex-col md:flex-row justify-between items-center mb-8">
-        <h1 class="border-theme-link border-b-4">
-          {{ project.fields.title }}
-        </h1>
-      </header>
-      <!-- <section
-        class="prose prose-theme-text mb-8"
-      >
-        <h2>Gallery</h2>
-      </section>
-      <section
-        class="prose prose-theme-text mb-8"
-      >
-        <h2>Tech Stack</h2>
-        <ul>
-          <li>Vue</li>
-          <li>Netlify</li>
-        </ul>
-      </section> -->
-      <section
-        v-interpolation
-        class="prose prose-theme-text mb-8"
-        v-html="$md.render(project.fields.body)"
-      />
-      <footer class="flex flex-row items-center mb-12">
+  <base-content-full v-if="!isLoading">
+    <template slot="header">
+      {{ project.fields.title }}
+    </template>
+    <section
+      v-interpolation
+      v-html="$md.render(project.fields.body)"
+    />
+    <template slot="footer">
+      <footer class="flex flex-row items-center">
         <a
           v-if="project.fields.repoUrl"
           :href="project.fields.repoUrl"
@@ -96,6 +79,6 @@ export default {
           target="_blank"
         >View Website</a>
       </footer>
-    </article>
-  </div>
+    </template>
+  </base-content-full>
 </template>
