@@ -20,6 +20,7 @@ export default {
       <li>
         <a
           aria-label="Tyler's Twitter"
+          target="_blank"
           href="https://twitter.com/tylerpetz"
         >
           <svg-icon
@@ -31,6 +32,7 @@ export default {
       <li>
         <a
           aria-label="Tyler's Github"
+          target="_blank"
           href="https://github.com/tylerpetz"
         >
           <svg-icon
@@ -42,6 +44,7 @@ export default {
       <li>
         <a
           aria-label="Email Tyler"
+          target="_blank"
           href="mailto:tylerpetz@gmail.com"
         >
           <svg-icon
@@ -53,6 +56,7 @@ export default {
       <li>
         <a
           aria-label="Tyler's LinkedIn"
+          target="_blank"
           href="https://www.linkedin.com/in/tyler-petz-11734818/"
         >
           <svg-icon

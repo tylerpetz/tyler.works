@@ -47,10 +47,6 @@ export default {
       lang: 'css'
     },
     {
-      src: '~/assets/styles.scss',
-      lang: 'scss'
-    },
-    {
       src: '~/node_modules/highlight.js/styles/dracula.css',
       lang: 'css'
     }
@@ -91,6 +87,9 @@ export default {
     use: [
       'markdown-it-highlightjs'
     ]
+  },
+  tailwindcss: {
+    jit: true
   },
 
   /*

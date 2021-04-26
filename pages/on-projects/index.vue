@@ -44,6 +44,7 @@ export default {
         href="https://github.com/tylerpetz"
         target="_blank"
         rel="noopener noreferrer"
+        class="underline"
       >my github</a>,
       peep it.
     </template>
