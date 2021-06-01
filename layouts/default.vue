@@ -15,10 +15,10 @@ export default {
           url: '/on-projects',
           text: 'Projects'
         },
-        {
-          url: '/on-writing',
-          text: 'Blog'
-        },
+        // {
+        //   url: '/on-writing',
+        //   text: 'Blog'
+        // },
         {
           url: '/on-networking',
           text: 'Contact'

@@ -63,7 +63,7 @@ export default {
       </h1>
     </project-list>
     <base-divider />
-    <blog-list
+    <!-- <blog-list
       :posts="posts"
       :count="2"
     >
@@ -74,7 +74,7 @@ export default {
         I have also written these blog posts on <em>web development</em>:
       </h1>
     </blog-list>
-    <base-divider />
+    <base-divider />-->
     <tech-list>
       <h1
         slot="header"
