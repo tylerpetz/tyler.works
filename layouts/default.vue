@@ -172,4 +172,8 @@ html {
   @apply opacity-0 transform-gpu;
   backface-visibility: hidden;
 }
+
+.content a {
+  @apply text-theme-link hover:text-theme-link-hover;
+}
 </style>
