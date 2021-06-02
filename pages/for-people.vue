@@ -9,7 +9,7 @@ export default {
           company: 'booj (RE/MAX)',
           companyUrl: 'https://booj.com',
           time: 'June \'20 - Current',
-          description: 'Vue Stuff',
+          description: 'As chapter lead I continued to develop the software suite for RE/MAX, as well as set the standards for the front end team, onboarded new team members, championed best practices and testing, keeping the entire team on the cutting edge of front end technology.',
           tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
         },
         {
@@ -64,8 +64,8 @@ export default {
 </script>
 
 <template>
-  <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6">
-    <div class="w-full lg:w-2/3">
+  <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6 print:flex-row">
+    <div class="w-full lg:w-2/3 print:w-2/3">
       <h1 class="text-2xl text-theme-text">
         Tyler Petz
       </h1>
@@ -75,7 +75,7 @@ export default {
       <section
         v-for="job in jobs"
         :key="job.title"
-        class="border-t-2 pt-8 mb-8 border-theme-border"
+        class="border-t-2 pt-8 mb-8 border-theme-border print:border-none"
       >
         <h2 class="text-xl lg:text-2xl mb-1">
           {{ job.title }} -
@@ -107,7 +107,7 @@ export default {
         </dl>
       </section>
     </div>
-    <div class="w-full lg:w-1/3 flex flex-col space-y-8">
+    <div class="w-full lg:w-1/3 flex flex-col space-y-8 print:w-1/3">
       <section
         v-for="section in sections"
         :key="section.title"

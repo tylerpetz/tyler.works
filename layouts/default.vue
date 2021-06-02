@@ -134,7 +134,7 @@ export default {
   >
     <the-cap :links="links" />
     <main class="px-4 md:px-8 min-h-screen">
-      <div class="w-full max-w-screen-lg mx-auto pt-40">
+      <div class="w-full max-w-screen-lg mx-auto pt-40 print:pt-0">
         <transition name="page">
           <nuxt />
         </transition>
