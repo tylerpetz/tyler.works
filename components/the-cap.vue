@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <header class="w-full py-8 px-4 md:px-8 absolute top-0 left-0 right-0 z-10">
+  <header class="w-full py-8 px-4 md:px-8 absolute top-0 left-0 right-0 z-10 print:hidden">
     <nav
       role="navigation"
       aria-label="main navigation"

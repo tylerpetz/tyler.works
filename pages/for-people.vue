@@ -6,32 +6,32 @@ export default {
       jobs: [
         {
           title: 'Front End Chapter Lead',
-          company: 'booj / RE-MAX',
+          company: 'booj (RE/MAX)',
           companyUrl: 'https://booj.com',
-          time: 'June 2020 - Current',
+          time: 'June \'20 - Current',
           description: 'Vue Stuff',
           tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
-        },
-        {
-          title: 'Freelance Web Developer',
-          company: 'Tyler Works',
-          time: 'July 2012 - Current',
-          description: 'Doing anything (web-related) that the clients ask for, day and night. Lots of UI Design, e-commerce, server setup, website creation, graphic design. A Tyler of all trades.',
-          tools: ['Nuxt', 'Netlify', 'Shopify', 'AWS Lambda', 'Express', 'Mongoose']
         },
         {
           title: 'R&D Developer',
           company: 'booj',
           companyUrl: 'https://booj.com',
-          time: 'March 2019 - June 2020',
-          description: 'Vue Stuff',
+          time: 'March \'19 - June \'20',
+          description: 'Developed a suite of applications for RE/MAX\'s real estate agents. This included a CRM, email campaign builder, and a CMS that powers remax.com, thousands of agent websites, and individual property websites.',
           tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
+        },
+        {
+          title: 'Freelance Web Developer',
+          company: 'Tyler Works',
+          time: 'July \'12 - Current',
+          description: 'Doing anything (web-related) that the clients ask for, day and night. Lots of UI Design, e-commerce, server setup, website creation, graphic design. A Tyler of all trades.',
+          tools: ['Nuxt', 'Netlify', 'Shopify', 'AWS Lambda', 'Express', 'Mongoose']
         },
         {
           title: 'Front End Developer',
           company: 'Strive Media',
           companyUrl: 'https://strivemedia.com',
-          time: 'July 2015 - March 2019',
+          time: 'July \'15 - March \'19',
           description: 'I developed high-traffic high-performance web sites and landing pages for awesome brands like Trips to Discover, Insider Car News, and Grocery Coupon Cart. I built a lot of cool features, like reporting dashboards and analytics, email building platforms, and subscription funnels.',
           tools: ['Wordpress', 'Laravel', 'Vagrant', 'CircleCI', 'MJML']
         },
@@ -39,9 +39,9 @@ export default {
           title: 'Front End Developer',
           company: 'Eleven11 Group',
           companyUrl: 'https://e11group.com/',
-          time: 'August 2015 - July 2015',
+          time: 'August \'12 - July \'15',
           description: 'Worked on a small team to quickly develop websites for local businesses. I primarily created responsive Wordpress themes from Photoshop design files and wired them up.',
-          tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
+          tools: ['Photoshop', 'Wordpress', 'jQuery', 'ZURB Foundation', 'Bootstrap']
         },
       ],
       sections: [
@@ -64,71 +64,77 @@ export default {
 </script>
 
 <template>
-  <section>
-    <div class="mt-6 flex flex-col lg:flex-row lg:space-x-6">
-      <div class="w-full lg:w-2/3">
-        <h1 class="text-2xl text-theme-text">
-          Tyler Petz
-        </h1>
-        <h2 class="text-lg text-theme-text-d mb-8">
-          <em>Web Developer</em>
+  <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6">
+    <div class="w-full lg:w-2/3">
+      <h1 class="text-2xl text-theme-text">
+        Tyler Petz
+      </h1>
+      <h2 class="text-lg text-theme-text-d mb-8">
+        <em>Web Developer</em>
+      </h2>
+      <section
+        v-for="job in jobs"
+        :key="job.title"
+        class="border-t-2 pt-8 mb-8 border-theme-border"
+      >
+        <h2 class="text-xl lg:text-2xl mb-1">
+          {{ job.title }} -
+          <template v-if="job.companyUrl">
+            <a
+              :href="job.companyUrl"
+              target="_blank"
+            >{{ job.company }}</a>
+          </template>
+          <span v-else>{{ job.company }}</span>
         </h2>
-        <section
-          v-for="job in jobs"
-          :key="job.title"
-          class="prose border-b-2 pb-4 mb-8 border-theme-border"
-        >
-          <h2>
-            {{ job.title }} -
-            <template v-if="job.companyUrl">
-              <a
-                :href="job.companyUrl"
-                target="_blank"
-              >{{ job.company }}</a>
-            </template>
-            <span v-else>{{ job.company }}</span>
-          </h2>
-          <p>{{ job.description }}</p>
-          <dl class="flex flex-row items-center space-x-4 list-none">
-            <dd
-              v-for="tool in job.tools"
-              :key="tool"
-            >
-              {{ tool }}
-            </dd>
-          </dl>
-        </section>
-      </div>
-      <div class="w-full lg:w-1/3 flex flex-col space-y-6">
-        <section
-          v-for="section in sections"
-          :key="section.title"
-          class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm"
-        >
-          <h3>
-            {{ section.title }}
-          </h3>
-          <ul>
-            <li
-              v-for="(item, index) in section.items"
-              :key="index"
-            >
-              {{ item }}
-            </li>
-          </ul>
-        </section>
-        <section class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm">
-          <h3>
-            Contact Info
-          </h3>
-          <p>
-            Email:
-            <a href="mailto:tylerpetz@gmail.com">tylerpetz@gmail.com</a> <br>
-            Location: Denver, CO, USA
-          </p>
-        </section>
-        <span>* - I really like this.</span>
-      </div>
+        <h3 class="mb-4 italic">
+          {{ job.time }}
+        </h3>
+        <p class="mb-4">
+          {{ job.description }}
+        </p>
+        <dl class="flex flex-row items-center space-x-2 list-none flex-wrap">
+          <dd class="pt-1 text-sm">
+            Favorite Tech
+          </dd>
+          <dd
+            v-for="tool in job.tools"
+            :key="tool"
+            class="px-1 pt-1 bg-accent-cap text-accent-legend rounded leading-none text-sm"
+          >
+            {{ tool }}
+          </dd>
+        </dl>
+      </section>
+    </div>
+    <div class="w-full lg:w-1/3 flex flex-col space-y-8">
+      <section
+        v-for="section in sections"
+        :key="section.title"
+        class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm"
+      >
+        <h3>
+          {{ section.title }}
+        </h3>
+        <ul>
+          <li
+            v-for="(item, index) in section.items"
+            :key="index"
+          >
+            {{ item }}
+          </li>
+        </ul>
+      </section>
+      <section class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm">
+        <h3>
+          Contact Info
+        </h3>
+        <p>
+          Email:
+          <a href="mailto:tylerpetz@gmail.com">tylerpetz@gmail.com</a> <br>
+          Location: Denver, CO, USA
+        </p>
+      </section>
     </div>
   </section>
 </template>

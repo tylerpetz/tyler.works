@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <footer class="h-20 px-4 md:px-8 bg-mod-cap text-mod-legend flex items-center">
+  <footer class="h-20 px-4 md:px-8 bg-mod-cap text-mod-legend flex items-center print:hidden">
     <div class="w-full max-w-screen-lg mx-auto flex justify-between items-center">
       <p class="text-sm sm:text-base md:text-lg">
         Tyler Petz <span class="hidden sm:inline">(web developer)</span> &copy; {{ new Date().getFullYear() }}
