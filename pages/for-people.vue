@@ -64,20 +64,20 @@ export default {
 </script>
 
 <template>
-  <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6 print:flex-row">
-    <div class="w-full lg:w-2/3 print:w-2/3">
+  <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6 print:mb-0">
+    <div class="w-full lg:w-2/3 print:w-full">
       <h1 class="text-2xl text-theme-text">
         Tyler Petz
       </h1>
-      <h2 class="text-lg text-theme-text-d mb-8">
+      <h2 class="text-lg text-theme-text-d mb-8 print:mb-4">
         <em>Web Developer</em>
       </h2>
       <section
         v-for="job in jobs"
         :key="job.title"
-        class="border-t-2 pt-8 mb-8 border-theme-border print:border-none"
+        class="border-t-2 pt-8 mb-8 border-theme-border print:border-none print:mb-2 print:pt-3"
       >
-        <h2 class="text-xl lg:text-2xl mb-1">
+        <h2 class="text-xl lg:text-2xl mb-1 print:text-lg print:mb-0 print:inline">
           {{ job.title }} -
           <template v-if="job.companyUrl">
             <a
@@ -87,10 +87,10 @@ export default {
           </template>
           <span v-else>{{ job.company }}</span>
         </h2>
-        <h3 class="mb-4 italic">
+        <h3 class="mb-4 italic print:inline">
           {{ job.time }}
         </h3>
-        <p class="mb-4">
+        <p class="mb-4 print:mb-0 print:text-sm">
           {{ job.description }}
         </p>
         <dl class="flex flex-row items-center space-x-2 list-none flex-wrap">
@@ -107,11 +107,12 @@ export default {
         </dl>
       </section>
     </div>
-    <div class="w-full lg:w-1/3 flex flex-col space-y-8 print:w-1/3">
+    <div class="w-full lg:w-1/3 flex flex-col space-y-8 print:mt-4 print:space-y-4">
       <section
         v-for="section in sections"
         :key="section.title"
-        class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm"
+        class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm print:p-0"
+        :class="{ 'print:hidden': section.title === 'Hobbies' }"
       >
         <h3>
           {{ section.title }}
@@ -120,12 +121,13 @@ export default {
           <li
             v-for="(item, index) in section.items"
             :key="index"
+            class="print:inline print:pl-0 print:ml-0 pl-0 ml-0"
           >
             {{ item }}
           </li>
         </ul>
       </section>
-      <section class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm">
+      <section class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm print:p-0">
         <h3>
           Contact Info
         </h3>

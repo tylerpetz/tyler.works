@@ -176,4 +176,18 @@ html {
 .content a {
   @apply text-theme-link hover:text-theme-link-hover;
 }
+
+@media print {
+  .prose ul {
+    @apply list-none;
+  }
+
+  .prose ul > li {
+    @apply list-none ml-0 pl-0 mr-2;
+  }
+
+  .prose ul > li::before {
+    @apply hidden;
+  }
+}
 </style>
