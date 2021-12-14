@@ -16,7 +16,7 @@ export default {
         'ZSH',
         'GitHub',
         'Netlify',
-        'Contentful',
+        'Cypress',
         'Figma',
         'Google Analytics',
         'AWS',
