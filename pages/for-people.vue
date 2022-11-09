@@ -6,26 +6,26 @@ export default {
       jobs: [
         {
           title: 'Front End Chapter Lead',
-          company: 'booj (RE/MAX)',
-          companyUrl: 'https://booj.com',
+          company: 'RE/MAX',
+          companyUrl: 'https://remax.com',
           time: 'June \'20 - Current',
-          description: 'As chapter lead I continued to develop the software suite for RE/MAX, as well as set the standards for the front end team, onboarded new team members, championed best practices and testing, keeping the entire team on the cutting edge of front end technology.',
-          tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
+          description: 'As chapter lead I continue to develop the software suite for RE/MAX, as well as set the standards for the front end team, onboard new team members, champion best practices and testing, and keep the entire team on the cutting edge of front end technology.',
+          tools: ['Vue/Nuxt', 'React/Next.js', 'TailwindCSS', 'Jest', 'Cypress', 'GitHub Actions']
         },
         {
           title: 'R&D Developer',
-          company: 'booj',
+          company: 'booj (acquired by RE/MAX)',
           companyUrl: 'https://booj.com',
           time: 'March \'19 - June \'20',
           description: 'Developed a suite of applications for RE/MAX\'s real estate agents. This included a CRM, email campaign builder, and a CMS that powers remax.com, thousands of agent websites, and individual property websites.',
-          tools: ['Vue', 'Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
+          tools: ['Vue/Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
         },
         {
           title: 'Freelance Web Developer',
           company: 'Tyler Works',
           time: 'July \'12 - Current',
           description: 'Doing anything (web-related) that the clients ask for, day and night. Lots of UI Design, e-commerce, server setup, website creation, graphic design. A Tyler of all trades.',
-          tools: ['Nuxt', 'Netlify', 'Shopify', 'AWS Lambda', 'Express', 'Mongoose']
+          tools: ['Vue/Nuxt', 'Netlify', 'Prisma', 'Shopify', 'AWS Lambda', 'Express', 'Mongoose']
         },
         {
           title: 'Front End Developer',
@@ -47,15 +47,15 @@ export default {
       sections: [
         {
           title: 'Favorite Tools',
-          items: ['Vue.js', 'Nuxt.js', 'Javascript/ES6+', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB', 'Webpack', 'HTML5', 'CSS3', 'Laravel', 'Markdown']
+          items: ['Vue.js', 'Nuxt.js', 'Javascript/ES6+', 'TailwindCSS', 'Node.js', 'Prisma']
         },
         {
           title: 'Favorite Platforms',
-          items: ['Netlify', 'Apollo GraphQL', 'Shopify', 'Cypress', 'Wordpress', 'Google Tag Manager', 'Google Analytics', 'Mailchimp', 'Sendgrid', 'AWS (EC2, S3, Lambda, Lightsail)']
+          items: ['Netlify', 'Prisma', 'Shopify', 'Cypress.io', 'Wordpress', 'Supabase', 'AWS (EC2, S3, Lambda, Lightsail)']
         },
         {
           title: 'Hobbies',
-          items: ['Collecting Records', 'Building Mechanical Keyboards', 'Live Concerts', 'Woodworking', 'PC Gaming']
+          items: ['Collecting Records', 'Building Mechanical Keyboards', 'Lots of Coffee', 'Live Concerts', 'Woodworking', 'PC Gaming', 'Painting', 'Traveling']
         }
       ]
     }
