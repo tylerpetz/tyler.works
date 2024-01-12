@@ -74,11 +74,12 @@ export default {
 <template>
   <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6 print:mb-0">
     <div class="w-full lg:w-2/3 print:w-full">
-      <h1 class="text-2xl text-theme-text">
+      <h1 class="text-2xl print:text-xl text-theme-text">
         Tyler Petz
       </h1>
-      <h2 class="text-lg text-theme-text-d mb-8 print:mb-4">
-        <em>Web Developer</em>
+      <h2 class="text-lg print:text-base text-theme-text-d mb-8 print:mb-4">
+        <em class="print:hidden">Web Developer</em>
+        <em class="hidden print:inline">tylerpetz@gmail.com - 941.518.9050</em>
       </h2>
       <section
         v-for="job in jobs"
