@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'on-networking',
+  name: 'contact',
 }
 </script>
 

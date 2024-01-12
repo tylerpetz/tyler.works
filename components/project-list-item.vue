@@ -13,7 +13,7 @@ export default {
 <template functional>
   <li>
     <nuxt-link
-      :to="`/on-projects/${props.project.fields.slug}`"
+      :to="`/projects/${props.project.fields.slug}`"
       :title="props.project.fields.title"
     >
       <article class="bg-theme-bg-l hover:bg-theme-bg-d transition-colors shadow-xl rounded p-8 duration-75">

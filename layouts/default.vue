@@ -12,7 +12,7 @@ export default {
           text: 'TP'
         },
         {
-          url: '/on-projects',
+          url: '/projects',
           text: 'Projects'
         },
         // {
@@ -20,11 +20,11 @@ export default {
         //   text: 'Blog'
         // },
         {
-          url: '/on-networking',
+          url: '/contact',
           text: 'Contact'
         },
         {
-          url: '/for-people',
+          url: '/cv',
           text: 'CV'
         },
       ]

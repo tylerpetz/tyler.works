@@ -1,15 +1,23 @@
 <script>
 export default {
-  name: 'for-people',
+  name: 'cv',
   data() {
     return {
       jobs: [
         {
-          title: 'Front End Chapter Lead',
+          title: 'Senior Frontend Developer',
           company: 'RE/MAX',
           companyUrl: 'https://remax.com',
-          time: 'June \'20 - Current',
-          description: 'As chapter lead I continue to develop the software suite for RE/MAX, as well as set the standards for the front end team, onboard new team members, champion best practices and testing, and keep the entire team on the cutting edge of front end technology.',
+          time: 'June \'22 - January \'24',
+          description: 'Continued development of consumer-facing products as a senior frontend member of the team. ',
+          tools: ['React/Next.js', 'Vue/Nuxt', 'Wordpress', 'TailwindCSS', 'Jest', 'Cypress', 'GitHub Actions']
+        },
+        {
+          title: 'Frontend Chapter Lead',
+          company: 'RE/MAX',
+          companyUrl: 'https://remax.com',
+          time: 'June \'20 - June \'22',
+          description: 'As chapter lead I continue to develop the software suite for RE/MAX, as well as set the standards for the frontend team, onboard new team members, champion best practices and testing, and keep the entire team on the cutting edge of frontend technology.',
           tools: ['Vue/Nuxt', 'React/Next.js', 'TailwindCSS', 'Jest', 'Cypress', 'GitHub Actions']
         },
         {
@@ -18,7 +26,7 @@ export default {
           companyUrl: 'https://booj.com',
           time: 'March \'19 - June \'20',
           description: 'Developed a suite of applications for RE/MAX\'s real estate agents. This included a CRM, email campaign builder, and a CMS that powers remax.com, thousands of agent websites, and individual property websites.',
-          tools: ['Vue/Nuxt', 'TailwindCSS', 'Jest', 'Cypress']
+          tools: ['Vue/Nuxt', 'TailwindCSS', 'Jest', 'Cypress', 'Laravel']
         },
         {
           title: 'Freelance Web Developer',
@@ -28,7 +36,7 @@ export default {
           tools: ['Vue/Nuxt', 'Netlify', 'Prisma', 'Shopify', 'AWS Lambda', 'Express', 'Mongoose']
         },
         {
-          title: 'Front End Developer',
+          title: 'Frontend Developer',
           company: 'Strive Media',
           companyUrl: 'https://strivemedia.com',
           time: 'July \'15 - March \'19',
@@ -36,7 +44,7 @@ export default {
           tools: ['Wordpress', 'Laravel', 'Vagrant', 'CircleCI', 'MJML']
         },
         {
-          title: 'Front End Developer',
+          title: 'Frontend Developer',
           company: 'Eleven11 Group',
           companyUrl: 'https://e11group.com/',
           time: 'August \'12 - July \'15',
@@ -47,7 +55,7 @@ export default {
       sections: [
         {
           title: 'Favorite Tools',
-          items: ['Vue.js', 'Nuxt.js', 'Javascript/ES6+', 'TailwindCSS', 'Node.js', 'Prisma']
+          items: ['Vue', 'Nuxt.js', 'React', 'Next.js', 'Javascript/ES6+', 'TailwindCSS', 'Node.js', 'Prisma', 'Cypress']
         },
         {
           title: 'Favorite Platforms',
@@ -55,7 +63,7 @@ export default {
         },
         {
           title: 'Hobbies',
-          items: ['Collecting Records', 'Building Mechanical Keyboards', 'Lots of Coffee', 'Live Concerts', 'Woodworking', 'PC Gaming', 'Painting', 'Traveling']
+          items: ['Collecting Records', 'Stand-up Comedy', 'Building Mechanical Keyboards', 'Lots of Coffee', 'Live Concerts', 'PC Gaming', 'Painting', 'Traveling']
         }
       ]
     }

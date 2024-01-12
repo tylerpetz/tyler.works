@@ -27,7 +27,7 @@ export default {
         You can find some more on my
         <nuxt-link
           class="text-theme-link hover:text-theme-link-hover"
-          to="/on-projects"
+          to="/projects"
         >
           projects
         </nuxt-link> page.
