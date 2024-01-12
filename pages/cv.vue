@@ -9,7 +9,7 @@ export default {
           company: 'RE/MAX',
           companyUrl: 'https://remax.com',
           time: 'June \'22 - January \'24',
-          description: 'Continued development of consumer-facing products as a senior frontend member of the team. ',
+          description: 'I helped enhance lead generation through a listings search website, remax.com. I played a crucial role in supporting and sunsetting legacy software, showcasing adaptability and migration skills, while also contributing to rebuilding pieces of our application on more suitable tech stacks.',
           tools: ['React/Next.js', 'Vue/Nuxt', 'Wordpress', 'TailwindCSS', 'Jest', 'Cypress', 'GitHub Actions']
         },
         {
