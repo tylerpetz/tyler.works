@@ -14,6 +14,7 @@ module.exports = {
       body: ['Overpass', 'sans-serif']
     },
     colors: {
+      black: '#000000',
       theme: {
         bg: 'var(--theme-bg)',
         'bg-l': 'var(--theme-bg-light)',

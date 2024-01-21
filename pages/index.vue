@@ -16,7 +16,7 @@ export default {
       }),
       client.getEntries({
         content_type: 'brag',
-        order: 'sys.createdAt'
+        order: '-sys.updatedAt'
       })
     ]).then(([posts,projects,brags]) => {
       return {
