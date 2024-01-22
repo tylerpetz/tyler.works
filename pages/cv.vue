@@ -36,7 +36,7 @@ export default {
               title: 'R&D Developer',
               time: 'March \'19 - June \'20',
               bullets: [
-                'Contributed to the development of comprehensive suite for RE/MAX agents using Vue.js, allowing them to manage leads, track active deals, and build their online presence.',
+                'Contributed to the development of a comprehensive suite for RE/MAX agents using Vue.js, allowing them to manage leads, track active deals, and build their online presence.',
                 'Worked with API developers to build data-intensive workflows, including front and backend validation, sorting, filtering, pagination, and searching.',
                 'Engineered a customizable website builder integrated with a robust CMS using Vue and Nuxt, giving agents the ability to personalize the display of their listings and services.',
                 'Implemented a centralized system for managing contacts, calendars, and reminders, fostering better organization and timely follow-ups for real estate agents.',
@@ -66,7 +66,7 @@ export default {
           time: 'July \'15 - March \'19',
           bullets: [
             'Developed frontends for a high-traffic web publisher covering travel, couponing, and automotive news.',
-            'Worked with designers to create of visually appealing and user-friendly websites.',
+            'Worked with designers to create visually appealing and user-friendly websites.',
             'Engineered custom ad integrations and workflows for travel deals to build revenue.',
             'Leveraged Google Analytics to collect data, allowing the team to refine content strategy.',
             'Built personalized email campaigns with MailChimp for continued communication with subscribers.',
