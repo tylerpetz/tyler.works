@@ -6,13 +6,16 @@ export default {
       jobs: [
         {
           company: 'RE/MAX',
+          location: 'Denver, CO',
+          timespan: '5 years',
           tools: ['React/Next.js', 'Vue/Nuxt.js', 'TailwindCSS', 'Jest', 'Cypress', 'Laravel', 'TypeScript'],
           roles: [
             {
               title: 'Senior Frontend Developer',
-              time: 'June \'22 - January \'24',
+              place: 'Remote',
+              time: '2022 - 2024',
               bullets: [
-                'Worked with my team to develop a high performance web application using Vue and Nuxt for RE/MAX, a leading real estate franchise.',
+                'Worked with my team of 3 to develop a high performance web application using Vue and Nuxt for RE/MAX, a leading real estate franchise.',
                 'Contributed to the map page integration, leveraging Google Maps API to provide users with an interactive map for searching real estate listings.',
                 'Translated Figma and InVision designs into reusable components, used Tailwind CSS to maintain a consistent UI and a small CSS footprint.',
                 'Established and maintained an integration test suite using Cypress, reducing visual and functional regression in our applications.',
@@ -21,8 +24,9 @@ export default {
               ],
             },
             {
-              title: 'Frontend Chapter Lead',
-              time: 'June \'20 - June \'22',
+              title: 'Lead Frontend Developer',
+              place: 'Remote',
+              time: '2020 - 2022',
               bullets: [
                 'Led a team of 11 Vue.js developers, aiding with collaboration and delivering high-quality frontend solutions across 5 different product teams.',
                 'Conducted resume reviews and interviews for frontend and backend developers, presented candidates to upper management.',
@@ -34,7 +38,8 @@ export default {
             },
             {
               title: 'R&D Developer',
-              time: 'March \'19 - June \'20',
+              place: 'On-site',
+              time: '2019 - 2020',
               bullets: [
                 'Contributed to the development of a comprehensive suite for RE/MAX agents using Vue.js, allowing them to manage leads, track active deals, and build their online presence.',
                 'Worked with API developers to build data-intensive workflows, including front and backend validation, sorting, filtering, pagination, and searching.',
@@ -47,8 +52,11 @@ export default {
         },
         {
           title: 'Freelance Web Developer',
+          location: 'Sarasota, FL + Denver, CO',
+          place: 'Remote',
+          timespan: '12 years',
           company: 'Tyler Works',
-          time: 'July \'12 - Current',
+          time: '2012 - Current',
           bullets: [
             'Designed and built end-to-end website solutions for various clients.',
             'Worked with Vue.js and Nuxt.js to craft dynamic and responsive user interfaces, ensuring an engaging and seamless user experience across various projects.',
@@ -61,9 +69,12 @@ export default {
         },
         {
           title: 'Frontend Developer',
+          location: 'Sarasota, FL',
+          place: 'On-site',
+          timespan: '3.5 years',
           company: 'Strive Media',
           companyUrl: 'https://strivemedia.com',
-          time: 'July \'15 - March \'19',
+          time: '2015 - 2019',
           bullets: [
             'Developed frontends for a high-traffic web publisher covering travel, couponing, and automotive news.',
             'Worked with designers to create visually appealing and user-friendly websites.',
@@ -76,8 +87,11 @@ export default {
         {
           title: 'Frontend Developer',
           company: 'Eleven11 Group',
+          location: 'Tampa, FL',
+          place: 'Remote',
+          timespan: '3 years',
           companyUrl: 'https://e11group.com/',
-          time: 'August \'12 - July \'15',
+          time: '2012 - 2015',
           bullets: [
             'Translated Photoshop layouts into themes for WordPress, optimizing them for various screen sizes and devices.',
             'Ensured the maintainability of themes and plugins, facilitating easy content updates and future modifications for clients.',
@@ -89,12 +103,17 @@ export default {
       ],
       sections: [
         {
-          title: 'Favorite Tools',
+          title: 'My Strongest Skills',
           items: ['Vue', 'Nuxt.js', 'Next.js', 'TailwindCSS', 'Prisma', 'Cypress']
         },
         {
           title: 'Hobbies',
-          items: ['Collecting Vinyl', 'Building Mechanical Keyboards', 'Lots of Coffee', 'Live Concerts', 'PC Gaming', 'Traveling']
+          items: ['Collecting Vinyl', 'Building Mechanical Keyboards', 'Coffee', 'Live Concerts', 'PC Gaming', 'Traveling']
+        },
+        {
+          title: 'Professional References',
+          hidden: true,
+          items: ['Sean O\'Toole - 12344325 - Homie']
         }
       ]
     }
@@ -105,31 +124,48 @@ export default {
 <template>
   <section class="mb-24 flex flex-col lg:flex-row lg:space-x-6 print:mb-0 print:text-black">
     <div class="w-full lg:w-2/3 print:w-full">
-      <h1 class="text-2xl print:text-xl text-theme-text print:text-black">
+      <h1 class="text-2xl text-theme-text print:text-black font-semibold">
         Tyler Petz
       </h1>
-      <h2 class="text-lg print:text-base text-theme-text-d print:text-black mb-8 print:mb-4">
-        <em>Web Developer</em>
-        <em class="hidden print:block">tylerpetz@gmail.com - 941.518.9050 - Denver, Colorado</em>
+      <h2 class="text-lg print:text-base text-theme-text-d print:text-black mb-8 print:mb-8">
+        <em class="hidden print:inline">Denver, Colorado</em>
+        <em class="hidden print:block text-sm">tylerpetz@gmail.com - <a
+          href="https://tyler.works"
+          target="_blank"
+          class="underline"
+        >tyler.works</a> - <a
+          href="https://www.linkedin.com/in/tyler-petz/"
+          target="_blank"
+          class="underline"
+        >linkedin.com/in/tyler-petz/</a></em>
       </h2>
+      <h1 class="font-semibold hidden print:block mb-4">
+        Summary of Qualifications
+      </h1>
+      <p class="hidden print:block mb-6 text-sm">
+        With over 5 years of industry experience in web development, I bring a comprehensive skill set to the table. My expertise lies in HTML, CSS, JavaScript, and Vue.js, allowing me to build responsive web applications and implement pixel-perfect designs effectively. I have a proven track record of collaborating seamlessly with cross-functional teams and stakeholders, ensuring the delivery of high-quality solutions. Alongside my strong analytical and problem-solving abilities, I possess a commitment to continuous learning and improvement. With experience in RESTful APIs, TypeScript, and other relevant technologies, I am well-equipped to contribute to the development of scalable web applications. Thriving in fast-paced environments, I maintain a high level of quality and attention to detail in all my endeavors.
+      </p>
+      <h1 class="font-semibold hidden print:block mb-0">
+        Professional Experience
+      </h1>
       <section
         v-for="job in jobs"
         :key="job.title"
         class="border-t-2 pt-8 mb-8 border-theme-border print:border-none print:mb-2 print:pt-3"
       >
         <template v-if="job.roles">
-          <h2 class="text-xl lg:text-2xl print:text-base mb-2">
-            {{ job.company }}
+          <h2 class="text-xl lg:text-2xl print:text-base mb-4 flex flex-row justify-between print:mb-2">
+            {{ job.company }} <span class="text-lg print:text-base">{{ job.location }} - {{ job.timespan }}</span>
           </h2>
           <section
             v-for="role in job.roles"
             :key="role.title"
-            class="mb-2 print:mb-6"
+            class="mb-2 print:mb-4"
           >
             <h3
               class="text-lg lg:text-xl print:text-base print:inline"
             >
-              {{ role.title }}
+              {{ role.title }} - {{ role.place }} <span class="print:inline hidden">-</span>
             </h3>
             <h4
               class="mb-4 italic print:inline"
@@ -167,9 +203,8 @@ export default {
 
         <template v-else>
           <h2
-            class="text-xl lg:text-2xl mb-1 print:text-base print:mb-0 print:inline"
+            class="text-xl lg:text-2xl mb-1 print:text-base print:mb-0"
           >
-            {{ job.title }} -
             <template v-if="job.companyUrl">
               <a
                 :href="job.companyUrl"
@@ -177,10 +212,16 @@ export default {
               >{{ job.company }}</a>
             </template>
             <span v-else>{{ job.company }}</span>
+            <span class="float-right text-lg print:text-base">{{ job.location }} - {{ job.timespan }}</span>
           </h2>
-          <h3 class="mb-4 italic print:inline">
-            {{ job.time }}
+          <h3
+            class="text-lg lg:text-xl print:text-base print:inline"
+          >
+            {{ job.title }} - {{ job.place }} <span class="print:inline hidden">-</span>
           </h3>
+          <h4 class="mb-4 italic print:inline">
+            {{ job.time }}
+          </h4>
           <ul class="list-disc mb-6 pl-6 print:mb-2">
             <li
               v-for="(bullet, index) in job.bullets"
@@ -190,7 +231,9 @@ export default {
               {{ bullet }}
             </li>
           </ul>
-          <dl class="flex flex-row items-center space-x-2 list-none flex-wrap">
+          <dl
+            class="flex flex-row items-center space-x-2 list-none flex-wrap"
+          >
             <dd class="pt-1 text-sm print:mr-2 print:text-xs">
               Technology Used
             </dd>
@@ -211,6 +254,7 @@ export default {
         v-for="section in sections"
         :key="section.title"
         class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm print:p-0 print:text-black"
+        :class="section.hidden ? 'hidden print:block' : ''"
       >
         <h3 class="print:text-black">
           {{ section.title }}
@@ -219,7 +263,8 @@ export default {
           <li
             v-for="(item, index) in section.items"
             :key="index"
-            class="print:inline print:pl-0 print:ml-0 pl-0 ml-0"
+            class="print:pl-0 print:ml-0 pl-0 ml-0"
+            :class="section.hidden ? 'print:block' : 'print:inline'"
           >
             {{ item }}
           </li>
