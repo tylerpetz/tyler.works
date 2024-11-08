@@ -11,6 +11,28 @@ export default {
         I thrive in fast-paced environments, and I maintain a high level of quality and attention to detail in my work.`,
       jobs: [
         {
+          title: 'Frontend Developer',
+          company: 'American City Business Journals',
+          location: 'Charlotte, NC',
+          place: 'Remote',
+          timespan: '6 months',
+          companyUrl: 'https://bizjournals.com/',
+          time: '2024 - Present',
+          bullets: [
+            'Developed and maintained responsive user interfaces, optimizing for mobile and desktop experiences to enhance accessibility and user engagement.',
+            'Integrated APIs and data feeds from backend systems to display real-time business news, events, and market data, ensuring seamless data flow and user experience.',
+            'Created interactive features using Vue, Nuxt, and Typescript, enhancing reader engagement with live news updates, personalized dashboards, and subscription prompts.',
+            'Implemented performance optimization and SEO best practices, including structured data, meta tags, and image optimization, leading to improved page load times and higher search rankings.'
+          ],
+          bullets2: [
+            'Developed and maintained responsive user interfaces, optimizing for mobile and desktop experiences to enhance accessibility and user engagement.',
+            'Integrated APIs and data feeds from backend systems to display real-time business news, events, and market data, ensuring seamless data flow and user experience.',
+            'Created interactive features using Vue, Nuxt, and Typescript, enhancing reader engagement with live news updates, personalized dashboards, and subscription prompts.',
+            'Implemented performance optimization and SEO best practices, including structured data, meta tags, and image optimization, leading to improved page load times and higher search rankings.'
+          ],
+          tools: ['Vue/Nuxt.js', 'Typescript', 'TailwindCSS', 'Cypress', 'Laravel']
+        },
+        {
           company: 'RE/MAX',
           location: 'Denver, CO',
           timespan: '5 years',
@@ -25,7 +47,7 @@ export default {
                 'Contributed to the map page integration, leveraging Google Maps API to provide users with an interactive map for searching real estate listings.',
                 'Translated Figma and InVision designs into reusable components in a design system using Storybook to maintain a consistent UI and a small CSS footprint.',
                 'Established and maintained an integration test suite using Cypress, resulting in a 60% decrease in visual and functional regression issues in our application.', // 110 issues to 45 issues
-                'Implemented Sentry to effectively track and address issues, bugs, and performance.',
+                // 'Implemented Sentry to effectively track and address issues, bugs, and performance.',
                 'Aided in the development of an updated RE/MAX website with React, Next.js, and TypeScript to bring various applications under one codebase.',
               ],
               bullets2: [
@@ -41,12 +63,13 @@ export default {
               place: 'Remote',
               time: '2020 - 2022',
               bullets: [
+                'Successfully led the migration process of Vue projects to Vue 3, enhancing performance, scalability, and leveraging new features, ensuring seamless transition and optimized user experiences.',
                 'Led a team of 11 Vue.js developers, aiding with collaboration and delivering high-quality frontend solutions across 5 different product teams.',
                 'Conducted resume reviews and interviews for frontend and backend developers, presented candidates to upper management.',
                 'Performed daily code reviews to ensure adherence to industry best practices and coding standards, reviewing over 300 changes yearly.',
                 'Mentored and guided 2 junior developers, facilitating their professional growth and the team\'s skill enhancement.',
                 'Revamped and helped maintain our CI/CD deployment process, resulting in a 65% reduction in deployment time, and enabling us to deploy changes daily.', // 25 mins to 9 mins
-                'Proactively optimized site speed and performance, resulting in a notable reduction in page load times and enhanced user experience.',
+                // 'Proactively optimized site speed and performance, resulting in a notable reduction in page load times and enhanced user experience.',
               ],
               bullets2: [
                 'Led a team of 11 frontend developers, aiding with collaboration and delivering high-quality Javascript and Typescript applications across 5 different product teams.',
@@ -54,7 +77,7 @@ export default {
                 'Performed daily code reviews to ensure adherence to industry best practices and coding standards, reviewing over 300 changes yearly.',
                 'Mentored and guided 2 junior developers, facilitating their professional growth and the team\'s skill enhancement.',
                 'Revamped and helped maintain our CI/CD deployment process, resulting in a 65% reduction in deployment time, and enabling us to deploy changes daily.', // 25 mins to 9 mins
-                'Proactively optimized site speed and performance, resulting in a notable reduction in page load times and enhanced user experience.',
+                // 'Proactively optimized site speed and performance, resulting in a notable reduction in page load times and enhanced user experience.',
               ]
             },
             {
@@ -66,14 +89,14 @@ export default {
                 'Worked with API developers to build data-intensive workflows, including front and backend validation, sorting, filtering, pagination, and searching.',
                 'Engineered a customizable website builder integrated with a robust CMS using Vue and Nuxt, giving agents the ability to personalize the display of their listings and services, resulting in over 12,000 personalized web pages built for our agents.',
                 'Implemented a centralized system for managing contacts, calendars, and reminders, fostering better organization and timely follow-ups for real estate agents.',
-                'Collaborated with cross-functional teams to gather requirements and continuously enhanced the tooling suite.',
+                // 'Collaborated with cross-functional teams to gather requirements and continuously enhanced the tooling suite.',
               ],
               bullets2: [
                 'Contributed to the development of a comprehensive suite for RE/MAX agents using various Javascript frameworks, allowing them to manage leads, track active deals, and build their online presence. This led to a 67% increase in lead conversion rates for agents.', // 15% to 25%
                 'Worked with API developers to build data-intensive workflows, including front and backend validation, sorting, filtering, pagination, and searching.',
                 'Engineered a customizable website builder integrated with a robust CMS, giving agents the ability to personalize the display of their listings and services, resulting in over 12,000 personalized web pages built for our agents.',
                 'Implemented a centralized system for managing contacts, calendars, and reminders, fostering better organization and timely follow-ups for real estate agents.',
-                'Collaborated with cross-functional teams to gather requirements and continuously enhanced the tooling suite.',
+                // 'Collaborated with cross-functional teams to gather requirements and continuously enhanced the tooling suite.',
               ]
             },
           ]
@@ -86,19 +109,19 @@ export default {
           company: 'Tyler Works',
           time: '2012 - Current',
           bullets: [
-            'Designed and built end-to-end website solutions for various clients.',
+            // 'Designed and built end-to-end website solutions for various clients.',
             'Worked with Vue.js and Nuxt.js to craft dynamic and responsive user interfaces, ensuring an engaging and seamless user experience across various projects.',
             'Utilized Shopify to create e-commerce solutions, integrating custom features to meet client-specific requirements.',
-            'Managed hosting some websites on AWS, helped moved clients off of pricy hosting services and dedicated servers, saving my clients an average of 83%.', // 120/mo to 20/mo
-            'Deployed websites using Netlify, optimizing the CI/CD pipeline for quick and easy project delivery.',
+            // 'Managed hosting some websites on AWS, helped moved clients off of pricy hosting services and dedicated servers, saving my clients an average of 83%.', // 120/mo to 20/mo
+            // 'Deployed websites using Netlify, optimizing the CI/CD pipeline for quick and easy project delivery.',
             'Took care of domain management, including registration, configuration, and DNS setup.',
           ],
           bullets2: [
-            'Designed and built end-to-end website solutions for various clients.',
+            // 'Designed and built end-to-end website solutions for various clients.',
             'Worked with various Javascript frameworks to craft dynamic and responsive user interfaces, ensuring an engaging and seamless user experience across various projects.',
             'Utilized Shopify to create e-commerce solutions, integrating custom features to meet client-specific requirements.',
-            'Managed hosting some websites on AWS, helped moved clients off of pricy hosting services and dedicated servers, saving my clients an average of 83%.', // 120/mo to 20/mo
-            'Deployed websites using Netlify, optimizing the CI/CD pipeline for quick and easy project delivery.',
+            // 'Managed hosting some websites on AWS, helped moved clients off of pricy hosting services and dedicated servers, saving my clients an average of 83%.', // 120/mo to 20/mo
+            // 'Deployed websites using Netlify, optimizing the CI/CD pipeline for quick and easy project delivery.',
             'Took care of domain management, including registration, configuration, and DNS setup.',
           ],
           tools: ['Vue/Nuxt', 'React', 'Svelte', 'Angular', 'Netlify', 'Prisma', 'Shopify', 'Express']
@@ -139,13 +162,13 @@ export default {
             'Translated Photoshop layouts into themes for WordPress for over 25 businesses, optimizing them for various screen sizes and devices.',
             'Ensured the maintainability of themes and plugins, facilitating easy content updates and future modifications for clients.',
             'Maintained a client-focused approach, making iterative improvements to meet the evolving needs of each business.',
-            'Contributed to the growth of local businesses by providing them with an online presence that effectively showcased their products and services.'
+            // 'Contributed to the growth of local businesses by providing them with an online presence that effectively showcased their products and services.'
           ],
           bullets2: [
             'Translated Photoshop layouts into themes for WordPress for over 25 businesses, optimizing them for various screen sizes and devices.',
             'Ensured the maintainability of themes and plugins, facilitating easy content updates and future modifications for clients.',
             'Maintained a client-focused approach, making iterative improvements to meet the evolving needs of each business.',
-            'Contributed to the growth of local businesses by providing them with an online presence that effectively showcased their products and services.'
+            // 'Contributed to the growth of local businesses by providing them with an online presence that effectively showcased their products and services.'
           ],
           tools: ['Photoshop', 'Wordpress', 'jQuery', 'Bootstrap']
         },
@@ -157,7 +180,7 @@ export default {
         },
         {
           title: 'Hobbies',
-          items: ['Collecting Vinyl', 'Building Mechanical Keyboards', 'Coffee', 'Live Concerts', 'PC Gaming', 'Traveling']
+          items: ['Standup Comedy', 'Collecting Vinyl', 'Building Mechanical Keyboards', 'Coffee', 'Live Concerts', 'PC Gaming', 'Traveling']
         },
         // {
         //   title: 'Professional References',
@@ -217,7 +240,7 @@ export default {
           <section
             v-for="role in job.roles"
             :key="role.title"
-            class="mb-2 print:mb-2"
+            class="mb-2 print:mb-1"
           >
             <h3
               class="text-lg lg:text-xl print:text-base print:inline"
@@ -251,7 +274,7 @@ export default {
             <dd
               v-for="tool in job.tools"
               :key="tool"
-              class="px-1 pt-1 bg-accent-cap text-accent-legend rounded leading-none text-sm print:text-xs"
+              class="px-1 pt-1 bg-accent-cap text-accent-legend rounded leading-none text-sm print:text-xs print:pt-0"
             >
               {{ tool }}
             </dd>
@@ -306,14 +329,14 @@ export default {
       </section>
     </div>
 
-    <div class="w-full lg:w-1/3 flex flex-col space-y-8 print:mt-4 print:space-y-4">
+    <div class="w-full lg:w-1/3 flex flex-col space-y-8 print:mt-2 print:space-y-4">
       <section
         v-for="section in sections"
         :key="section.title"
         class="bg-theme-bg-d p-6 pb-5 rounded prose prose-theme-text prose-sm print:p-0 print:text-black"
         :class="section.hidden ? 'hidden print:block' : ''"
       >
-        <h3 class="print:text-black">
+        <h3 class="print:text-black print:mb-0">
           {{ section.title }}
         </h3>
         <ul>
